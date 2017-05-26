@@ -1,0 +1,742 @@
+[
+    {
+        "node_text": "VENTILAT",
+        "split_text": "",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 311362,
+                "proba": "99.49"
+            },
+            {
+                "label": 1,
+                "size": 1611,
+                "proba": "0.51"
+            }
+        ],
+        "parent_id": -2,
+        "node_id": 1,
+        "n_node_samples": 312973,
+        "proba": "0.51"
+    },
+    {
+        "node_text": "PRBUN",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 299059,
+                "proba": "99.58"
+            },
+            {
+                "label": 1,
+                "size": 1271,
+                "proba": "0.42"
+            }
+        ],
+        "parent_id": 1,
+        "node_id": 2,
+        "n_node_samples": 300330,
+        "proba": "0.42"
+    },
+    {
+        "node_text": "PRALBUM",
+        "split_text": "< 21.3439",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 241069,
+                "proba": "99.73"
+            },
+            {
+                "label": 1,
+                "size": 642,
+                "proba": "0.27"
+            }
+        ],
+        "parent_id": 2,
+        "node_id": 3,
+        "n_node_samples": 241711,
+        "proba": "0.27"
+    },
+    {
+        "node_text": "SURGSPEC",
+        "split_text": "< 3.6492",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 72706,
+                "proba": "99.43"
+            },
+            {
+                "label": 1,
+                "size": 417,
+                "proba": "0.57"
+            }
+        ],
+        "parent_id": 3,
+        "node_id": 4,
+        "n_node_samples": 73123,
+        "proba": "0.57"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "Cardiac Surgery;Neurosurgery;Otolaryngology (ENT);Vascular",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 11193,
+                "proba": "98.14"
+            },
+            {
+                "label": 1,
+                "size": 212,
+                "proba": "1.86"
+            }
+        ],
+        "parent_id": 4,
+        "node_id": 5,
+        "n_node_samples": 11405,
+        "proba": "1.86"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "General Surgery;Gynecology;Interventional Radiologist;Orthopedics;Other;Plastics;Thoracic;Unknown;Urology",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 61513,
+                "proba": "99.67"
+            },
+            {
+                "label": 1,
+                "size": 205,
+                "proba": "0.33"
+            }
+        ],
+        "parent_id": 4,
+        "node_id": 6,
+        "n_node_samples": 61718,
+        "proba": "0.33"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 52.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 22058,
+                "proba": "99.93"
+            },
+            {
+                "label": 1,
+                "size": 15,
+                "proba": "0.07"
+            }
+        ],
+        "parent_id": 6,
+        "node_id": 7,
+        "n_node_samples": 22073,
+        "proba": "0.07"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "≥ 52.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 39455,
+                "proba": "99.52"
+            },
+            {
+                "label": 1,
+                "size": 190,
+                "proba": "0.48"
+            }
+        ],
+        "parent_id": 6,
+        "node_id": 8,
+        "n_node_samples": 39645,
+        "proba": "0.48"
+    },
+    {
+        "node_text": "PRALBUM",
+        "split_text": "< 72.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 22969,
+                "proba": "99.70"
+            },
+            {
+                "label": 1,
+                "size": 70,
+                "proba": "0.30"
+            }
+        ],
+        "parent_id": 8,
+        "node_id": 9,
+        "n_node_samples": 23039,
+        "proba": "0.30"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 3.0718",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 8368,
+                "proba": "99.45"
+            },
+            {
+                "label": 1,
+                "size": 46,
+                "proba": "0.55"
+            }
+        ],
+        "parent_id": 9,
+        "node_id": 10,
+        "n_node_samples": 8414,
+        "proba": "0.55"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 3.0718",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 14601,
+                "proba": "99.84"
+            },
+            {
+                "label": 1,
+                "size": 24,
+                "proba": "0.16"
+            }
+        ],
+        "parent_id": 9,
+        "node_id": 11,
+        "n_node_samples": 14625,
+        "proba": "0.16"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 72.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 16486,
+                "proba": "99.28"
+            },
+            {
+                "label": 1,
+                "size": 120,
+                "proba": "0.72"
+            }
+        ],
+        "parent_id": 8,
+        "node_id": 12,
+        "n_node_samples": 16606,
+        "proba": "0.72"
+    },
+    {
+        "node_text": "HYPERMED",
+        "split_text": "≥ 3.6492",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 168363,
+                "proba": "99.87"
+            },
+            {
+                "label": 1,
+                "size": 225,
+                "proba": "0.13"
+            }
+        ],
+        "parent_id": 3,
+        "node_id": 13,
+        "n_node_samples": 168588,
+        "proba": "0.13"
+    },
+    {
+        "node_text": "SURGSPEC",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 131860,
+                "proba": "99.96"
+            },
+            {
+                "label": 1,
+                "size": 57,
+                "proba": "0.04"
+            }
+        ],
+        "parent_id": 13,
+        "node_id": 14,
+        "n_node_samples": 131917,
+        "proba": "0.04"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "General Surgery;Gynecology;Orthopedics;Other;Otolaryngology (ENT);Plastics;Thoracic;Unknown;Urology",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 128362,
+                "proba": "99.98"
+            },
+            {
+                "label": 1,
+                "size": 23,
+                "proba": "0.02"
+            }
+        ],
+        "parent_id": 14,
+        "node_id": 15,
+        "n_node_samples": 128385,
+        "proba": "0.02"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 46.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 93943,
+                "proba": "100.00"
+            },
+            {
+                "label": 1,
+                "size": 3,
+                "proba": "0.00"
+            }
+        ],
+        "parent_id": 15,
+        "node_id": 16,
+        "n_node_samples": 93946,
+        "proba": "0.00"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 46.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 34419,
+                "proba": "99.94"
+            },
+            {
+                "label": 1,
+                "size": 20,
+                "proba": "0.06"
+            }
+        ],
+        "parent_id": 15,
+        "node_id": 17,
+        "n_node_samples": 34439,
+        "proba": "0.06"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "Cardiac Surgery;Interventional Radiologist;Neurosurgery;Vascular",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3498,
+                "proba": "99.04"
+            },
+            {
+                "label": 1,
+                "size": 34,
+                "proba": "0.96"
+            }
+        ],
+        "parent_id": 14,
+        "node_id": 18,
+        "n_node_samples": 3532,
+        "proba": "0.96"
+    },
+    {
+        "node_text": "SURGSPEC",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 36503,
+                "proba": "99.54"
+            },
+            {
+                "label": 1,
+                "size": 168,
+                "proba": "0.46"
+            }
+        ],
+        "parent_id": 13,
+        "node_id": 19,
+        "n_node_samples": 36671,
+        "proba": "0.46"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "General Surgery;Gynecology;Orthopedics;Other;Otolaryngology (ENT);Plastics;Unknown;Urology",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 31662,
+                "proba": "99.79"
+            },
+            {
+                "label": 1,
+                "size": 66,
+                "proba": "0.21"
+            }
+        ],
+        "parent_id": 19,
+        "node_id": 20,
+        "n_node_samples": 31728,
+        "proba": "0.21"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 61.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 17686,
+                "proba": "99.94"
+            },
+            {
+                "label": 1,
+                "size": 11,
+                "proba": "0.06"
+            }
+        ],
+        "parent_id": 20,
+        "node_id": 21,
+        "n_node_samples": 17697,
+        "proba": "0.06"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 61.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 13976,
+                "proba": "99.61"
+            },
+            {
+                "label": 1,
+                "size": 55,
+                "proba": "0.39"
+            }
+        ],
+        "parent_id": 20,
+        "node_id": 22,
+        "n_node_samples": 14031,
+        "proba": "0.39"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "Cardiac Surgery;Interventional Radiologist;Neurosurgery;Thoracic;Vascular",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 4841,
+                "proba": "97.94"
+            },
+            {
+                "label": 1,
+                "size": 102,
+                "proba": "2.06"
+            }
+        ],
+        "parent_id": 19,
+        "node_id": 23,
+        "n_node_samples": 4943,
+        "proba": "2.06"
+    },
+    {
+        "node_text": "WNDCLAS",
+        "split_text": "≥ 21.3439",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 57990,
+                "proba": "98.93"
+            },
+            {
+                "label": 1,
+                "size": 629,
+                "proba": "1.07"
+            }
+        ],
+        "parent_id": 2,
+        "node_id": 24,
+        "n_node_samples": 58619,
+        "proba": "1.07"
+    },
+    {
+        "node_text": "SURGSPEC",
+        "split_text": "< 1.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 19354,
+                "proba": "98.49"
+            },
+            {
+                "label": 1,
+                "size": 296,
+                "proba": "1.51"
+            }
+        ],
+        "parent_id": 24,
+        "node_id": 25,
+        "n_node_samples": 19650,
+        "proba": "1.51"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "General Surgery;Gynecology;Interventional Radiologist;Orthopedics;Other;Plastics;Thoracic;Unknown;Urology",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 10765,
+                "proba": "99.38"
+            },
+            {
+                "label": 1,
+                "size": 67,
+                "proba": "0.62"
+            }
+        ],
+        "parent_id": 25,
+        "node_id": 26,
+        "n_node_samples": 10832,
+        "proba": "0.62"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "Cardiac Surgery;Neurosurgery;Otolaryngology (ENT);Vascular",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 8589,
+                "proba": "97.40"
+            },
+            {
+                "label": 1,
+                "size": 229,
+                "proba": "2.60"
+            }
+        ],
+        "parent_id": 25,
+        "node_id": 27,
+        "n_node_samples": 8818,
+        "proba": "2.60"
+    },
+    {
+        "node_text": "PRCREAT",
+        "split_text": "≥ 1.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 38636,
+                "proba": "99.15"
+            },
+            {
+                "label": 1,
+                "size": 333,
+                "proba": "0.85"
+            }
+        ],
+        "parent_id": 24,
+        "node_id": 28,
+        "n_node_samples": 38969,
+        "proba": "0.85"
+    },
+    {
+        "node_text": "PRBUN",
+        "split_text": "< 1.4966",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 20564,
+                "proba": "99.44"
+            },
+            {
+                "label": 1,
+                "size": 115,
+                "proba": "0.56"
+            }
+        ],
+        "parent_id": 28,
+        "node_id": 29,
+        "n_node_samples": 20679,
+        "proba": "0.56"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "< 25.4347",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 9236,
+                "proba": "99.48"
+            },
+            {
+                "label": 1,
+                "size": 48,
+                "proba": "0.52"
+            }
+        ],
+        "parent_id": 29,
+        "node_id": 30,
+        "n_node_samples": 9284,
+        "proba": "0.52"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 68.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 5045,
+                "proba": "99.92"
+            },
+            {
+                "label": 1,
+                "size": 4,
+                "proba": "0.08"
+            }
+        ],
+        "parent_id": 30,
+        "node_id": 31,
+        "n_node_samples": 5049,
+        "proba": "0.08"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 68.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 4191,
+                "proba": "98.96"
+            },
+            {
+                "label": 1,
+                "size": 44,
+                "proba": "1.04"
+            }
+        ],
+        "parent_id": 30,
+        "node_id": 32,
+        "n_node_samples": 4235,
+        "proba": "1.04"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 25.4347",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 11328,
+                "proba": "99.41"
+            },
+            {
+                "label": 1,
+                "size": 67,
+                "proba": "0.59"
+            }
+        ],
+        "parent_id": 29,
+        "node_id": 33,
+        "n_node_samples": 11395,
+        "proba": "0.59"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 1.4966",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 18072,
+                "proba": "98.81"
+            },
+            {
+                "label": 1,
+                "size": 218,
+                "proba": "1.19"
+            }
+        ],
+        "parent_id": 28,
+        "node_id": 34,
+        "n_node_samples": 18290,
+        "proba": "1.19"
+    },
+    {
+        "node_text": "SURGSPEC",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 12303,
+                "proba": "97.31"
+            },
+            {
+                "label": 1,
+                "size": 340,
+                "proba": "2.69"
+            }
+        ],
+        "parent_id": 1,
+        "node_id": 35,
+        "n_node_samples": 12643,
+        "proba": "2.69"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "General Surgery;Gynecology;Interventional Radiologist;Orthopedics;Otolaryngology (ENT);Unknown;Urology",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 9014,
+                "proba": "98.05"
+            },
+            {
+                "label": 1,
+                "size": 179,
+                "proba": "1.95"
+            }
+        ],
+        "parent_id": 35,
+        "node_id": 36,
+        "n_node_samples": 9193,
+        "proba": "1.95"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "Cardiac Surgery;Neurosurgery;Other;Plastics;Thoracic;Vascular",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3289,
+                "proba": "95.33"
+            },
+            {
+                "label": 1,
+                "size": 161,
+                "proba": "4.67"
+            }
+        ],
+        "parent_id": 35,
+        "node_id": 37,
+        "n_node_samples": 3450,
+        "proba": "4.67"
+    }
+]

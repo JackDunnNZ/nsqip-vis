@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Optimal Trees for Morbidity and Mortality</title>
+
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <div id="select-container">
+      <select id="morb"></select>
+      <select id="extra-vars"></select>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <script src="trees.js"></script>
+
+    <script>
+      var trees;
+      $.getJSON('trees/index.json', function(json){ //get data from file
+        trees = json;
+
+        var morbselect = $('#morb');
+        var extravarsselect = $('#extra-vars');
+
+
+        extravarsselect.change(function() {
+          var morb = morbselect.val();
+          var vartype = extravarsselect.val();
+          var treename = morb + '_' + vartype + '.json';
+          loadtree('trees/' + treename);
+        });
+
+        morbselect.change(function() {
+          var morb = morbselect.val();
+          extravarsselect.find('option').remove().end();
+          var morbvars = trees[morb];
+          for (var i = 0; i < morbvars.length; i++) {
+            extravarsselect.append('<option>' + morbvars[i] + '</option>');
+          }
+          extravarsselect.trigger('change');
+        });
+        for (morb in trees) {
+          if (trees.hasOwnProperty(morb)) {
+            morbselect.append('<option>' + morb + '</option>');
+          }
+        }
+        morbselect.val(morb);
+        morbselect.trigger('change');
+      });
+    </script>
+
+
+  </body>
+</html>

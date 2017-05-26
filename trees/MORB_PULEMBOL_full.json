@@ -1,0 +1,582 @@
+[
+    {
+        "node_text": "ASACLAS",
+        "split_text": "",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 311305,
+                "proba": "99.47"
+            },
+            {
+                "label": 1,
+                "size": 1668,
+                "proba": "0.53"
+            }
+        ],
+        "parent_id": -2,
+        "node_id": 1,
+        "n_node_samples": 312973,
+        "proba": "0.53"
+    },
+    {
+        "node_text": "CPT_CAT",
+        "split_text": "< 2.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 164863,
+                "proba": "99.82"
+            },
+            {
+                "label": 1,
+                "size": 298,
+                "proba": "0.18"
+            }
+        ],
+        "parent_id": 1,
+        "node_id": 2,
+        "n_node_samples": 165161,
+        "proba": "0.18"
+    },
+    {
+        "node_text": "CPT_Digestive",
+        "split_text": "1x: Integumentary system;2x: Musculoskeletal system;30x-32x: Respiratory system;38x: Hemic and lymphatic systems;4x: Digestive system;50x-53x: Urinary system;54x-55x: Male genital system and intersex;56x-58x: Female genital system;59x: Maternity and delivery;60x: Endocrine system;MISSING",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 162484,
+                "proba": "99.83"
+            },
+            {
+                "label": 1,
+                "size": 274,
+                "proba": "0.17"
+            }
+        ],
+        "parent_id": 2,
+        "node_id": 3,
+        "n_node_samples": 162758,
+        "proba": "0.17"
+    },
+    {
+        "node_text": "CPT_Digestive",
+        "split_text": "404x-426x: Mouth;44120;44140;44143;441x: Intestines - excision;442x: Intestines - laproscopic;443x-447x: Intestines - other;44950;44970;46x: Anus;47562;MISSING",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 121691,
+                "proba": "99.86"
+            },
+            {
+                "label": 1,
+                "size": 170,
+                "proba": "0.14"
+            }
+        ],
+        "parent_id": 3,
+        "node_id": 4,
+        "n_node_samples": 121861,
+        "proba": "0.14"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "430x-434x: Esophagus;44120;44140;44143;441x: Intestines - excision;442x: Intestines - laproscopic;443x-447x: Intestines - other;449x: Appendix;49000",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 13438,
+                "proba": "99.23"
+            },
+            {
+                "label": 1,
+                "size": 104,
+                "proba": "0.77"
+            }
+        ],
+        "parent_id": 4,
+        "node_id": 5,
+        "n_node_samples": 13542,
+        "proba": "0.77"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "404x-426x: Mouth;435x-439x: Stomach;44005;440x: Intestines - incision;448x: Meckels Diverticulum and the Mesentery;44950;44970;45x: Rectum;46x: Anus;47562;47x: Liver and bilary tract;48x: Pancreas;49x: Abdomen, Peritoneum, and Omentum;MISSING;Not digestive surgery",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 108253,
+                "proba": "99.94"
+            },
+            {
+                "label": 1,
+                "size": 66,
+                "proba": "0.06"
+            }
+        ],
+        "parent_id": 4,
+        "node_id": 6,
+        "n_node_samples": 108319,
+        "proba": "0.06"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 48.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 83013,
+                "proba": "99.97"
+            },
+            {
+                "label": 1,
+                "size": 26,
+                "proba": "0.03"
+            }
+        ],
+        "parent_id": 6,
+        "node_id": 7,
+        "n_node_samples": 83039,
+        "proba": "0.03"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 48.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 25240,
+                "proba": "99.84"
+            },
+            {
+                "label": 1,
+                "size": 40,
+                "proba": "0.16"
+            }
+        ],
+        "parent_id": 6,
+        "node_id": 8,
+        "n_node_samples": 25280,
+        "proba": "0.16"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "430x-434x: Esophagus;435x-439x: Stomach;44005;440x: Intestines - incision;448x: Meckels Diverticulum and the Mesentery;449x: Appendix;45x: Rectum;47x: Liver and bilary tract;48x: Pancreas;49000;49x: Abdomen, Peritoneum, and Omentum;Not digestive surgery",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 40793,
+                "proba": "99.75"
+            },
+            {
+                "label": 1,
+                "size": 104,
+                "proba": "0.25"
+            }
+        ],
+        "parent_id": 3,
+        "node_id": 9,
+        "n_node_samples": 40897,
+        "proba": "0.25"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 51.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 24527,
+                "proba": "99.89"
+            },
+            {
+                "label": 1,
+                "size": 27,
+                "proba": "0.11"
+            }
+        ],
+        "parent_id": 9,
+        "node_id": 10,
+        "n_node_samples": 24554,
+        "proba": "0.11"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 51.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 16266,
+                "proba": "99.53"
+            },
+            {
+                "label": 1,
+                "size": 77,
+                "proba": "0.47"
+            }
+        ],
+        "parent_id": 9,
+        "node_id": 11,
+        "n_node_samples": 16343,
+        "proba": "0.47"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "33x-37x: Cardiovascular system;39x: Mediastinum and diaphragm;61x-64x: Nervous system, eyes, auditory",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2379,
+                "proba": "99.00"
+            },
+            {
+                "label": 1,
+                "size": 24,
+                "proba": "1.00"
+            }
+        ],
+        "parent_id": 2,
+        "node_id": 12,
+        "n_node_samples": 2403,
+        "proba": "1.00"
+    },
+    {
+        "node_text": "CPT_Digestive",
+        "split_text": "≥ 2.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 146442,
+                "proba": "99.07"
+            },
+            {
+                "label": 1,
+                "size": 1370,
+                "proba": "0.93"
+            }
+        ],
+        "parent_id": 1,
+        "node_id": 13,
+        "n_node_samples": 147812,
+        "proba": "0.93"
+    },
+    {
+        "node_text": "PRALBUM",
+        "split_text": "404x-426x: Mouth;430x-434x: Esophagus;435x-439x: Stomach;44005;440x: Intestines - incision;44120;44140;44143;441x: Intestines - excision;442x: Intestines - laproscopic;443x-447x: Intestines - other;48x: Pancreas;49000;MISSING",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 57644,
+                "proba": "98.70"
+            },
+            {
+                "label": 1,
+                "size": 761,
+                "proba": "1.30"
+            }
+        ],
+        "parent_id": 13,
+        "node_id": 14,
+        "n_node_samples": 58405,
+        "proba": "1.30"
+    },
+    {
+        "node_text": "PRPTT",
+        "split_text": "< 3.8431",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 44666,
+                "proba": "98.57"
+            },
+            {
+                "label": 1,
+                "size": 646,
+                "proba": "1.43"
+            }
+        ],
+        "parent_id": 14,
+        "node_id": 15,
+        "n_node_samples": 45312,
+        "proba": "1.43"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 29.9578",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 21938,
+                "proba": "98.38"
+            },
+            {
+                "label": 1,
+                "size": 362,
+                "proba": "1.62"
+            }
+        ],
+        "parent_id": 15,
+        "node_id": 16,
+        "n_node_samples": 22300,
+        "proba": "1.62"
+    },
+    {
+        "node_text": "PRCREAT",
+        "split_text": "≥ 29.9578",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 22728,
+                "proba": "98.77"
+            },
+            {
+                "label": 1,
+                "size": 284,
+                "proba": "1.23"
+            }
+        ],
+        "parent_id": 15,
+        "node_id": 17,
+        "n_node_samples": 23012,
+        "proba": "1.23"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "< 2.1234",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 17536,
+                "proba": "98.56"
+            },
+            {
+                "label": 1,
+                "size": 257,
+                "proba": "1.44"
+            }
+        ],
+        "parent_id": 17,
+        "node_id": 18,
+        "n_node_samples": 17793,
+        "proba": "1.44"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 73.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 10816,
+                "proba": "98.19"
+            },
+            {
+                "label": 1,
+                "size": 199,
+                "proba": "1.81"
+            }
+        ],
+        "parent_id": 18,
+        "node_id": 19,
+        "n_node_samples": 11015,
+        "proba": "1.81"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 73.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 6720,
+                "proba": "99.14"
+            },
+            {
+                "label": 1,
+                "size": 58,
+                "proba": "0.86"
+            }
+        ],
+        "parent_id": 18,
+        "node_id": 20,
+        "n_node_samples": 6778,
+        "proba": "0.86"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 2.1234",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 5192,
+                "proba": "99.48"
+            },
+            {
+                "label": 1,
+                "size": 27,
+                "proba": "0.52"
+            }
+        ],
+        "parent_id": 17,
+        "node_id": 21,
+        "n_node_samples": 5219,
+        "proba": "0.52"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 3.8431",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 12978,
+                "proba": "99.12"
+            },
+            {
+                "label": 1,
+                "size": 115,
+                "proba": "0.88"
+            }
+        ],
+        "parent_id": 14,
+        "node_id": 22,
+        "n_node_samples": 13093,
+        "proba": "0.88"
+    },
+    {
+        "node_text": "CPT_CAT",
+        "split_text": "448x: Meckels Diverticulum and the Mesentery;44950;44970;449x: Appendix;45x: Rectum;46x: Anus;47562;47x: Liver and bilary tract;49x: Abdomen, Peritoneum, and Omentum;Not digestive surgery",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 88798,
+                "proba": "99.32"
+            },
+            {
+                "label": 1,
+                "size": 609,
+                "proba": "0.68"
+            }
+        ],
+        "parent_id": 13,
+        "node_id": 23,
+        "n_node_samples": 89407,
+        "proba": "0.68"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "38x: Hemic and lymphatic systems;39x: Mediastinum and diaphragm;61x-64x: Nervous system, eyes, auditory",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 4945,
+                "proba": "98.10"
+            },
+            {
+                "label": 1,
+                "size": 96,
+                "proba": "1.90"
+            }
+        ],
+        "parent_id": 23,
+        "node_id": 24,
+        "n_node_samples": 5041,
+        "proba": "1.90"
+    },
+    {
+        "node_text": "CPT_Digestive",
+        "split_text": "1x: Integumentary system;2x: Musculoskeletal system;30x-32x: Respiratory system;33x-37x: Cardiovascular system;4x: Digestive system;50x-53x: Urinary system;54x-55x: Male genital system and intersex;56x-58x: Female genital system;59x: Maternity and delivery;60x: Endocrine system;MISSING",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 83853,
+                "proba": "99.39"
+            },
+            {
+                "label": 1,
+                "size": 513,
+                "proba": "0.61"
+            }
+        ],
+        "parent_id": 23,
+        "node_id": 25,
+        "n_node_samples": 84366,
+        "proba": "0.61"
+    },
+    {
+        "node_text": "ASACLAS",
+        "split_text": "44950;449x: Appendix;47x: Liver and bilary tract;49x: Abdomen, Peritoneum, and Omentum;Not digestive surgery",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 68563,
+                "proba": "99.31"
+            },
+            {
+                "label": 1,
+                "size": 478,
+                "proba": "0.69"
+            }
+        ],
+        "parent_id": 25,
+        "node_id": 26,
+        "n_node_samples": 69041,
+        "proba": "0.69"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 3.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 42324,
+                "proba": "99.45"
+            },
+            {
+                "label": 1,
+                "size": 234,
+                "proba": "0.55"
+            }
+        ],
+        "parent_id": 26,
+        "node_id": 27,
+        "n_node_samples": 42558,
+        "proba": "0.55"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 3.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 26239,
+                "proba": "99.08"
+            },
+            {
+                "label": 1,
+                "size": 244,
+                "proba": "0.92"
+            }
+        ],
+        "parent_id": 26,
+        "node_id": 28,
+        "n_node_samples": 26483,
+        "proba": "0.92"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "404x-426x: Mouth;430x-434x: Esophagus;435x-439x: Stomach;44005;440x: Intestines - incision;44120;44140;44143;441x: Intestines - excision;442x: Intestines - laproscopic;443x-447x: Intestines - other;448x: Meckels Diverticulum and the Mesentery;44970;45x: Rectum;46x: Anus;47562;48x: Pancreas;49000;MISSING",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 15290,
+                "proba": "99.77"
+            },
+            {
+                "label": 1,
+                "size": 35,
+                "proba": "0.23"
+            }
+        ],
+        "parent_id": 25,
+        "node_id": 29,
+        "n_node_samples": 15325,
+        "proba": "0.23"
+    }
+]

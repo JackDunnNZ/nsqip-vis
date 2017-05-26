@@ -1,0 +1,2382 @@
+[
+    {
+        "node_text": "Age",
+        "split_text": "",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 305551,
+                "proba": "97.63"
+            },
+            {
+                "label": 1,
+                "size": 7422,
+                "proba": "2.37"
+            }
+        ],
+        "parent_id": -2,
+        "node_id": 1,
+        "n_node_samples": 312973,
+        "proba": "2.37"
+    },
+    {
+        "node_text": "PRPTT",
+        "split_text": "< 67.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 224262,
+                "proba": "98.59"
+            },
+            {
+                "label": 1,
+                "size": 3214,
+                "proba": "1.41"
+            }
+        ],
+        "parent_id": 1,
+        "node_id": 2,
+        "n_node_samples": 227476,
+        "proba": "1.41"
+    },
+    {
+        "node_text": "INOUT_OUTPATIENT",
+        "split_text": "< 49.4441",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 220681,
+                "proba": "98.64"
+            },
+            {
+                "label": 1,
+                "size": 3053,
+                "proba": "1.36"
+            }
+        ],
+        "parent_id": 2,
+        "node_id": 3,
+        "n_node_samples": 223734,
+        "proba": "1.36"
+    },
+    {
+        "node_text": "VENTILAT",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 179871,
+                "proba": "98.41"
+            },
+            {
+                "label": 1,
+                "size": 2906,
+                "proba": "1.59"
+            }
+        ],
+        "parent_id": 3,
+        "node_id": 4,
+        "n_node_samples": 182777,
+        "proba": "1.59"
+    },
+    {
+        "node_text": "PRCREAT",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 173891,
+                "proba": "98.60"
+            },
+            {
+                "label": 1,
+                "size": 2468,
+                "proba": "1.40"
+            }
+        ],
+        "parent_id": 4,
+        "node_id": 5,
+        "n_node_samples": 176359,
+        "proba": "1.40"
+    },
+    {
+        "node_text": "SURGSPEC",
+        "split_text": "< 5.8016",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 171880,
+                "proba": "98.60"
+            },
+            {
+                "label": 1,
+                "size": 2444,
+                "proba": "1.40"
+            }
+        ],
+        "parent_id": 5,
+        "node_id": 6,
+        "n_node_samples": 174324,
+        "proba": "1.40"
+    },
+    {
+        "node_text": "PRSEPIS",
+        "split_text": "Cardiac Surgery;General Surgery;Gynecology;Interventional Radiologist;Orthopedics;Other;Otolaryngology (ENT);Plastics;Thoracic;Unknown;Urology;Vascular",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 169303,
+                "proba": "98.65"
+            },
+            {
+                "label": 1,
+                "size": 2310,
+                "proba": "1.35"
+            }
+        ],
+        "parent_id": 6,
+        "node_id": 7,
+        "n_node_samples": 171613,
+        "proba": "1.35"
+    },
+    {
+        "node_text": "PRBUN",
+        "split_text": "MISSING;None;SIRS;Sepsis",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 166280,
+                "proba": "98.73"
+            },
+            {
+                "label": 1,
+                "size": 2137,
+                "proba": "1.27"
+            }
+        ],
+        "parent_id": 7,
+        "node_id": 8,
+        "n_node_samples": 168417,
+        "proba": "1.27"
+    },
+    {
+        "node_text": "HYPERMED",
+        "split_text": "< 26.9454",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 156964,
+                "proba": "98.88"
+            },
+            {
+                "label": 1,
+                "size": 1770,
+                "proba": "1.12"
+            }
+        ],
+        "parent_id": 8,
+        "node_id": 9,
+        "n_node_samples": 158734,
+        "proba": "1.12"
+    },
+    {
+        "node_text": "PRHCT",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 120333,
+                "proba": "99.14"
+            },
+            {
+                "label": 1,
+                "size": 1040,
+                "proba": "0.86"
+            }
+        ],
+        "parent_id": 9,
+        "node_id": 10,
+        "n_node_samples": 121373,
+        "proba": "0.86"
+    },
+    {
+        "node_text": "PRALBUM",
+        "split_text": "< 33.0004",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 12872,
+                "proba": "97.57"
+            },
+            {
+                "label": 1,
+                "size": 320,
+                "proba": "2.43"
+            }
+        ],
+        "parent_id": 10,
+        "node_id": 11,
+        "n_node_samples": 13192,
+        "proba": "2.43"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 2.8203",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3437,
+                "proba": "95.61"
+            },
+            {
+                "label": 1,
+                "size": 158,
+                "proba": "4.39"
+            }
+        ],
+        "parent_id": 11,
+        "node_id": 12,
+        "n_node_samples": 3595,
+        "proba": "4.39"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 2.8203",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 9435,
+                "proba": "98.31"
+            },
+            {
+                "label": 1,
+                "size": 162,
+                "proba": "1.69"
+            }
+        ],
+        "parent_id": 11,
+        "node_id": 13,
+        "n_node_samples": 9597,
+        "proba": "1.69"
+    },
+    {
+        "node_text": "PRPLATE",
+        "split_text": "≥ 33.0004",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 107461,
+                "proba": "99.33"
+            },
+            {
+                "label": 1,
+                "size": 720,
+                "proba": "0.67"
+            }
+        ],
+        "parent_id": 10,
+        "node_id": 14,
+        "n_node_samples": 108181,
+        "proba": "0.67"
+    },
+    {
+        "node_text": "PRCREAT",
+        "split_text": "< 527.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 106645,
+                "proba": "99.35"
+            },
+            {
+                "label": 1,
+                "size": 699,
+                "proba": "0.65"
+            }
+        ],
+        "parent_id": 14,
+        "node_id": 15,
+        "n_node_samples": 107344,
+        "proba": "0.65"
+    },
+    {
+        "node_text": "PRALBUM",
+        "split_text": "< 0.6606",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 18755,
+                "proba": "98.87"
+            },
+            {
+                "label": 1,
+                "size": 215,
+                "proba": "1.13"
+            }
+        ],
+        "parent_id": 15,
+        "node_id": 16,
+        "n_node_samples": 18970,
+        "proba": "1.13"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "< 3.866",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 6732,
+                "proba": "98.28"
+            },
+            {
+                "label": 1,
+                "size": 118,
+                "proba": "1.72"
+            }
+        ],
+        "parent_id": 16,
+        "node_id": 17,
+        "n_node_samples": 6850,
+        "proba": "1.72"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 59.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 5792,
+                "proba": "98.67"
+            },
+            {
+                "label": 1,
+                "size": 78,
+                "proba": "1.33"
+            }
+        ],
+        "parent_id": 17,
+        "node_id": 18,
+        "n_node_samples": 5870,
+        "proba": "1.33"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 59.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 940,
+                "proba": "95.92"
+            },
+            {
+                "label": 1,
+                "size": 40,
+                "proba": "4.08"
+            }
+        ],
+        "parent_id": 17,
+        "node_id": 19,
+        "n_node_samples": 980,
+        "proba": "4.08"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 3.866",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 12023,
+                "proba": "99.20"
+            },
+            {
+                "label": 1,
+                "size": 97,
+                "proba": "0.80"
+            }
+        ],
+        "parent_id": 16,
+        "node_id": 20,
+        "n_node_samples": 12120,
+        "proba": "0.80"
+    },
+    {
+        "node_text": "SEX_MALE",
+        "split_text": "≥ 0.6606",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 87890,
+                "proba": "99.45"
+            },
+            {
+                "label": 1,
+                "size": 484,
+                "proba": "0.55"
+            }
+        ],
+        "parent_id": 15,
+        "node_id": 21,
+        "n_node_samples": 88374,
+        "proba": "0.55"
+    },
+    {
+        "node_text": "DIABETES",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 35585,
+                "proba": "98.98"
+            },
+            {
+                "label": 1,
+                "size": 366,
+                "proba": "1.02"
+            }
+        ],
+        "parent_id": 21,
+        "node_id": 22,
+        "n_node_samples": 35951,
+        "proba": "1.02"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "INSULIN;NON-INSULIN",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 739,
+                "proba": "96.85"
+            },
+            {
+                "label": 1,
+                "size": 24,
+                "proba": "3.15"
+            }
+        ],
+        "parent_id": 22,
+        "node_id": 23,
+        "n_node_samples": 763,
+        "proba": "3.15"
+    },
+    {
+        "node_text": "PRALBUM",
+        "split_text": "NO;ORAL",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 34846,
+                "proba": "99.03"
+            },
+            {
+                "label": 1,
+                "size": 342,
+                "proba": "0.97"
+            }
+        ],
+        "parent_id": 22,
+        "node_id": 24,
+        "n_node_samples": 35188,
+        "proba": "0.97"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 3.1473",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1467,
+                "proba": "97.15"
+            },
+            {
+                "label": 1,
+                "size": 43,
+                "proba": "2.85"
+            }
+        ],
+        "parent_id": 24,
+        "node_id": 25,
+        "n_node_samples": 1510,
+        "proba": "2.85"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 3.1473",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 33379,
+                "proba": "99.11"
+            },
+            {
+                "label": 1,
+                "size": 299,
+                "proba": "0.89"
+            }
+        ],
+        "parent_id": 24,
+        "node_id": 26,
+        "n_node_samples": 33678,
+        "proba": "0.89"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 52305,
+                "proba": "99.77"
+            },
+            {
+                "label": 1,
+                "size": 118,
+                "proba": "0.23"
+            }
+        ],
+        "parent_id": 21,
+        "node_id": 27,
+        "n_node_samples": 52423,
+        "proba": "0.23"
+    },
+    {
+        "node_text": "PRALBUM",
+        "split_text": "< 58.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 47519,
+                "proba": "99.83"
+            },
+            {
+                "label": 1,
+                "size": 79,
+                "proba": "0.17"
+            }
+        ],
+        "parent_id": 27,
+        "node_id": 28,
+        "n_node_samples": 47598,
+        "proba": "0.17"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 3.9128",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 10606,
+                "proba": "99.60"
+            },
+            {
+                "label": 1,
+                "size": 43,
+                "proba": "0.40"
+            }
+        ],
+        "parent_id": 28,
+        "node_id": 29,
+        "n_node_samples": 10649,
+        "proba": "0.40"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 3.9128",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 36913,
+                "proba": "99.90"
+            },
+            {
+                "label": 1,
+                "size": 36,
+                "proba": "0.10"
+            }
+        ],
+        "parent_id": 28,
+        "node_id": 30,
+        "n_node_samples": 36949,
+        "proba": "0.10"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 58.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 4786,
+                "proba": "99.19"
+            },
+            {
+                "label": 1,
+                "size": 39,
+                "proba": "0.81"
+            }
+        ],
+        "parent_id": 27,
+        "node_id": 31,
+        "n_node_samples": 4825,
+        "proba": "0.81"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 527.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 816,
+                "proba": "97.49"
+            },
+            {
+                "label": 1,
+                "size": 21,
+                "proba": "2.51"
+            }
+        ],
+        "parent_id": 14,
+        "node_id": 32,
+        "n_node_samples": 837,
+        "proba": "2.51"
+    },
+    {
+        "node_text": "PRPLATE",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 36631,
+                "proba": "98.05"
+            },
+            {
+                "label": 1,
+                "size": 730,
+                "proba": "1.95"
+            }
+        ],
+        "parent_id": 9,
+        "node_id": 33,
+        "n_node_samples": 37361,
+        "proba": "1.95"
+    },
+    {
+        "node_text": "PRHCT",
+        "split_text": "< 386.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 33247,
+                "proba": "98.14"
+            },
+            {
+                "label": 1,
+                "size": 629,
+                "proba": "1.86"
+            }
+        ],
+        "parent_id": 33,
+        "node_id": 34,
+        "n_node_samples": 33876,
+        "proba": "1.86"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 31.945",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 4201,
+                "proba": "96.53"
+            },
+            {
+                "label": 1,
+                "size": 151,
+                "proba": "3.47"
+            }
+        ],
+        "parent_id": 34,
+        "node_id": 35,
+        "n_node_samples": 4352,
+        "proba": "3.47"
+    },
+    {
+        "node_text": "PRCREAT",
+        "split_text": "≥ 31.945",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 29046,
+                "proba": "98.38"
+            },
+            {
+                "label": 1,
+                "size": 478,
+                "proba": "1.62"
+            }
+        ],
+        "parent_id": 34,
+        "node_id": 36,
+        "n_node_samples": 29524,
+        "proba": "1.62"
+    },
+    {
+        "node_text": "PRALBUM",
+        "split_text": "< 0.7014",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 6926,
+                "proba": "97.71"
+            },
+            {
+                "label": 1,
+                "size": 162,
+                "proba": "2.29"
+            }
+        ],
+        "parent_id": 36,
+        "node_id": 37,
+        "n_node_samples": 7088,
+        "proba": "2.29"
+    },
+    {
+        "node_text": "PRBUN",
+        "split_text": "< 3.9561",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 4124,
+                "proba": "96.85"
+            },
+            {
+                "label": 1,
+                "size": 134,
+                "proba": "3.15"
+            }
+        ],
+        "parent_id": 37,
+        "node_id": 38,
+        "n_node_samples": 4258,
+        "proba": "3.15"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 15.1179",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3436,
+                "proba": "97.50"
+            },
+            {
+                "label": 1,
+                "size": 88,
+                "proba": "2.50"
+            }
+        ],
+        "parent_id": 38,
+        "node_id": 39,
+        "n_node_samples": 3524,
+        "proba": "2.50"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 15.1179",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 688,
+                "proba": "93.73"
+            },
+            {
+                "label": 1,
+                "size": 46,
+                "proba": "6.27"
+            }
+        ],
+        "parent_id": 38,
+        "node_id": 40,
+        "n_node_samples": 734,
+        "proba": "6.27"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 3.9561",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2802,
+                "proba": "99.01"
+            },
+            {
+                "label": 1,
+                "size": 28,
+                "proba": "0.99"
+            }
+        ],
+        "parent_id": 37,
+        "node_id": 41,
+        "n_node_samples": 2830,
+        "proba": "0.99"
+    },
+    {
+        "node_text": "SEX_MALE",
+        "split_text": "≥ 0.7014",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 22120,
+                "proba": "98.59"
+            },
+            {
+                "label": 1,
+                "size": 316,
+                "proba": "1.41"
+            }
+        ],
+        "parent_id": 36,
+        "node_id": 42,
+        "n_node_samples": 22436,
+        "proba": "1.41"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 8156,
+                "proba": "97.74"
+            },
+            {
+                "label": 1,
+                "size": 189,
+                "proba": "2.26"
+            }
+        ],
+        "parent_id": 42,
+        "node_id": 43,
+        "n_node_samples": 8345,
+        "proba": "2.26"
+    },
+    {
+        "node_text": "PRALBUM",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 13964,
+                "proba": "99.10"
+            },
+            {
+                "label": 1,
+                "size": 127,
+                "proba": "0.90"
+            }
+        ],
+        "parent_id": 42,
+        "node_id": 44,
+        "n_node_samples": 14091,
+        "proba": "0.90"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 3.9",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 7216,
+                "proba": "98.71"
+            },
+            {
+                "label": 1,
+                "size": 94,
+                "proba": "1.29"
+            }
+        ],
+        "parent_id": 44,
+        "node_id": 45,
+        "n_node_samples": 7310,
+        "proba": "1.29"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 3.9",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 6748,
+                "proba": "99.51"
+            },
+            {
+                "label": 1,
+                "size": 33,
+                "proba": "0.49"
+            }
+        ],
+        "parent_id": 44,
+        "node_id": 46,
+        "n_node_samples": 6781,
+        "proba": "0.49"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 386.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3384,
+                "proba": "97.10"
+            },
+            {
+                "label": 1,
+                "size": 101,
+                "proba": "2.90"
+            }
+        ],
+        "parent_id": 33,
+        "node_id": 47,
+        "n_node_samples": 3485,
+        "proba": "2.90"
+    },
+    {
+        "node_text": "PRALBUM",
+        "split_text": "≥ 26.9454",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 9316,
+                "proba": "96.21"
+            },
+            {
+                "label": 1,
+                "size": 367,
+                "proba": "3.79"
+            }
+        ],
+        "parent_id": 8,
+        "node_id": 48,
+        "n_node_samples": 9683,
+        "proba": "3.79"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 2.9",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2888,
+                "proba": "94.32"
+            },
+            {
+                "label": 1,
+                "size": 174,
+                "proba": "5.68"
+            }
+        ],
+        "parent_id": 48,
+        "node_id": 49,
+        "n_node_samples": 3062,
+        "proba": "5.68"
+    },
+    {
+        "node_text": "SEX_MALE",
+        "split_text": "≥ 2.9",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 6428,
+                "proba": "97.09"
+            },
+            {
+                "label": 1,
+                "size": 193,
+                "proba": "2.91"
+            }
+        ],
+        "parent_id": 48,
+        "node_id": 50,
+        "n_node_samples": 6621,
+        "proba": "2.91"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2490,
+                "proba": "95.99"
+            },
+            {
+                "label": 1,
+                "size": 104,
+                "proba": "4.01"
+            }
+        ],
+        "parent_id": 50,
+        "node_id": 51,
+        "n_node_samples": 2594,
+        "proba": "4.01"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3938,
+                "proba": "97.79"
+            },
+            {
+                "label": 1,
+                "size": 89,
+                "proba": "2.21"
+            }
+        ],
+        "parent_id": 50,
+        "node_id": 52,
+        "n_node_samples": 4027,
+        "proba": "2.21"
+    },
+    {
+        "node_text": "BMI",
+        "split_text": "Septic Shock",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3023,
+                "proba": "94.59"
+            },
+            {
+                "label": 1,
+                "size": 173,
+                "proba": "5.41"
+            }
+        ],
+        "parent_id": 7,
+        "node_id": 53,
+        "n_node_samples": 3196,
+        "proba": "5.41"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 24.6729",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 888,
+                "proba": "97.16"
+            },
+            {
+                "label": 1,
+                "size": 26,
+                "proba": "2.84"
+            }
+        ],
+        "parent_id": 53,
+        "node_id": 54,
+        "n_node_samples": 914,
+        "proba": "2.84"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 24.6729",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2135,
+                "proba": "93.56"
+            },
+            {
+                "label": 1,
+                "size": 147,
+                "proba": "6.44"
+            }
+        ],
+        "parent_id": 53,
+        "node_id": 55,
+        "n_node_samples": 2282,
+        "proba": "6.44"
+    },
+    {
+        "node_text": "RACE_NEW",
+        "split_text": "Neurosurgery",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2577,
+                "proba": "95.06"
+            },
+            {
+                "label": 1,
+                "size": 134,
+                "proba": "4.94"
+            }
+        ],
+        "parent_id": 6,
+        "node_id": 56,
+        "n_node_samples": 2711,
+        "proba": "4.94"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "Asian;Black or African American;MISSING;Native Hawaiian or Pacific Islander;Unknown",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 573,
+                "proba": "91.83"
+            },
+            {
+                "label": 1,
+                "size": 51,
+                "proba": "8.17"
+            }
+        ],
+        "parent_id": 56,
+        "node_id": 57,
+        "n_node_samples": 624,
+        "proba": "8.17"
+    },
+    {
+        "node_text": "PRWBC",
+        "split_text": "American Indian or Alaska Native;Unknown/Not Reported;White",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2004,
+                "proba": "96.02"
+            },
+            {
+                "label": 1,
+                "size": 83,
+                "proba": "3.98"
+            }
+        ],
+        "parent_id": 56,
+        "node_id": 58,
+        "n_node_samples": 2087,
+        "proba": "3.98"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 12.4977",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1492,
+                "proba": "97.71"
+            },
+            {
+                "label": 1,
+                "size": 35,
+                "proba": "2.29"
+            }
+        ],
+        "parent_id": 58,
+        "node_id": 59,
+        "n_node_samples": 1527,
+        "proba": "2.29"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 12.4977",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 512,
+                "proba": "91.43"
+            },
+            {
+                "label": 1,
+                "size": 48,
+                "proba": "8.57"
+            }
+        ],
+        "parent_id": 58,
+        "node_id": 60,
+        "n_node_samples": 560,
+        "proba": "8.57"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 5.8016",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2011,
+                "proba": "98.82"
+            },
+            {
+                "label": 1,
+                "size": 24,
+                "proba": "1.18"
+            }
+        ],
+        "parent_id": 5,
+        "node_id": 61,
+        "n_node_samples": 2035,
+        "proba": "1.18"
+    },
+    {
+        "node_text": "SEX_MALE",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 5980,
+                "proba": "93.18"
+            },
+            {
+                "label": 1,
+                "size": 438,
+                "proba": "6.82"
+            }
+        ],
+        "parent_id": 4,
+        "node_id": 62,
+        "n_node_samples": 6418,
+        "proba": "6.82"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2517,
+                "proba": "90.44"
+            },
+            {
+                "label": 1,
+                "size": 266,
+                "proba": "9.56"
+            }
+        ],
+        "parent_id": 62,
+        "node_id": 63,
+        "n_node_samples": 2783,
+        "proba": "9.56"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3463,
+                "proba": "95.27"
+            },
+            {
+                "label": 1,
+                "size": 172,
+                "proba": "4.73"
+            }
+        ],
+        "parent_id": 62,
+        "node_id": 64,
+        "n_node_samples": 3635,
+        "proba": "4.73"
+    },
+    {
+        "node_text": "PRHCT",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 40810,
+                "proba": "99.64"
+            },
+            {
+                "label": 1,
+                "size": 147,
+                "proba": "0.36"
+            }
+        ],
+        "parent_id": 3,
+        "node_id": 65,
+        "n_node_samples": 40957,
+        "proba": "0.36"
+    },
+    {
+        "node_text": "PRBUN",
+        "split_text": "< 40.5004",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 15870,
+                "proba": "99.36"
+            },
+            {
+                "label": 1,
+                "size": 103,
+                "proba": "0.64"
+            }
+        ],
+        "parent_id": 65,
+        "node_id": 66,
+        "n_node_samples": 15973,
+        "proba": "0.64"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 7.9511",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2233,
+                "proba": "98.54"
+            },
+            {
+                "label": 1,
+                "size": 33,
+                "proba": "1.46"
+            }
+        ],
+        "parent_id": 66,
+        "node_id": 67,
+        "n_node_samples": 2266,
+        "proba": "1.46"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 7.9511",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 13637,
+                "proba": "99.49"
+            },
+            {
+                "label": 1,
+                "size": 70,
+                "proba": "0.51"
+            }
+        ],
+        "parent_id": 66,
+        "node_id": 68,
+        "n_node_samples": 13707,
+        "proba": "0.51"
+    },
+    {
+        "node_text": "SEX_MALE",
+        "split_text": "≥ 40.5004",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 24940,
+                "proba": "99.82"
+            },
+            {
+                "label": 1,
+                "size": 44,
+                "proba": "0.18"
+            }
+        ],
+        "parent_id": 65,
+        "node_id": 69,
+        "n_node_samples": 24984,
+        "proba": "0.18"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 7625,
+                "proba": "99.60"
+            },
+            {
+                "label": 1,
+                "size": 31,
+                "proba": "0.40"
+            }
+        ],
+        "parent_id": 69,
+        "node_id": 70,
+        "n_node_samples": 7656,
+        "proba": "0.40"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 17315,
+                "proba": "99.92"
+            },
+            {
+                "label": 1,
+                "size": 13,
+                "proba": "0.08"
+            }
+        ],
+        "parent_id": 69,
+        "node_id": 71,
+        "n_node_samples": 17328,
+        "proba": "0.08"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 36.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 10059,
+                "proba": "100.00"
+            },
+            {
+                "label": 1,
+                "size": 0,
+                "proba": "0.00"
+            }
+        ],
+        "parent_id": 71,
+        "node_id": 72,
+        "n_node_samples": 10059,
+        "proba": "0.00"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 36.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 7256,
+                "proba": "99.82"
+            },
+            {
+                "label": 1,
+                "size": 13,
+                "proba": "0.18"
+            }
+        ],
+        "parent_id": 71,
+        "node_id": 73,
+        "n_node_samples": 7269,
+        "proba": "0.18"
+    },
+    {
+        "node_text": "PRHCT",
+        "split_text": "≥ 49.4441",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3581,
+                "proba": "95.70"
+            },
+            {
+                "label": 1,
+                "size": 161,
+                "proba": "4.30"
+            }
+        ],
+        "parent_id": 2,
+        "node_id": 74,
+        "n_node_samples": 3742,
+        "proba": "4.30"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 32.25",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1677,
+                "proba": "94.00"
+            },
+            {
+                "label": 1,
+                "size": 107,
+                "proba": "6.00"
+            }
+        ],
+        "parent_id": 74,
+        "node_id": 75,
+        "n_node_samples": 1784,
+        "proba": "6.00"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 32.25",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1904,
+                "proba": "97.24"
+            },
+            {
+                "label": 1,
+                "size": 54,
+                "proba": "2.76"
+            }
+        ],
+        "parent_id": 74,
+        "node_id": 76,
+        "n_node_samples": 1958,
+        "proba": "2.76"
+    },
+    {
+        "node_text": "INOUT_OUTPATIENT",
+        "split_text": "≥ 67.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 81289,
+                "proba": "95.08"
+            },
+            {
+                "label": 1,
+                "size": 4208,
+                "proba": "4.92"
+            }
+        ],
+        "parent_id": 1,
+        "node_id": 77,
+        "n_node_samples": 85497,
+        "proba": "4.92"
+    },
+    {
+        "node_text": "PRHCT",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 78756,
+                "proba": "94.97"
+            },
+            {
+                "label": 1,
+                "size": 4167,
+                "proba": "5.03"
+            }
+        ],
+        "parent_id": 77,
+        "node_id": 78,
+        "n_node_samples": 82923,
+        "proba": "5.03"
+    },
+    {
+        "node_text": "PRBILI",
+        "split_text": "< 35.1097",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 33750,
+                "proba": "93.93"
+            },
+            {
+                "label": 1,
+                "size": 2181,
+                "proba": "6.07"
+            }
+        ],
+        "parent_id": 78,
+        "node_id": 79,
+        "n_node_samples": 35931,
+        "proba": "6.07"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 0.4092",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 7457,
+                "proba": "93.67"
+            },
+            {
+                "label": 1,
+                "size": 504,
+                "proba": "6.33"
+            }
+        ],
+        "parent_id": 79,
+        "node_id": 80,
+        "n_node_samples": 7961,
+        "proba": "6.33"
+    },
+    {
+        "node_text": "SURGSPEC",
+        "split_text": "≥ 0.4092",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 26293,
+                "proba": "94.00"
+            },
+            {
+                "label": 1,
+                "size": 1677,
+                "proba": "6.00"
+            }
+        ],
+        "parent_id": 79,
+        "node_id": 81,
+        "n_node_samples": 27970,
+        "proba": "6.00"
+    },
+    {
+        "node_text": "RACE_NEW",
+        "split_text": "Cardiac Surgery;General Surgery;Gynecology;Interventional Radiologist;Orthopedics;Otolaryngology (ENT);Plastics;Thoracic;Unknown;Vascular",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 25542,
+                "proba": "94.20"
+            },
+            {
+                "label": 1,
+                "size": 1574,
+                "proba": "5.80"
+            }
+        ],
+        "parent_id": 81,
+        "node_id": 82,
+        "n_node_samples": 27116,
+        "proba": "5.80"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "Unknown;Unknown/Not Reported",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3796,
+                "proba": "91.27"
+            },
+            {
+                "label": 1,
+                "size": 363,
+                "proba": "8.73"
+            }
+        ],
+        "parent_id": 82,
+        "node_id": 83,
+        "n_node_samples": 4159,
+        "proba": "8.73"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 76.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1342,
+                "proba": "94.57"
+            },
+            {
+                "label": 1,
+                "size": 77,
+                "proba": "5.43"
+            }
+        ],
+        "parent_id": 83,
+        "node_id": 84,
+        "n_node_samples": 1419,
+        "proba": "5.43"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 76.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2454,
+                "proba": "89.56"
+            },
+            {
+                "label": 1,
+                "size": 286,
+                "proba": "10.44"
+            }
+        ],
+        "parent_id": 83,
+        "node_id": 85,
+        "n_node_samples": 2740,
+        "proba": "10.44"
+    },
+    {
+        "node_text": "SEX_MALE",
+        "split_text": "American Indian or Alaska Native;Asian;Black or African American;MISSING;Native Hawaiian or Pacific Islander;White",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 21746,
+                "proba": "94.72"
+            },
+            {
+                "label": 1,
+                "size": 1211,
+                "proba": "5.28"
+            }
+        ],
+        "parent_id": 82,
+        "node_id": 86,
+        "n_node_samples": 22957,
+        "proba": "5.28"
+    },
+    {
+        "node_text": "DYSPNEA",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 12312,
+                "proba": "94.03"
+            },
+            {
+                "label": 1,
+                "size": 782,
+                "proba": "5.97"
+            }
+        ],
+        "parent_id": 86,
+        "node_id": 87,
+        "n_node_samples": 13094,
+        "proba": "5.97"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 0.6579",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 10138,
+                "proba": "94.45"
+            },
+            {
+                "label": 1,
+                "size": 596,
+                "proba": "5.55"
+            }
+        ],
+        "parent_id": 87,
+        "node_id": 88,
+        "n_node_samples": 10734,
+        "proba": "5.55"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 0.6579",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2174,
+                "proba": "92.12"
+            },
+            {
+                "label": 1,
+                "size": 186,
+                "proba": "7.88"
+            }
+        ],
+        "parent_id": 87,
+        "node_id": 89,
+        "n_node_samples": 2360,
+        "proba": "7.88"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 9434,
+                "proba": "95.65"
+            },
+            {
+                "label": 1,
+                "size": 429,
+                "proba": "4.35"
+            }
+        ],
+        "parent_id": 86,
+        "node_id": 90,
+        "n_node_samples": 9863,
+        "proba": "4.35"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "Neurosurgery;Other;Urology",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 751,
+                "proba": "87.94"
+            },
+            {
+                "label": 1,
+                "size": 103,
+                "proba": "12.06"
+            }
+        ],
+        "parent_id": 81,
+        "node_id": 91,
+        "n_node_samples": 854,
+        "proba": "12.06"
+    },
+    {
+        "node_text": "PRALBUM",
+        "split_text": "≥ 35.1097",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 45006,
+                "proba": "95.77"
+            },
+            {
+                "label": 1,
+                "size": 1986,
+                "proba": "4.23"
+            }
+        ],
+        "parent_id": 78,
+        "node_id": 92,
+        "n_node_samples": 46992,
+        "proba": "4.23"
+    },
+    {
+        "node_text": "PRSGOT",
+        "split_text": "< 3.0896",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 7285,
+                "proba": "94.75"
+            },
+            {
+                "label": 1,
+                "size": 404,
+                "proba": "5.25"
+            }
+        ],
+        "parent_id": 92,
+        "node_id": 93,
+        "n_node_samples": 7689,
+        "proba": "5.25"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 44.2685",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 5679,
+                "proba": "94.21"
+            },
+            {
+                "label": 1,
+                "size": 349,
+                "proba": "5.79"
+            }
+        ],
+        "parent_id": 93,
+        "node_id": 94,
+        "n_node_samples": 6028,
+        "proba": "5.79"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 44.2685",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1606,
+                "proba": "96.69"
+            },
+            {
+                "label": 1,
+                "size": 55,
+                "proba": "3.31"
+            }
+        ],
+        "parent_id": 93,
+        "node_id": 95,
+        "n_node_samples": 1661,
+        "proba": "3.31"
+    },
+    {
+        "node_text": "PRBUN",
+        "split_text": "≥ 3.0896",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 37721,
+                "proba": "95.97"
+            },
+            {
+                "label": 1,
+                "size": 1582,
+                "proba": "4.03"
+            }
+        ],
+        "parent_id": 92,
+        "node_id": 96,
+        "n_node_samples": 39303,
+        "proba": "4.03"
+    },
+    {
+        "node_text": "PRPLATE",
+        "split_text": "< 19.9912",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 20343,
+                "proba": "96.23"
+            },
+            {
+                "label": 1,
+                "size": 798,
+                "proba": "3.77"
+            }
+        ],
+        "parent_id": 96,
+        "node_id": 97,
+        "n_node_samples": 21141,
+        "proba": "3.77"
+    },
+    {
+        "node_text": "SURGSPEC",
+        "split_text": "< 344.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 18979,
+                "proba": "96.35"
+            },
+            {
+                "label": 1,
+                "size": 719,
+                "proba": "3.65"
+            }
+        ],
+        "parent_id": 97,
+        "node_id": 98,
+        "n_node_samples": 19698,
+        "proba": "3.65"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "Interventional Radiologist;Neurosurgery;Orthopedics;Other;Urology",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3333,
+                "proba": "93.00"
+            },
+            {
+                "label": 1,
+                "size": 251,
+                "proba": "7.00"
+            }
+        ],
+        "parent_id": 98,
+        "node_id": 99,
+        "n_node_samples": 3584,
+        "proba": "7.00"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 87.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2692,
+                "proba": "93.93"
+            },
+            {
+                "label": 1,
+                "size": 174,
+                "proba": "6.07"
+            }
+        ],
+        "parent_id": 99,
+        "node_id": 100,
+        "n_node_samples": 2866,
+        "proba": "6.07"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 87.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 641,
+                "proba": "89.28"
+            },
+            {
+                "label": 1,
+                "size": 77,
+                "proba": "10.72"
+            }
+        ],
+        "parent_id": 99,
+        "node_id": 101,
+        "n_node_samples": 718,
+        "proba": "10.72"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "Cardiac Surgery;General Surgery;Gynecology;Otolaryngology (ENT);Plastics;Thoracic;Unknown;Vascular",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 15646,
+                "proba": "97.10"
+            },
+            {
+                "label": 1,
+                "size": 468,
+                "proba": "2.90"
+            }
+        ],
+        "parent_id": 98,
+        "node_id": 102,
+        "n_node_samples": 16114,
+        "proba": "2.90"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 76.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 8603,
+                "proba": "98.16"
+            },
+            {
+                "label": 1,
+                "size": 161,
+                "proba": "1.84"
+            }
+        ],
+        "parent_id": 102,
+        "node_id": 103,
+        "n_node_samples": 8764,
+        "proba": "1.84"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 76.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 7043,
+                "proba": "95.82"
+            },
+            {
+                "label": 1,
+                "size": 307,
+                "proba": "4.18"
+            }
+        ],
+        "parent_id": 102,
+        "node_id": 104,
+        "n_node_samples": 7350,
+        "proba": "4.18"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 344.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1364,
+                "proba": "94.53"
+            },
+            {
+                "label": 1,
+                "size": 79,
+                "proba": "5.47"
+            }
+        ],
+        "parent_id": 97,
+        "node_id": 105,
+        "n_node_samples": 1443,
+        "proba": "5.47"
+    },
+    {
+        "node_text": "BMI",
+        "split_text": "≥ 19.9912",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 17378,
+                "proba": "95.68"
+            },
+            {
+                "label": 1,
+                "size": 784,
+                "proba": "4.32"
+            }
+        ],
+        "parent_id": 96,
+        "node_id": 106,
+        "n_node_samples": 18162,
+        "proba": "4.32"
+    },
+    {
+        "node_text": "SURGSPEC",
+        "split_text": "< 30.5703",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 13563,
+                "proba": "95.76"
+            },
+            {
+                "label": 1,
+                "size": 601,
+                "proba": "4.24"
+            }
+        ],
+        "parent_id": 106,
+        "node_id": 107,
+        "n_node_samples": 14164,
+        "proba": "4.24"
+    },
+    {
+        "node_text": "PRSEPIS",
+        "split_text": "Cardiac Surgery;General Surgery;Interventional Radiologist;Otolaryngology (ENT);Thoracic;Vascular",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 11707,
+                "proba": "96.25"
+            },
+            {
+                "label": 1,
+                "size": 456,
+                "proba": "3.75"
+            }
+        ],
+        "parent_id": 107,
+        "node_id": 108,
+        "n_node_samples": 12163,
+        "proba": "3.75"
+    },
+    {
+        "node_text": "Age",
+        "split_text": "MISSING;None;Sepsis",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 8712,
+                "proba": "96.77"
+            },
+            {
+                "label": 1,
+                "size": 291,
+                "proba": "3.23"
+            }
+        ],
+        "parent_id": 108,
+        "node_id": 109,
+        "n_node_samples": 9003,
+        "proba": "3.23"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 73.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1916,
+                "proba": "98.41"
+            },
+            {
+                "label": 1,
+                "size": 31,
+                "proba": "1.59"
+            }
+        ],
+        "parent_id": 109,
+        "node_id": 110,
+        "n_node_samples": 1947,
+        "proba": "1.59"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 73.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 6796,
+                "proba": "96.32"
+            },
+            {
+                "label": 1,
+                "size": 260,
+                "proba": "3.68"
+            }
+        ],
+        "parent_id": 109,
+        "node_id": 111,
+        "n_node_samples": 7056,
+        "proba": "3.68"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "SIRS;Septic Shock",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2995,
+                "proba": "94.78"
+            },
+            {
+                "label": 1,
+                "size": 165,
+                "proba": "5.22"
+            }
+        ],
+        "parent_id": 108,
+        "node_id": 112,
+        "n_node_samples": 3160,
+        "proba": "5.22"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "Gynecology;Neurosurgery;Orthopedics;Other;Plastics;Unknown;Urology",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1856,
+                "proba": "92.75"
+            },
+            {
+                "label": 1,
+                "size": 145,
+                "proba": "7.25"
+            }
+        ],
+        "parent_id": 107,
+        "node_id": 113,
+        "n_node_samples": 2001,
+        "proba": "7.25"
+    },
+    {
+        "node_text": "SEX_MALE",
+        "split_text": "≥ 30.5703",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3815,
+                "proba": "95.42"
+            },
+            {
+                "label": 1,
+                "size": 183,
+                "proba": "4.58"
+            }
+        ],
+        "parent_id": 106,
+        "node_id": 114,
+        "n_node_samples": 3998,
+        "proba": "4.58"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1984,
+                "proba": "93.94"
+            },
+            {
+                "label": 1,
+                "size": 128,
+                "proba": "6.06"
+            }
+        ],
+        "parent_id": 114,
+        "node_id": 115,
+        "n_node_samples": 2112,
+        "proba": "6.06"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1831,
+                "proba": "97.08"
+            },
+            {
+                "label": 1,
+                "size": 55,
+                "proba": "2.92"
+            }
+        ],
+        "parent_id": 114,
+        "node_id": 116,
+        "n_node_samples": 1886,
+        "proba": "2.92"
+    },
+    {
+        "node_text": "PRHCT",
+        "split_text": "≥ 0.5",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2533,
+                "proba": "98.41"
+            },
+            {
+                "label": 1,
+                "size": 41,
+                "proba": "1.59"
+            }
+        ],
+        "parent_id": 77,
+        "node_id": 117,
+        "n_node_samples": 2574,
+        "proba": "1.59"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "< 35.55",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 488,
+                "proba": "95.50"
+            },
+            {
+                "label": 1,
+                "size": 23,
+                "proba": "4.50"
+            }
+        ],
+        "parent_id": 117,
+        "node_id": 118,
+        "n_node_samples": 511,
+        "proba": "4.50"
+    },
+    {
+        "node_text": "predict 0",
+        "split_text": "≥ 35.55",
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2045,
+                "proba": "99.13"
+            },
+            {
+                "label": 1,
+                "size": 18,
+                "proba": "0.87"
+            }
+        ],
+        "parent_id": 117,
+        "node_id": 119,
+        "n_node_samples": 2063,
+        "proba": "0.87"
+    }
+]
