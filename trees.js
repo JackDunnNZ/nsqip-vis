@@ -332,3 +332,33 @@ function wrapsemicolons(text) {
     }
   });
 }
+
+function collapseTree() {
+  collapse(root);
+  update(root);
+}
+
+function expandTree() {
+  expand(root);
+  update(root);
+}
+
+function collapse(d) {
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+  }
+  if (d._children) {
+    d._children.forEach(collapse);
+  }
+}
+
+function expand(d) {
+  if (d._children) {
+    d.children = d._children;
+    d._children = null;
+  }
+  if (d.children) {
+    d.children.forEach(expand);
+  }
+}

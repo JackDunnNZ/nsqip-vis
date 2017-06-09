@@ -12,6 +12,8 @@
     <div id="select-container">
       <select id="morb"></select>
       <select id="extra-vars"></select>
+      <button id="collapse">Collapse</button>
+      <button id="expand">Expand</button>
     </div>
 
     <script
@@ -55,6 +57,10 @@
         morbselect.val(morb);
         morbselect.trigger('change');
       });
+
+      $('#collapse').click(collapseTree)
+
+      $('#expand').click(expandTree)
     </script>
 
 
