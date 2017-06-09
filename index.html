@@ -25,6 +25,32 @@
     <script src="trees.js"></script>
 
     <script>
+      var TARGET_MAP = {
+        MORB_SUPINFEC: "Superficial SSI",
+        MORB_WNDINFD: "Deep Incisional SSI",
+        MORB_ORGSPCSSI: "Organ Space SSI",
+        MORB_DEHIS: "Wound Disruption",
+        MORB_OUPNEUMO: "Pneumonia",
+        MORB_REINTUB: "Unplanned Intubation",
+        MORB_PULEMBOL: "Pulmonary Embolism",
+        MORB_FAILWEAN: "On Ventilator > 48 hours",
+        MORB_RENAINSF: "Progressive Renal Insufficiency",
+        MORB_OPRENAFL: "Acute Renal Failure",
+        MORB_URNINFEC: "Urinary Tract Infection",
+        MORB_CNSCVA: "Stroke/CVA",
+        MORB_CDARREST: "Cardiac Arrest Requiring CPR",
+        MORB_CDMI: "Myocardial Infection",
+        MORB_OTHBLEED: "Bleeding Transfusions",
+        MORB_OTHDVT: "DVT/Thrombophlebitis",
+        MORB_OTHSYSEP: "Sepsis",
+        MORB_OTHSESHOCK: "Septic Shock",
+
+        MORB_ANY: "Any Morbidity",
+        MORT: "Mortality",
+
+        MORB_OR_MORT: "Any Morbidity or Mortality",
+      };
+
       var trees;
       $.getJSON('trees/index.json', function(json){ //get data from file
         trees = json;
@@ -51,7 +77,8 @@
         });
         for (morb in trees) {
           if (trees.hasOwnProperty(morb)) {
-            morbselect.append('<option>' + morb + '</option>');
+            morbselect.append('<option value="' + morb + '">' +
+                              TARGET_MAP[morb] + '</option>');
           }
         }
         morbselect.val(morb);
