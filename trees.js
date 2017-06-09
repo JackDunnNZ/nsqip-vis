@@ -163,7 +163,7 @@ function update(source) {
   nodeEnter.append("text")
       .attr("class", "node-title")
       .attr("text-anchor", "middle")
-      .text(function(d) { return "Death: " + d.proba + "%;" + d.n_node_samples + " patients"; })
+      .text(function(d) { return "Risk: " + d.proba + "%;" + d.n_node_samples + " patients"; })
       .call(wrapsemicolons)
       .style("fill-opacity", 1e-6);
   nodeEnter.append("text")
@@ -171,7 +171,11 @@ function update(source) {
       .attr("y", 30)
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
-      .text(function(d) { return d.node_text; })
+      .text(function(d) {
+          if (d.children || d._children) {
+            return d.node_text;
+          }
+      })
       .style("fill-opacity", 1e-6);
 
   // Transition nodes to their new position.
@@ -237,9 +241,35 @@ function update(source) {
       .attr("text-anchor", "middle")
       .style("fill-opacity", 1e-6)
       .text(function(d) {
-        return d.target.split_text;
+        var text = d.target.split_text;
+        numfactors = text.split(";").length;
+        if (numfactors > 3) {
+          text = numfactors + " factors";
+        }
+        return text;
       })
-      .call(wrapsemicolons);
+      .call(wrapsemicolons)
+      .on("mouseover", function(d) {
+          var text = d.target.split_text;
+          if (text.split(";").length > 3) {
+            text = "<b>Factors</b><br>" + text.replace(/;/g, "<br>")
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", 1);
+            tooltip.html(text)
+                .style("left", (d3.event.pageX + 10) + "px")
+                .style("top", (d3.event.pageY - 28) + "px");
+          }
+      })
+      .on("mousemove", function(d) {
+          tooltip.style("left", (d3.event.pageX + 10) + "px")
+              .style("top", (d3.event.pageY - 28) + "px")
+      })
+      .on("mouseout", function(d) {
+          tooltip.transition()
+              .duration(250)
+              .style("opacity", 0);
+      })
   // Transition links to their new position.
   link.selectAll("path")
       .transition()
