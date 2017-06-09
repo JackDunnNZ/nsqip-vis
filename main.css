@@ -1,13 +1,13 @@
 .node circle {
   fill: #fff;
-  stroke: steelblue;
-  stroke-width: 3px;
+  stroke: #888;
+  stroke-width: 1px;
 }
 
 .node rect {
   fill: #fff;
-  stroke: steelblue;
-  stroke-width: 2px;
+  stroke: #444;
+  stroke-width: 1px;
   cursor: pointer;
 }
 

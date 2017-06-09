@@ -27,6 +27,10 @@ var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
+var color = d3.scale.linear()
+    .domain([0, 0.5, 1])
+    .range(["#4daf4a", "white", "#e41a1c"]);
+
 var loadtree = function(treename) {
   console.log(treename);
   d3.json(treename, function(error, data) {
@@ -131,7 +135,13 @@ function update(source) {
       .attr("ry", 4)
       .style("fill-opacity", 1e-6)
       .style("fill", function(d) {
-          return d._children ? "lightsteelblue" : "#fff";
+          if (d._children) {
+            return "#bbb";
+          } else if (d.children) {
+            return "#fff";
+          } else {
+            return color(parseFloat(d.proba) / 100);
+          }
       })
       .on("mouseover", function(d) {
           tooltip.transition()
@@ -173,7 +183,13 @@ function update(source) {
   nodeUpdate.select("rect")
       .style("fill-opacity", 1)
       .style("fill", function(d) {
-          return d._children ? "lightsteelblue" : "#fff";
+          if (d._children) {
+            return "#bbb";
+          } else if (d.children) {
+            return "#fff";
+          } else {
+            return color(parseFloat(d.proba) / 100);
+          }
       });
   nodeUpdate.select("text.split-title")
       .style("fill-opacity", function(d) { return d._children ? 1e-6 : 1; });
