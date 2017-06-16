@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Optimal Trees for Morbidity and Mortality</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="question.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="question-container">
+        <div class="question">
+          <div class="heading">Prediction target:</div>
+          <select id="morb" class="form-control"></select>
+        </div>
+        <div class="question">
+          <div class="heading">Model type:</div>
+          <select id="extra-vars" class="form-control"></select>
+        </div>
+
+        <div id="dynamic-questions"></div>
+
+      </div>
+    </div>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
+    <script>
+      var TARGET_MAP = {
+        MORB_SUPINFEC: "Superficial SSI",
+        MORB_WNDINFD: "Deep Incisional SSI",
+        MORB_ORGSPCSSI: "Organ Space SSI",
+        MORB_DEHIS: "Wound Disruption",
+        MORB_OUPNEUMO: "Pneumonia",
+        MORB_REINTUB: "Unplanned Intubation",
+        MORB_PULEMBOL: "Pulmonary Embolism",
+        MORB_FAILWEAN: "On Ventilator > 48 hours",
+        MORB_RENAINSF: "Progressive Renal Insufficiency",
+        MORB_OPRENAFL: "Acute Renal Failure",
+        MORB_URNINFEC: "Urinary Tract Infection",
+        MORB_CNSCVA: "Stroke/CVA",
+        MORB_CDARREST: "Cardiac Arrest Requiring CPR",
+        MORB_CDMI: "Myocardial Infection",
+        MORB_OTHBLEED: "Bleeding Transfusions",
+        MORB_OTHDVT: "DVT/Thrombophlebitis",
+        MORB_OTHSYSEP: "Sepsis",
+        MORB_OTHSESHOCK: "Septic Shock",
+
+        MORB_ANY: "Any Morbidity",
+        MORT: "Mortality",
+
+        MORB_OR_MORT: "Any Morbidity or Mortality",
+      };
+
+      var trees;
+      $.getJSON('alltrees.json', function(json){ //get data from file
+        trees = json;
+
+        var morbselect = $('#morb');
+        var extravarsselect = $('#extra-vars');
+
+
+        extravarsselect.change(function() {
+          var morb = morbselect.val();
+          var vartype = extravarsselect.val();
+          var treename = morb + '_' + vartype + '.json';
+          loadtree('questions/' + treename);
+        });
+
+        morbselect.change(function() {
+          var morb = morbselect.val();
+          extravarsselect.find('option').remove().end();
+          var morbvars = trees[morb];
+          for (var i = 0; i < morbvars.length; i++) {
+            extravarsselect.append('<option>' + morbvars[i] + '</option>');
+          }
+          extravarsselect.trigger('change');
+        });
+        for (morb in trees) {
+          if (trees.hasOwnProperty(morb)) {
+            morbselect.append('<option value="' + morb + '">' +
+                              TARGET_MAP[morb] + '</option>');
+          }
+        }
+        morbselect.val(morb);
+        morbselect.trigger('change');
+      });
+    </script>
+    <script>
+      var questionVisible = [];
+
+      var answerQuestionRadio = function() {
+        var question = this.parentElement.parentElement.parentElement
+        var nodeId = parseInt(question.getAttribute('id')) - 1
+        var nextId = this.value - 1
+        answerQuestion(nodeId, nextId)
+      }
+
+      var answerQuestionSelect = function() {
+        console.log(this)
+        var question = this.parentElement;
+        var nodeId = parseInt(question.getAttribute('id')) - 1
+        var nextId = this.value - 1
+        answerQuestion(nodeId, nextId)
+      }
+
+      var answerQuestion = function(nodeId, nextId) {
+        console.log(nodeId + " " + nextId)
+        for (var i = nodeId + 1; i < questionVisible.length; i++) {
+          questionVisible[i] = false;
+        }
+        questionVisible[nextId] = true;
+        refreshQuestions();
+      }
+
+      var refreshQuestions = function() {
+        $('#dynamic-questions').children().each(function(i, question) {
+          var node_id = parseInt(question.getAttribute('id'));
+          if (questionVisible[node_id - 1]) {
+            $(question).removeClass('hidden')
+          } else {
+            $(question).addClass('hidden')
+            $(question).find('input[type="radio"]:checked').prop('checked', false);
+            $(question).find('select').val('')
+          }
+        })
+      }
+
+      var resetQuestions = function() {
+        questionVisible[0] = true;
+        refreshQuestions()
+      }
+
+      var loadtree = function(treename) {
+        console.log(treename);
+        $.getJSON(treename, function(data) {
+          var questions = $("#dynamic-questions");
+          questions.empty();
+          for (var i = 0; i < data.length; i++) {
+            questionVisible[i] = false;
+            var question = data[i]
+            console.log(question)
+            var div = document.createElement('div')
+            div.setAttribute('class', 'question')
+            div.setAttribute('id', question.node_id)
+
+            var heading = document.createElement('div')
+            heading.setAttribute('class', 'heading')
+            div.appendChild(heading);
+
+            if (question.question_text) {
+              heading.appendChild(document.createTextNode(question.question_text))
+
+
+              if (question.question_options.length > 2) {
+                // Categoric
+                var select = document.createElement('select');
+                select.setAttribute('class', 'form-control')
+
+                var option = document.createElement('option')
+                option.setAttribute('value', '');
+                option.appendChild(document.createTextNode('Choose an answer...'));
+                select.appendChild(option);
+
+                for (var r = 0; r < question.question_options.length; r++) {
+                  var question_option = question.question_options[r];
+
+                  option = document.createElement('option')
+                  option.setAttribute('value', question_option.next_question);
+                  option.appendChild(document.createTextNode(question_option.option_text));
+                  select.appendChild(option);
+                }
+                $(select).change(answerQuestionSelect)
+                div.appendChild(select);
+              } else {
+                // Parallel
+                var radioGroup = document.createElement('div')
+                radioGroup.setAttribute('class', 'container')
+                for (var r = 0; r < question.question_options.length; r++) {
+                  var question_option = question.question_options[r];
+
+                  var radioLabel = document.createElement('label');
+                  radioLabel.setAttribute('class', 'radio-inline col-xs-6')
+                  radioGroup.appendChild(radioLabel);
+
+                  var radio = document.createElement('input')
+                  radio.setAttribute('name', question.node_id);
+                  radio.setAttribute('type', 'radio');
+                  radio.setAttribute('value', question_option.next_question);
+                  radioLabel.appendChild(radio);
+                  radioLabel.appendChild(document.createTextNode(question_option.option_text));
+
+                  $(radio).click(answerQuestionRadio)
+                }
+                div.appendChild(radioGroup);
+              }
+            } else {
+              heading.appendChild(document.createTextNode("Final risk estimation:"))
+
+              var result = document.createElement('div')
+              result.setAttribute('class', 'result')
+              result.appendChild(document.createTextNode(question.proba + "%"))
+              div.appendChild(result)
+            }
+
+            var text1 = question.number_of_patients + ' patients'
+            var text2 = '(' + question.proba + '%)'
+
+            var stats = document.createElement('div')
+            stats.setAttribute('class', 'stats')
+            var stats1 = document.createElement('div')
+            stats1.appendChild(document.createTextNode(text1))
+            stats.appendChild(stats1)
+            if (question.question_text) {
+              var stats2 = document.createElement('div')
+              stats2.appendChild(document.createTextNode(text2))
+              stats.appendChild(stats2)
+            }
+            div.appendChild(stats)
+
+            questions.append(div)
+          }
+          resetQuestions()
+        });
+      };
+    </script>
+  </body>
+</html>
