@@ -1,0 +1,2580 @@
+[
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 305551,
+                "proba": "97.63"
+            },
+            {
+                "label": 1,
+                "size": 7422,
+                "proba": "2.37"
+            }
+        ],
+        "number_of_patients": 312973,
+        "parent_id": -2,
+        "node_id": 1,
+        "question_text": "VENTILAT",
+        "question_options": [
+            {
+                "next_question": 2,
+                "option_text": "< 0.5"
+            },
+            {
+                "next_question": 83,
+                "option_text": "≥ 0.5"
+            }
+        ],
+        "proba": "2.37"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 293713,
+                "proba": "97.80"
+            },
+            {
+                "label": 1,
+                "size": 6617,
+                "proba": "2.20"
+            }
+        ],
+        "number_of_patients": 300330,
+        "parent_id": 1,
+        "node_id": 2,
+        "question_text": "Age",
+        "question_options": [
+            {
+                "next_question": 3,
+                "option_text": "< 68.5"
+            },
+            {
+                "next_question": 56,
+                "option_text": "≥ 68.5"
+            }
+        ],
+        "proba": "2.20"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 221208,
+                "proba": "98.72"
+            },
+            {
+                "label": 1,
+                "size": 2865,
+                "proba": "1.28"
+            }
+        ],
+        "number_of_patients": 224073,
+        "parent_id": 2,
+        "node_id": 3,
+        "question_text": "PRBUN",
+        "question_options": [
+            {
+                "next_question": 4,
+                "option_text": "< 23.9508"
+            },
+            {
+                "next_question": 43,
+                "option_text": "≥ 23.9508"
+            }
+        ],
+        "proba": "1.28"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 202257,
+                "proba": "98.92"
+            },
+            {
+                "label": 1,
+                "size": 2208,
+                "proba": "1.08"
+            }
+        ],
+        "number_of_patients": 204465,
+        "parent_id": 3,
+        "node_id": 4,
+        "question_text": "PRHCT",
+        "question_options": [
+            {
+                "next_question": 5,
+                "option_text": "< 33.1031"
+            },
+            {
+                "next_question": 16,
+                "option_text": "≥ 33.1031"
+            }
+        ],
+        "proba": "1.08"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 22820,
+                "proba": "97.04"
+            },
+            {
+                "label": 1,
+                "size": 697,
+                "proba": "2.96"
+            }
+        ],
+        "number_of_patients": 23517,
+        "parent_id": 4,
+        "node_id": 5,
+        "question_text": "SURGSPEC",
+        "question_options": [
+            {
+                "next_question": 6,
+                "option_text": "Cardiac Surgery"
+            },
+            {
+                "next_question": 6,
+                "option_text": "General Surgery"
+            },
+            {
+                "next_question": 6,
+                "option_text": "Gynecology"
+            },
+            {
+                "next_question": 15,
+                "option_text": "Interventional Radiologist"
+            },
+            {
+                "next_question": 15,
+                "option_text": "Neurosurgery"
+            },
+            {
+                "next_question": 6,
+                "option_text": "Orthopedics"
+            },
+            {
+                "next_question": 15,
+                "option_text": "Other"
+            },
+            {
+                "next_question": 6,
+                "option_text": "Otolaryngology (ENT)"
+            },
+            {
+                "next_question": 6,
+                "option_text": "Plastics"
+            },
+            {
+                "next_question": 6,
+                "option_text": "Thoracic"
+            },
+            {
+                "next_question": 6,
+                "option_text": "Unknown"
+            },
+            {
+                "next_question": 15,
+                "option_text": "Urology"
+            },
+            {
+                "next_question": 6,
+                "option_text": "Vascular"
+            }
+        ],
+        "proba": "2.96"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 22318,
+                "proba": "97.17"
+            },
+            {
+                "label": 1,
+                "size": 651,
+                "proba": "2.83"
+            }
+        ],
+        "number_of_patients": 22969,
+        "parent_id": 5,
+        "node_id": 6,
+        "question_text": "WNDINF",
+        "question_options": [
+            {
+                "next_question": 7,
+                "option_text": "< 0.5"
+            },
+            {
+                "next_question": 14,
+                "option_text": "≥ 0.5"
+            }
+        ],
+        "proba": "2.83"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 19540,
+                "proba": "97.45"
+            },
+            {
+                "label": 1,
+                "size": 512,
+                "proba": "2.55"
+            }
+        ],
+        "number_of_patients": 20052,
+        "parent_id": 6,
+        "node_id": 7,
+        "question_text": "PRPTT",
+        "question_options": [
+            {
+                "next_question": 8,
+                "option_text": "< 43.15"
+            },
+            {
+                "next_question": 13,
+                "option_text": "≥ 43.15"
+            }
+        ],
+        "proba": "2.55"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 18588,
+                "proba": "97.67"
+            },
+            {
+                "label": 1,
+                "size": 444,
+                "proba": "2.33"
+            }
+        ],
+        "number_of_patients": 19032,
+        "parent_id": 7,
+        "node_id": 8,
+        "question_text": "PRALBUM",
+        "question_options": [
+            {
+                "next_question": 9,
+                "option_text": "< 2.6002"
+            },
+            {
+                "next_question": 10,
+                "option_text": "≥ 2.6002"
+            }
+        ],
+        "proba": "2.33"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3554,
+                "proba": "95.82"
+            },
+            {
+                "label": 1,
+                "size": 155,
+                "proba": "4.18"
+            }
+        ],
+        "number_of_patients": 3709,
+        "parent_id": 8,
+        "node_id": 9,
+        "question_text": "",
+        "question_options": [],
+        "proba": "4.18"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 15034,
+                "proba": "98.11"
+            },
+            {
+                "label": 1,
+                "size": 289,
+                "proba": "1.89"
+            }
+        ],
+        "number_of_patients": 15323,
+        "parent_id": 8,
+        "node_id": 10,
+        "question_text": "Age",
+        "question_options": [
+            {
+                "next_question": 11,
+                "option_text": "< 53.5"
+            },
+            {
+                "next_question": 12,
+                "option_text": "≥ 53.5"
+            }
+        ],
+        "proba": "1.89"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 10132,
+                "proba": "98.69"
+            },
+            {
+                "label": 1,
+                "size": 135,
+                "proba": "1.31"
+            }
+        ],
+        "number_of_patients": 10267,
+        "parent_id": 10,
+        "node_id": 11,
+        "question_text": "",
+        "question_options": [],
+        "proba": "1.31"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 4902,
+                "proba": "96.95"
+            },
+            {
+                "label": 1,
+                "size": 154,
+                "proba": "3.05"
+            }
+        ],
+        "number_of_patients": 5056,
+        "parent_id": 10,
+        "node_id": 12,
+        "question_text": "",
+        "question_options": [],
+        "proba": "3.05"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 952,
+                "proba": "93.33"
+            },
+            {
+                "label": 1,
+                "size": 68,
+                "proba": "6.67"
+            }
+        ],
+        "number_of_patients": 1020,
+        "parent_id": 7,
+        "node_id": 13,
+        "question_text": "",
+        "question_options": [],
+        "proba": "6.67"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2778,
+                "proba": "95.23"
+            },
+            {
+                "label": 1,
+                "size": 139,
+                "proba": "4.77"
+            }
+        ],
+        "number_of_patients": 2917,
+        "parent_id": 6,
+        "node_id": 14,
+        "question_text": "",
+        "question_options": [],
+        "proba": "4.77"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 502,
+                "proba": "91.61"
+            },
+            {
+                "label": 1,
+                "size": 46,
+                "proba": "8.39"
+            }
+        ],
+        "number_of_patients": 548,
+        "parent_id": 5,
+        "node_id": 15,
+        "question_text": "",
+        "question_options": [],
+        "proba": "8.39"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 179437,
+                "proba": "99.16"
+            },
+            {
+                "label": 1,
+                "size": 1511,
+                "proba": "0.84"
+            }
+        ],
+        "number_of_patients": 180948,
+        "parent_id": 4,
+        "node_id": 16,
+        "question_text": "SURGSPEC",
+        "question_options": [
+            {
+                "next_question": 17,
+                "option_text": "Cardiac Surgery"
+            },
+            {
+                "next_question": 17,
+                "option_text": "General Surgery"
+            },
+            {
+                "next_question": 17,
+                "option_text": "Gynecology"
+            },
+            {
+                "next_question": 17,
+                "option_text": "Interventional Radiologist"
+            },
+            {
+                "next_question": 40,
+                "option_text": "Neurosurgery"
+            },
+            {
+                "next_question": 17,
+                "option_text": "Orthopedics"
+            },
+            {
+                "next_question": 17,
+                "option_text": "Other"
+            },
+            {
+                "next_question": 17,
+                "option_text": "Otolaryngology (ENT)"
+            },
+            {
+                "next_question": 17,
+                "option_text": "Plastics"
+            },
+            {
+                "next_question": 17,
+                "option_text": "Thoracic"
+            },
+            {
+                "next_question": 17,
+                "option_text": "Unknown"
+            },
+            {
+                "next_question": 40,
+                "option_text": "Urology"
+            },
+            {
+                "next_question": 17,
+                "option_text": "Vascular"
+            }
+        ],
+        "proba": "0.84"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 176184,
+                "proba": "99.22"
+            },
+            {
+                "label": 1,
+                "size": 1391,
+                "proba": "0.78"
+            }
+        ],
+        "number_of_patients": 177575,
+        "parent_id": 16,
+        "node_id": 17,
+        "question_text": "SEX_MALE",
+        "question_options": [
+            {
+                "next_question": 18,
+                "option_text": "< 0.5"
+            },
+            {
+                "next_question": 31,
+                "option_text": "≥ 0.5"
+            }
+        ],
+        "proba": "0.78"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 86290,
+                "proba": "98.81"
+            },
+            {
+                "label": 1,
+                "size": 1039,
+                "proba": "1.19"
+            }
+        ],
+        "number_of_patients": 87329,
+        "parent_id": 17,
+        "node_id": 18,
+        "question_text": "INOUT_OUTPATIENT",
+        "question_options": [
+            {
+                "next_question": 19,
+                "option_text": "< 0.5"
+            },
+            {
+                "next_question": 28,
+                "option_text": "≥ 0.5"
+            }
+        ],
+        "proba": "1.19"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 67112,
+                "proba": "98.64"
+            },
+            {
+                "label": 1,
+                "size": 927,
+                "proba": "1.36"
+            }
+        ],
+        "number_of_patients": 68039,
+        "parent_id": 18,
+        "node_id": 19,
+        "question_text": "ASACLAS",
+        "question_options": [
+            {
+                "next_question": 20,
+                "option_text": "< 2.5"
+            },
+            {
+                "next_question": 23,
+                "option_text": "≥ 2.5"
+            }
+        ],
+        "proba": "1.36"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 50630,
+                "proba": "99.15"
+            },
+            {
+                "label": 1,
+                "size": 434,
+                "proba": "0.85"
+            }
+        ],
+        "number_of_patients": 51064,
+        "parent_id": 19,
+        "node_id": 20,
+        "question_text": "ASACLAS",
+        "question_options": [
+            {
+                "next_question": 21,
+                "option_text": "< 1.5"
+            },
+            {
+                "next_question": 22,
+                "option_text": "≥ 1.5"
+            }
+        ],
+        "proba": "0.85"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 15505,
+                "proba": "99.47"
+            },
+            {
+                "label": 1,
+                "size": 82,
+                "proba": "0.53"
+            }
+        ],
+        "number_of_patients": 15587,
+        "parent_id": 20,
+        "node_id": 21,
+        "question_text": "",
+        "question_options": [],
+        "proba": "0.53"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 35125,
+                "proba": "99.01"
+            },
+            {
+                "label": 1,
+                "size": 352,
+                "proba": "0.99"
+            }
+        ],
+        "number_of_patients": 35477,
+        "parent_id": 20,
+        "node_id": 22,
+        "question_text": "",
+        "question_options": [],
+        "proba": "0.99"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 16482,
+                "proba": "97.10"
+            },
+            {
+                "label": 1,
+                "size": 493,
+                "proba": "2.90"
+            }
+        ],
+        "number_of_patients": 16975,
+        "parent_id": 19,
+        "node_id": 23,
+        "question_text": "ASACLAS",
+        "question_options": [
+            {
+                "next_question": 24,
+                "option_text": "< 3.5"
+            },
+            {
+                "next_question": 27,
+                "option_text": "≥ 3.5"
+            }
+        ],
+        "proba": "2.90"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 13980,
+                "proba": "97.51"
+            },
+            {
+                "label": 1,
+                "size": 357,
+                "proba": "2.49"
+            }
+        ],
+        "number_of_patients": 14337,
+        "parent_id": 23,
+        "node_id": 24,
+        "question_text": "PRALBUM",
+        "question_options": [
+            {
+                "next_question": 25,
+                "option_text": "< 3.0297"
+            },
+            {
+                "next_question": 26,
+                "option_text": "≥ 3.0297"
+            }
+        ],
+        "proba": "2.49"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1444,
+                "proba": "95.63"
+            },
+            {
+                "label": 1,
+                "size": 66,
+                "proba": "4.37"
+            }
+        ],
+        "number_of_patients": 1510,
+        "parent_id": 24,
+        "node_id": 25,
+        "question_text": "",
+        "question_options": [],
+        "proba": "4.37"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 12536,
+                "proba": "97.73"
+            },
+            {
+                "label": 1,
+                "size": 291,
+                "proba": "2.27"
+            }
+        ],
+        "number_of_patients": 12827,
+        "parent_id": 24,
+        "node_id": 26,
+        "question_text": "",
+        "question_options": [],
+        "proba": "2.27"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2502,
+                "proba": "94.84"
+            },
+            {
+                "label": 1,
+                "size": 136,
+                "proba": "5.16"
+            }
+        ],
+        "number_of_patients": 2638,
+        "parent_id": 23,
+        "node_id": 27,
+        "question_text": "",
+        "question_options": [],
+        "proba": "5.16"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 19178,
+                "proba": "99.42"
+            },
+            {
+                "label": 1,
+                "size": 112,
+                "proba": "0.58"
+            }
+        ],
+        "number_of_patients": 19290,
+        "parent_id": 18,
+        "node_id": 28,
+        "question_text": "PRBUN",
+        "question_options": [
+            {
+                "next_question": 29,
+                "option_text": "< 7.9481"
+            },
+            {
+                "next_question": 30,
+                "option_text": "≥ 7.9481"
+            }
+        ],
+        "proba": "0.58"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2599,
+                "proba": "98.63"
+            },
+            {
+                "label": 1,
+                "size": 36,
+                "proba": "1.37"
+            }
+        ],
+        "number_of_patients": 2635,
+        "parent_id": 28,
+        "node_id": 29,
+        "question_text": "",
+        "question_options": [],
+        "proba": "1.37"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 16579,
+                "proba": "99.54"
+            },
+            {
+                "label": 1,
+                "size": 76,
+                "proba": "0.46"
+            }
+        ],
+        "number_of_patients": 16655,
+        "parent_id": 28,
+        "node_id": 30,
+        "question_text": "",
+        "question_options": [],
+        "proba": "0.46"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 89894,
+                "proba": "99.61"
+            },
+            {
+                "label": 1,
+                "size": 352,
+                "proba": "0.39"
+            }
+        ],
+        "number_of_patients": 90246,
+        "parent_id": 17,
+        "node_id": 31,
+        "question_text": "ASACLAS",
+        "question_options": [
+            {
+                "next_question": 32,
+                "option_text": "< 2.5"
+            },
+            {
+                "next_question": 37,
+                "option_text": "≥ 2.5"
+            }
+        ],
+        "proba": "0.39"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 69306,
+                "proba": "99.84"
+            },
+            {
+                "label": 1,
+                "size": 114,
+                "proba": "0.16"
+            }
+        ],
+        "number_of_patients": 69420,
+        "parent_id": 31,
+        "node_id": 32,
+        "question_text": "PRALBUM",
+        "question_options": [
+            {
+                "next_question": 33,
+                "option_text": "< 3.925"
+            },
+            {
+                "next_question": 34,
+                "option_text": "≥ 3.925"
+            }
+        ],
+        "proba": "0.16"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 14663,
+                "proba": "99.63"
+            },
+            {
+                "label": 1,
+                "size": 55,
+                "proba": "0.37"
+            }
+        ],
+        "number_of_patients": 14718,
+        "parent_id": 32,
+        "node_id": 33,
+        "question_text": "",
+        "question_options": [],
+        "proba": "0.37"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 54643,
+                "proba": "99.89"
+            },
+            {
+                "label": 1,
+                "size": 59,
+                "proba": "0.11"
+            }
+        ],
+        "number_of_patients": 54702,
+        "parent_id": 32,
+        "node_id": 34,
+        "question_text": "Age",
+        "question_options": [
+            {
+                "next_question": 35,
+                "option_text": "< 59.5"
+            },
+            {
+                "next_question": 36,
+                "option_text": "≥ 59.5"
+            }
+        ],
+        "proba": "0.11"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 52162,
+                "proba": "99.92"
+            },
+            {
+                "label": 1,
+                "size": 44,
+                "proba": "0.08"
+            }
+        ],
+        "number_of_patients": 52206,
+        "parent_id": 34,
+        "node_id": 35,
+        "question_text": "",
+        "question_options": [],
+        "proba": "0.08"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2481,
+                "proba": "99.40"
+            },
+            {
+                "label": 1,
+                "size": 15,
+                "proba": "0.60"
+            }
+        ],
+        "number_of_patients": 2496,
+        "parent_id": 34,
+        "node_id": 36,
+        "question_text": "",
+        "question_options": [],
+        "proba": "0.60"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 20588,
+                "proba": "98.86"
+            },
+            {
+                "label": 1,
+                "size": 238,
+                "proba": "1.14"
+            }
+        ],
+        "number_of_patients": 20826,
+        "parent_id": 31,
+        "node_id": 37,
+        "question_text": "Age",
+        "question_options": [
+            {
+                "next_question": 38,
+                "option_text": "< 56.5"
+            },
+            {
+                "next_question": 39,
+                "option_text": "≥ 56.5"
+            }
+        ],
+        "proba": "1.14"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 11379,
+                "proba": "99.29"
+            },
+            {
+                "label": 1,
+                "size": 81,
+                "proba": "0.71"
+            }
+        ],
+        "number_of_patients": 11460,
+        "parent_id": 37,
+        "node_id": 38,
+        "question_text": "",
+        "question_options": [],
+        "proba": "0.71"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 9209,
+                "proba": "98.32"
+            },
+            {
+                "label": 1,
+                "size": 157,
+                "proba": "1.68"
+            }
+        ],
+        "number_of_patients": 9366,
+        "parent_id": 37,
+        "node_id": 39,
+        "question_text": "",
+        "question_options": [],
+        "proba": "1.68"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3253,
+                "proba": "96.44"
+            },
+            {
+                "label": 1,
+                "size": 120,
+                "proba": "3.56"
+            }
+        ],
+        "number_of_patients": 3373,
+        "parent_id": 16,
+        "node_id": 40,
+        "question_text": "ASACLAS",
+        "question_options": [
+            {
+                "next_question": 41,
+                "option_text": "< 2.5"
+            },
+            {
+                "next_question": 42,
+                "option_text": "≥ 2.5"
+            }
+        ],
+        "proba": "3.56"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1565,
+                "proba": "98.43"
+            },
+            {
+                "label": 1,
+                "size": 25,
+                "proba": "1.57"
+            }
+        ],
+        "number_of_patients": 1590,
+        "parent_id": 40,
+        "node_id": 41,
+        "question_text": "",
+        "question_options": [],
+        "proba": "1.57"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1688,
+                "proba": "94.67"
+            },
+            {
+                "label": 1,
+                "size": 95,
+                "proba": "5.33"
+            }
+        ],
+        "number_of_patients": 1783,
+        "parent_id": 40,
+        "node_id": 42,
+        "question_text": "",
+        "question_options": [],
+        "proba": "5.33"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 18951,
+                "proba": "96.65"
+            },
+            {
+                "label": 1,
+                "size": 657,
+                "proba": "3.35"
+            }
+        ],
+        "number_of_patients": 19608,
+        "parent_id": 3,
+        "node_id": 43,
+        "question_text": "ASACLAS",
+        "question_options": [
+            {
+                "next_question": 44,
+                "option_text": "< 2.5"
+            },
+            {
+                "next_question": 47,
+                "option_text": "≥ 2.5"
+            }
+        ],
+        "proba": "3.35"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3386,
+                "proba": "98.46"
+            },
+            {
+                "label": 1,
+                "size": 53,
+                "proba": "1.54"
+            }
+        ],
+        "number_of_patients": 3439,
+        "parent_id": 43,
+        "node_id": 44,
+        "question_text": "PRALBUM",
+        "question_options": [
+            {
+                "next_question": 45,
+                "option_text": "< 4.1007"
+            },
+            {
+                "next_question": 46,
+                "option_text": "≥ 4.1007"
+            }
+        ],
+        "proba": "1.54"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2144,
+                "proba": "97.81"
+            },
+            {
+                "label": 1,
+                "size": 48,
+                "proba": "2.19"
+            }
+        ],
+        "number_of_patients": 2192,
+        "parent_id": 44,
+        "node_id": 45,
+        "question_text": "",
+        "question_options": [],
+        "proba": "2.19"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1242,
+                "proba": "99.60"
+            },
+            {
+                "label": 1,
+                "size": 5,
+                "proba": "0.40"
+            }
+        ],
+        "number_of_patients": 1247,
+        "parent_id": 44,
+        "node_id": 46,
+        "question_text": "",
+        "question_options": [],
+        "proba": "0.40"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 15565,
+                "proba": "96.26"
+            },
+            {
+                "label": 1,
+                "size": 604,
+                "proba": "3.74"
+            }
+        ],
+        "number_of_patients": 16169,
+        "parent_id": 43,
+        "node_id": 47,
+        "question_text": "BMI",
+        "question_options": [
+            {
+                "next_question": 48,
+                "option_text": "< 54.3016"
+            },
+            {
+                "next_question": 55,
+                "option_text": "≥ 54.3016"
+            }
+        ],
+        "proba": "3.74"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 15180,
+                "proba": "96.41"
+            },
+            {
+                "label": 1,
+                "size": 566,
+                "proba": "3.59"
+            }
+        ],
+        "number_of_patients": 15746,
+        "parent_id": 47,
+        "node_id": 48,
+        "question_text": "PRCREAT",
+        "question_options": [
+            {
+                "next_question": 49,
+                "option_text": "< 5.305"
+            },
+            {
+                "next_question": 54,
+                "option_text": "≥ 5.305"
+            }
+        ],
+        "proba": "3.59"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 12951,
+                "proba": "96.00"
+            },
+            {
+                "label": 1,
+                "size": 539,
+                "proba": "4.00"
+            }
+        ],
+        "number_of_patients": 13490,
+        "parent_id": 48,
+        "node_id": 49,
+        "question_text": "RENAFAIL",
+        "question_options": [
+            {
+                "next_question": 50,
+                "option_text": "< 0.5"
+            },
+            {
+                "next_question": 53,
+                "option_text": "≥ 0.5"
+            }
+        ],
+        "proba": "4.00"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 11718,
+                "proba": "96.33"
+            },
+            {
+                "label": 1,
+                "size": 446,
+                "proba": "3.67"
+            }
+        ],
+        "number_of_patients": 12164,
+        "parent_id": 49,
+        "node_id": 50,
+        "question_text": "PRALBUM",
+        "question_options": [
+            {
+                "next_question": 51,
+                "option_text": "< 2.8214"
+            },
+            {
+                "next_question": 52,
+                "option_text": "≥ 2.8214"
+            }
+        ],
+        "proba": "3.67"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3828,
+                "proba": "94.50"
+            },
+            {
+                "label": 1,
+                "size": 223,
+                "proba": "5.50"
+            }
+        ],
+        "number_of_patients": 4051,
+        "parent_id": 50,
+        "node_id": 51,
+        "question_text": "",
+        "question_options": [],
+        "proba": "5.50"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 7890,
+                "proba": "97.25"
+            },
+            {
+                "label": 1,
+                "size": 223,
+                "proba": "2.75"
+            }
+        ],
+        "number_of_patients": 8113,
+        "parent_id": 50,
+        "node_id": 52,
+        "question_text": "",
+        "question_options": [],
+        "proba": "2.75"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1233,
+                "proba": "92.99"
+            },
+            {
+                "label": 1,
+                "size": 93,
+                "proba": "7.01"
+            }
+        ],
+        "number_of_patients": 1326,
+        "parent_id": 49,
+        "node_id": 53,
+        "question_text": "",
+        "question_options": [],
+        "proba": "7.01"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2229,
+                "proba": "98.80"
+            },
+            {
+                "label": 1,
+                "size": 27,
+                "proba": "1.20"
+            }
+        ],
+        "number_of_patients": 2256,
+        "parent_id": 48,
+        "node_id": 54,
+        "question_text": "",
+        "question_options": [],
+        "proba": "1.20"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 385,
+                "proba": "91.02"
+            },
+            {
+                "label": 1,
+                "size": 38,
+                "proba": "8.98"
+            }
+        ],
+        "number_of_patients": 423,
+        "parent_id": 47,
+        "node_id": 55,
+        "question_text": "",
+        "question_options": [],
+        "proba": "8.98"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 72505,
+                "proba": "95.08"
+            },
+            {
+                "label": 1,
+                "size": 3752,
+                "proba": "4.92"
+            }
+        ],
+        "number_of_patients": 76257,
+        "parent_id": 2,
+        "node_id": 56,
+        "question_text": "PRHCT",
+        "question_options": [
+            {
+                "next_question": 57,
+                "option_text": "< 35.2164"
+            },
+            {
+                "next_question": 70,
+                "option_text": "≥ 35.2164"
+            }
+        ],
+        "proba": "4.92"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 29902,
+                "proba": "93.98"
+            },
+            {
+                "label": 1,
+                "size": 1915,
+                "proba": "6.02"
+            }
+        ],
+        "number_of_patients": 31817,
+        "parent_id": 56,
+        "node_id": 57,
+        "question_text": "PRALBUM",
+        "question_options": [
+            {
+                "next_question": 58,
+                "option_text": "< 2.9045"
+            },
+            {
+                "next_question": 63,
+                "option_text": "≥ 2.9045"
+            }
+        ],
+        "proba": "6.02"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 10720,
+                "proba": "93.28"
+            },
+            {
+                "label": 1,
+                "size": 772,
+                "proba": "6.72"
+            }
+        ],
+        "number_of_patients": 11492,
+        "parent_id": 57,
+        "node_id": 58,
+        "question_text": "RACE_NEW",
+        "question_options": [
+            {
+                "next_question": 59,
+                "option_text": "American Indian or Alaska Native"
+            },
+            {
+                "next_question": 59,
+                "option_text": "Asian"
+            },
+            {
+                "next_question": 59,
+                "option_text": "Black or African American"
+            },
+            {
+                "next_question": 59,
+                "option_text": "MISSING"
+            },
+            {
+                "next_question": 59,
+                "option_text": "Native Hawaiian or Pacific Islander"
+            },
+            {
+                "next_question": 62,
+                "option_text": "Unknown"
+            },
+            {
+                "next_question": 62,
+                "option_text": "Unknown/Not Reported"
+            },
+            {
+                "next_question": 59,
+                "option_text": "White"
+            }
+        ],
+        "proba": "6.72"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 9506,
+                "proba": "93.83"
+            },
+            {
+                "label": 1,
+                "size": 625,
+                "proba": "6.17"
+            }
+        ],
+        "number_of_patients": 10131,
+        "parent_id": 58,
+        "node_id": 59,
+        "question_text": "SEX_MALE",
+        "question_options": [
+            {
+                "next_question": 60,
+                "option_text": "< 0.5"
+            },
+            {
+                "next_question": 61,
+                "option_text": "≥ 0.5"
+            }
+        ],
+        "proba": "6.17"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 5324,
+                "proba": "92.91"
+            },
+            {
+                "label": 1,
+                "size": 406,
+                "proba": "7.09"
+            }
+        ],
+        "number_of_patients": 5730,
+        "parent_id": 59,
+        "node_id": 60,
+        "question_text": "",
+        "question_options": [],
+        "proba": "7.09"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 4182,
+                "proba": "95.02"
+            },
+            {
+                "label": 1,
+                "size": 219,
+                "proba": "4.98"
+            }
+        ],
+        "number_of_patients": 4401,
+        "parent_id": 59,
+        "node_id": 61,
+        "question_text": "",
+        "question_options": [],
+        "proba": "4.98"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1214,
+                "proba": "89.20"
+            },
+            {
+                "label": 1,
+                "size": 147,
+                "proba": "10.80"
+            }
+        ],
+        "number_of_patients": 1361,
+        "parent_id": 58,
+        "node_id": 62,
+        "question_text": "",
+        "question_options": [],
+        "proba": "10.80"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 19182,
+                "proba": "94.38"
+            },
+            {
+                "label": 1,
+                "size": 1143,
+                "proba": "5.62"
+            }
+        ],
+        "number_of_patients": 20325,
+        "parent_id": 57,
+        "node_id": 63,
+        "question_text": "SURGSPEC",
+        "question_options": [
+            {
+                "next_question": 67,
+                "option_text": "Cardiac Surgery"
+            },
+            {
+                "next_question": 64,
+                "option_text": "General Surgery"
+            },
+            {
+                "next_question": 64,
+                "option_text": "Gynecology"
+            },
+            {
+                "next_question": 67,
+                "option_text": "Interventional Radiologist"
+            },
+            {
+                "next_question": 67,
+                "option_text": "Neurosurgery"
+            },
+            {
+                "next_question": 67,
+                "option_text": "Orthopedics"
+            },
+            {
+                "next_question": 64,
+                "option_text": "Other"
+            },
+            {
+                "next_question": 64,
+                "option_text": "Otolaryngology (ENT)"
+            },
+            {
+                "next_question": 67,
+                "option_text": "Plastics"
+            },
+            {
+                "next_question": 64,
+                "option_text": "Thoracic"
+            },
+            {
+                "next_question": 64,
+                "option_text": "Unknown"
+            },
+            {
+                "next_question": 67,
+                "option_text": "Urology"
+            },
+            {
+                "next_question": 64,
+                "option_text": "Vascular"
+            }
+        ],
+        "proba": "5.62"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 14159,
+                "proba": "95.22"
+            },
+            {
+                "label": 1,
+                "size": 711,
+                "proba": "4.78"
+            }
+        ],
+        "number_of_patients": 14870,
+        "parent_id": 63,
+        "node_id": 64,
+        "question_text": "PRSEPIS",
+        "question_options": [
+            {
+                "next_question": 66,
+                "option_text": "MISSING"
+            },
+            {
+                "next_question": 66,
+                "option_text": "None"
+            },
+            {
+                "next_question": 65,
+                "option_text": "SIRS"
+            },
+            {
+                "next_question": 66,
+                "option_text": "Sepsis"
+            },
+            {
+                "next_question": 66,
+                "option_text": "Septic Shock"
+            }
+        ],
+        "proba": "4.78"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2313,
+                "proba": "93.27"
+            },
+            {
+                "label": 1,
+                "size": 167,
+                "proba": "6.73"
+            }
+        ],
+        "number_of_patients": 2480,
+        "parent_id": 64,
+        "node_id": 65,
+        "question_text": "",
+        "question_options": [],
+        "proba": "6.73"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 11846,
+                "proba": "95.61"
+            },
+            {
+                "label": 1,
+                "size": 544,
+                "proba": "4.39"
+            }
+        ],
+        "number_of_patients": 12390,
+        "parent_id": 64,
+        "node_id": 66,
+        "question_text": "",
+        "question_options": [],
+        "proba": "4.39"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 5023,
+                "proba": "92.08"
+            },
+            {
+                "label": 1,
+                "size": 432,
+                "proba": "7.92"
+            }
+        ],
+        "number_of_patients": 5455,
+        "parent_id": 63,
+        "node_id": 67,
+        "question_text": "RACE_NEW",
+        "question_options": [
+            {
+                "next_question": 68,
+                "option_text": "American Indian or Alaska Native"
+            },
+            {
+                "next_question": 69,
+                "option_text": "Asian"
+            },
+            {
+                "next_question": 69,
+                "option_text": "Black or African American"
+            },
+            {
+                "next_question": 69,
+                "option_text": "MISSING"
+            },
+            {
+                "next_question": 69,
+                "option_text": "Native Hawaiian or Pacific Islander"
+            },
+            {
+                "next_question": 68,
+                "option_text": "Unknown"
+            },
+            {
+                "next_question": 68,
+                "option_text": "Unknown/Not Reported"
+            },
+            {
+                "next_question": 69,
+                "option_text": "White"
+            }
+        ],
+        "proba": "7.92"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1398,
+                "proba": "88.59"
+            },
+            {
+                "label": 1,
+                "size": 180,
+                "proba": "11.41"
+            }
+        ],
+        "number_of_patients": 1578,
+        "parent_id": 67,
+        "node_id": 68,
+        "question_text": "",
+        "question_options": [],
+        "proba": "11.41"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3625,
+                "proba": "93.50"
+            },
+            {
+                "label": 1,
+                "size": 252,
+                "proba": "6.50"
+            }
+        ],
+        "number_of_patients": 3877,
+        "parent_id": 67,
+        "node_id": 69,
+        "question_text": "",
+        "question_options": [],
+        "proba": "6.50"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 42603,
+                "proba": "95.87"
+            },
+            {
+                "label": 1,
+                "size": 1837,
+                "proba": "4.13"
+            }
+        ],
+        "number_of_patients": 44440,
+        "parent_id": 56,
+        "node_id": 70,
+        "question_text": "ASACLAS",
+        "question_options": [
+            {
+                "next_question": 71,
+                "option_text": "< 2.5"
+            },
+            {
+                "next_question": 74,
+                "option_text": "≥ 2.5"
+            }
+        ],
+        "proba": "4.13"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 9374,
+                "proba": "97.58"
+            },
+            {
+                "label": 1,
+                "size": 232,
+                "proba": "2.42"
+            }
+        ],
+        "number_of_patients": 9606,
+        "parent_id": 70,
+        "node_id": 71,
+        "question_text": "Age",
+        "question_options": [
+            {
+                "next_question": 72,
+                "option_text": "< 77.5"
+            },
+            {
+                "next_question": 73,
+                "option_text": "≥ 77.5"
+            }
+        ],
+        "proba": "2.42"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 5771,
+                "proba": "98.41"
+            },
+            {
+                "label": 1,
+                "size": 93,
+                "proba": "1.59"
+            }
+        ],
+        "number_of_patients": 5864,
+        "parent_id": 71,
+        "node_id": 72,
+        "question_text": "",
+        "question_options": [],
+        "proba": "1.59"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3603,
+                "proba": "96.29"
+            },
+            {
+                "label": 1,
+                "size": 139,
+                "proba": "3.71"
+            }
+        ],
+        "number_of_patients": 3742,
+        "parent_id": 71,
+        "node_id": 73,
+        "question_text": "",
+        "question_options": [],
+        "proba": "3.71"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 33229,
+                "proba": "95.39"
+            },
+            {
+                "label": 1,
+                "size": 1605,
+                "proba": "4.61"
+            }
+        ],
+        "number_of_patients": 34834,
+        "parent_id": 70,
+        "node_id": 74,
+        "question_text": "SURGSPEC",
+        "question_options": [
+            {
+                "next_question": 75,
+                "option_text": "Cardiac Surgery"
+            },
+            {
+                "next_question": 75,
+                "option_text": "General Surgery"
+            },
+            {
+                "next_question": 75,
+                "option_text": "Gynecology"
+            },
+            {
+                "next_question": 75,
+                "option_text": "Interventional Radiologist"
+            },
+            {
+                "next_question": 80,
+                "option_text": "Neurosurgery"
+            },
+            {
+                "next_question": 80,
+                "option_text": "Orthopedics"
+            },
+            {
+                "next_question": 80,
+                "option_text": "Other"
+            },
+            {
+                "next_question": 75,
+                "option_text": "Otolaryngology (ENT)"
+            },
+            {
+                "next_question": 75,
+                "option_text": "Plastics"
+            },
+            {
+                "next_question": 75,
+                "option_text": "Thoracic"
+            },
+            {
+                "next_question": 75,
+                "option_text": "Unknown"
+            },
+            {
+                "next_question": 80,
+                "option_text": "Urology"
+            },
+            {
+                "next_question": 75,
+                "option_text": "Vascular"
+            }
+        ],
+        "proba": "4.61"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 28711,
+                "proba": "95.87"
+            },
+            {
+                "label": 1,
+                "size": 1238,
+                "proba": "4.13"
+            }
+        ],
+        "number_of_patients": 29949,
+        "parent_id": 74,
+        "node_id": 75,
+        "question_text": "SEX_MALE",
+        "question_options": [
+            {
+                "next_question": 76,
+                "option_text": "< 0.5"
+            },
+            {
+                "next_question": 77,
+                "option_text": "≥ 0.5"
+            }
+        ],
+        "proba": "4.13"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 14859,
+                "proba": "94.85"
+            },
+            {
+                "label": 1,
+                "size": 806,
+                "proba": "5.15"
+            }
+        ],
+        "number_of_patients": 15665,
+        "parent_id": 75,
+        "node_id": 76,
+        "question_text": "",
+        "question_options": [],
+        "proba": "5.15"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 13852,
+                "proba": "96.98"
+            },
+            {
+                "label": 1,
+                "size": 432,
+                "proba": "3.02"
+            }
+        ],
+        "number_of_patients": 14284,
+        "parent_id": 75,
+        "node_id": 77,
+        "question_text": "Age",
+        "question_options": [
+            {
+                "next_question": 78,
+                "option_text": "< 81.5"
+            },
+            {
+                "next_question": 79,
+                "option_text": "≥ 81.5"
+            }
+        ],
+        "proba": "3.02"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 9548,
+                "proba": "97.50"
+            },
+            {
+                "label": 1,
+                "size": 245,
+                "proba": "2.50"
+            }
+        ],
+        "number_of_patients": 9793,
+        "parent_id": 77,
+        "node_id": 78,
+        "question_text": "",
+        "question_options": [],
+        "proba": "2.50"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 4304,
+                "proba": "95.84"
+            },
+            {
+                "label": 1,
+                "size": 187,
+                "proba": "4.16"
+            }
+        ],
+        "number_of_patients": 4491,
+        "parent_id": 77,
+        "node_id": 79,
+        "question_text": "",
+        "question_options": [],
+        "proba": "4.16"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 4518,
+                "proba": "92.49"
+            },
+            {
+                "label": 1,
+                "size": 367,
+                "proba": "7.51"
+            }
+        ],
+        "number_of_patients": 4885,
+        "parent_id": 74,
+        "node_id": 80,
+        "question_text": "RACE_NEW",
+        "question_options": [
+            {
+                "next_question": 82,
+                "option_text": "American Indian or Alaska Native"
+            },
+            {
+                "next_question": 82,
+                "option_text": "Asian"
+            },
+            {
+                "next_question": 81,
+                "option_text": "Black or African American"
+            },
+            {
+                "next_question": 82,
+                "option_text": "MISSING"
+            },
+            {
+                "next_question": 81,
+                "option_text": "Native Hawaiian or Pacific Islander"
+            },
+            {
+                "next_question": 82,
+                "option_text": "Unknown"
+            },
+            {
+                "next_question": 82,
+                "option_text": "Unknown/Not Reported"
+            },
+            {
+                "next_question": 81,
+                "option_text": "White"
+            }
+        ],
+        "proba": "7.51"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3121,
+                "proba": "94.20"
+            },
+            {
+                "label": 1,
+                "size": 192,
+                "proba": "5.80"
+            }
+        ],
+        "number_of_patients": 3313,
+        "parent_id": 80,
+        "node_id": 81,
+        "question_text": "",
+        "question_options": [],
+        "proba": "5.80"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1397,
+                "proba": "88.87"
+            },
+            {
+                "label": 1,
+                "size": 175,
+                "proba": "11.13"
+            }
+        ],
+        "number_of_patients": 1572,
+        "parent_id": 80,
+        "node_id": 82,
+        "question_text": "",
+        "question_options": [],
+        "proba": "11.13"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 11838,
+                "proba": "93.63"
+            },
+            {
+                "label": 1,
+                "size": 805,
+                "proba": "6.37"
+            }
+        ],
+        "number_of_patients": 12643,
+        "parent_id": 1,
+        "node_id": 83,
+        "question_text": "PRPLATE",
+        "question_options": [
+            {
+                "next_question": 84,
+                "option_text": "< 137.5"
+            },
+            {
+                "next_question": 87,
+                "option_text": "≥ 137.5"
+            }
+        ],
+        "proba": "6.37"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 3965,
+                "proba": "94.63"
+            },
+            {
+                "label": 1,
+                "size": 225,
+                "proba": "5.37"
+            }
+        ],
+        "number_of_patients": 4190,
+        "parent_id": 83,
+        "node_id": 84,
+        "question_text": "SEX_MALE",
+        "question_options": [
+            {
+                "next_question": 85,
+                "option_text": "< 0.5"
+            },
+            {
+                "next_question": 86,
+                "option_text": "≥ 0.5"
+            }
+        ],
+        "proba": "5.37"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 1701,
+                "proba": "92.65"
+            },
+            {
+                "label": 1,
+                "size": 135,
+                "proba": "7.35"
+            }
+        ],
+        "number_of_patients": 1836,
+        "parent_id": 84,
+        "node_id": 85,
+        "question_text": "",
+        "question_options": [],
+        "proba": "7.35"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 2264,
+                "proba": "96.18"
+            },
+            {
+                "label": 1,
+                "size": 90,
+                "proba": "3.82"
+            }
+        ],
+        "number_of_patients": 2354,
+        "parent_id": 84,
+        "node_id": 86,
+        "question_text": "",
+        "question_options": [],
+        "proba": "3.82"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 7873,
+                "proba": "93.14"
+            },
+            {
+                "label": 1,
+                "size": 580,
+                "proba": "6.86"
+            }
+        ],
+        "number_of_patients": 8453,
+        "parent_id": 83,
+        "node_id": 87,
+        "question_text": "BMI",
+        "question_options": [
+            {
+                "next_question": 88,
+                "option_text": "< 47.9001"
+            },
+            {
+                "next_question": 93,
+                "option_text": "≥ 47.9001"
+            }
+        ],
+        "proba": "6.86"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 7535,
+                "proba": "93.49"
+            },
+            {
+                "label": 1,
+                "size": 525,
+                "proba": "6.51"
+            }
+        ],
+        "number_of_patients": 8060,
+        "parent_id": 87,
+        "node_id": 88,
+        "question_text": "SURGSPEC",
+        "question_options": [
+            {
+                "next_question": 89,
+                "option_text": "Cardiac Surgery"
+            },
+            {
+                "next_question": 92,
+                "option_text": "General Surgery"
+            },
+            {
+                "next_question": 92,
+                "option_text": "Gynecology"
+            },
+            {
+                "next_question": 89,
+                "option_text": "Interventional Radiologist"
+            },
+            {
+                "next_question": 89,
+                "option_text": "Neurosurgery"
+            },
+            {
+                "next_question": 89,
+                "option_text": "Orthopedics"
+            },
+            {
+                "next_question": 92,
+                "option_text": "Other"
+            },
+            {
+                "next_question": 92,
+                "option_text": "Otolaryngology (ENT)"
+            },
+            {
+                "next_question": 92,
+                "option_text": "Plastics"
+            },
+            {
+                "next_question": 92,
+                "option_text": "Thoracic"
+            },
+            {
+                "next_question": 89,
+                "option_text": "Unknown"
+            },
+            {
+                "next_question": 92,
+                "option_text": "Urology"
+            },
+            {
+                "next_question": 92,
+                "option_text": "Vascular"
+            }
+        ],
+        "proba": "6.51"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 901,
+                "proba": "89.83"
+            },
+            {
+                "label": 1,
+                "size": 102,
+                "proba": "10.17"
+            }
+        ],
+        "number_of_patients": 1003,
+        "parent_id": 88,
+        "node_id": 89,
+        "question_text": "SEX_MALE",
+        "question_options": [
+            {
+                "next_question": 90,
+                "option_text": "< 0.5"
+            },
+            {
+                "next_question": 91,
+                "option_text": "≥ 0.5"
+            }
+        ],
+        "proba": "10.17"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 414,
+                "proba": "84.49"
+            },
+            {
+                "label": 1,
+                "size": 76,
+                "proba": "15.51"
+            }
+        ],
+        "number_of_patients": 490,
+        "parent_id": 89,
+        "node_id": 90,
+        "question_text": "",
+        "question_options": [],
+        "proba": "15.51"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 487,
+                "proba": "94.93"
+            },
+            {
+                "label": 1,
+                "size": 26,
+                "proba": "5.07"
+            }
+        ],
+        "number_of_patients": 513,
+        "parent_id": 89,
+        "node_id": 91,
+        "question_text": "",
+        "question_options": [],
+        "proba": "5.07"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 6634,
+                "proba": "94.01"
+            },
+            {
+                "label": 1,
+                "size": 423,
+                "proba": "5.99"
+            }
+        ],
+        "number_of_patients": 7057,
+        "parent_id": 88,
+        "node_id": 92,
+        "question_text": "",
+        "question_options": [],
+        "proba": "5.99"
+    },
+    {
+        "class_text": [
+            {
+                "label": 0,
+                "size": 338,
+                "proba": "86.01"
+            },
+            {
+                "label": 1,
+                "size": 55,
+                "proba": "13.99"
+            }
+        ],
+        "number_of_patients": 393,
+        "parent_id": 87,
+        "node_id": 93,
+        "question_text": "",
+        "question_options": [],
+        "proba": "13.99"
+    }
+]
