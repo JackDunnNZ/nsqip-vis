@@ -173,7 +173,7 @@ function update(source) {
       .attr("text-anchor", "middle")
       .text(function(d) {
           if (d.children || d._children) {
-            return d.node_text;
+            return getvariabletext(d.node_text);
           }
       })
       .style("fill-opacity", 1e-6);
@@ -245,6 +245,11 @@ function update(source) {
         numfactors = text.split(";").length;
         if (numfactors > 3) {
           text = numfactors + " factors";
+        }
+        if (text == "< 0.5") {
+          text = "False";
+        } else if (text == "≥ 0.5") {
+          text = "True";
         }
         return text;
       })
@@ -390,5 +395,102 @@ function expand(d) {
   }
   if (d.children) {
     d.children.forEach(expand);
+  }
+}
+
+function getvariabletext(varname) {
+  switch (varname) {
+    case "Age":
+      return "Age";
+    case "SURGSPEC":
+      return "Surgical Specialty";
+    case "DIABETES":
+      return "Diabetes";
+    case "SMOKE":
+      return "Smoker";
+    case "DYSPNEA":
+      return "Dyspnea";
+    case "VENTILAT":
+      return "Ventilator Dependent";
+    case "HXCOPD":
+      return "History of Severe COPD";
+    case "ASCITES":
+      return "Ascites";
+    case "HXCHF":
+      return "History of CHF";
+    case "HYPERMED":
+      return "Hypertension";
+    case "RENAFAIL":
+      return "Acute Renal Failure";
+    case "DIALYSIS":
+      return "On Dialysis";
+    case "DISCANCR":
+      return "Disseminated Cancer";
+    case "WNDINF":
+      return "Wound Infection";
+    case "STEROID":
+      return "Steriod Use";
+    case "WTLOSS":
+      return "Weight Loss";
+    case "BLEEDDIS":
+      return "Bleeding Disorders";
+    case "TRANSFUS":
+      return "Transfusion";
+    case "PRSEPIS":
+      return "Sepsis";
+    case "PRSODM":
+      return "Pre-op Serum Sodium";
+    case "PRBUN":
+      return "Pre-op BUN";
+    case "PRCREAT":
+      return "Pre-op Serum Creatinine";
+    case "PRALBUM":
+      return "Pre-op Serum Albumin";
+    case "PRBILI":
+      return "Pre-op Serum Bilirubin";
+    case "PRSGOT":
+      return "Pre-op SGOT";
+    case "PRALKPH":
+      return "Pre-op Alkline Phosphatase";
+    case "PRWBC":
+      return "Pre-op WBC";
+    case "PRHCT":
+      return "Pre-op Hematocrit";
+    case "PRPLATE":
+      return "Pre-op Platelet Count";
+    case "PRPTT":
+      return "Pre-op PTT";
+    case "PRINR":
+      return "Pre-op INR";
+    case "PRPT":
+      return "Pre-op PT";
+    case "WNDCLAS":
+      return "Wound Classification";
+    case "ASACLAS":
+      return "ASA Classification";
+    case "AdmQtr":
+      return "Quarter of Admission";
+    case "RACE_NEW":
+      return "Race";
+    case "ETHNICITY_HISPANIC":
+      return "Hispanic";
+    case "SEX_MALE":
+      return "Male";
+    case "CPT_CAT":
+      return "CPT";
+    case "CPT_Digestive":
+      return "CPT Digestive";
+    case "CPT_Cardio":
+      return "CPT Cardiovascular";
+    case "CPT_Muscl":
+      return "CPT Muscular";
+    case "INOUT_OUTPATIENT":
+      return "Outpatient";
+    case "BMI":
+      return "BMI";
+    case "ICD9_AREA":
+      return "ICD9 Area";
+    case "ELECTSURG":
+      return "Elective Surgery";
   }
 }

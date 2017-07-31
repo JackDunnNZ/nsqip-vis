@@ -158,7 +158,7 @@
             div.appendChild(heading);
 
             if (question.question_text) {
-              heading.appendChild(document.createTextNode(question.question_text))
+              heading.appendChild(document.createTextNode(getquestiontext(question.question_text)))
 
 
               if (question.question_options.length > 2) {
@@ -197,7 +197,14 @@
                   radio.setAttribute('type', 'radio');
                   radio.setAttribute('value', question_option.next_question);
                   radioLabel.appendChild(radio);
-                  radioLabel.appendChild(document.createTextNode(question_option.option_text));
+
+                  var text = question_option.option_text;
+                  if (text == "< 0.5") {
+                    text = "No";
+                  } else if (text == "≥ 0.5") {
+                    text = "Yes";
+                  }
+                  radioLabel.appendChild(document.createTextNode(text));
 
                   $(radio).click(answerQuestionRadio)
                 }
@@ -232,6 +239,103 @@
           resetQuestions()
         });
       };
+
+      function getquestiontext(varname) {
+        switch (varname) {
+          case "Age":
+            return "What is the patient's age?";
+          case "SURGSPEC":
+            return "What type of surgery will be performed?";
+          case "DIABETES":
+            return "Does the patient have diabetes mellitus requiring therapy with non-insulin agents or insulin?";
+          case "SMOKE":
+            return "Is the patient a current smoker within one year?";
+          case "DYSPNEA":
+            return "Does the patient have dyspnea?";
+          case "VENTILAT":
+            return "Is the patient ventilator dependent?";
+          case "HXCOPD":
+            return "Does the patient have history of severe COPD?";
+          case "ASCITES":
+            return "Does the patient have ascites?";
+          case "HXCHF":
+            return "Did the patient experience congestive heart failure within 30 days prior to surgery?";
+          case "HYPERMED":
+            return "Does the patient have hypertension requiring medication?";
+          case "RENAFAIL":
+            return "Does the patient have acute renal failure?";
+          case "DIALYSIS":
+            return "Is the patient on dialysis or currently requiring dialysis?";
+          case "DISCANCR":
+            return "Does the patient have disseminated cancer?";
+          case "WNDINF":
+            return "Does the patient have an open wound or a wound infection?";
+          case "STEROID":
+            return "Is the patient using steroids or immunosuppressants for a chronic condition?";
+          case "WTLOSS":
+            return "Has the patient experienced >10% loss of body weight in the 6 months prior to surgery?";
+          case "BLEEDDIS":
+            return "Does the patient have bleeding disorders?";
+          case "TRANSFUS":
+            return "Has the patient received a pre-operative transfusion (RBC within 72 hours prior to surgery start time)?";
+          case "PRSEPIS":
+            return "What is the patient's sepsis status in the 48 hours prior to surgery?";
+          case "PRSODM":
+            return "What is the patient's pre-operative serum sodium?";
+          case "PRBUN":
+            return "What is the patient's pre-operative BUN?";
+          case "PRCREAT":
+            return "What is the patient's pre-operative serum creatinine?";
+          case "PRALBUM":
+            return "What is the patient's pre-operative serum albumin?";
+          case "PRBILI":
+            return "What is the patient's pre-operative serum bilirubin?";
+          case "PRSGOT":
+            return "What is the patient's pre-operative SGOT?";
+          case "PRALKPH":
+            return "What is the patient's pre-operative alkline phosphatase?";
+          case "PRWBC":
+            return "What is the patient's pre-operative WBC?";
+          case "PRHCT":
+            return "What is the patient's pre-operative hematocrit?";
+          case "PRPLATE":
+            return "What is the patient's pre-operative platelet count?";
+          case "PRPTT":
+            return "What is the patient's pre-operative PTT?";
+          case "PRINR":
+            return "What is the patient's pre-operative INR?";
+          case "PRPT":
+            return "What is the patient's pre-operative PT?";
+          case "WNDCLAS":
+            return "What is the patient's wound classification?";
+          case "ASACLAS":
+            return "What is the patient's ASA classification?";
+          case "AdmQtr":
+            return "In which quarter was the patient admitted?";
+          case "RACE_NEW":
+            return "What is the patient's race?";
+          case "ETHNICITY_HISPANIC":
+            return "Is the patient hispanic?";
+          case "SEX_MALE":
+            return "Is the patient male?";
+          case "CPT_CAT":
+            return "What is the CPT code of the procedure?";
+          case "CPT_Digestive":
+            return "Which digestive CPT code best describes the procedure?";
+          case "CPT_Cardio":
+            return "Which cardiovascular CPT code best describes the procedure?";
+          case "CPT_Muscl":
+            return "Which muscular CPT code best describes the procedure?";
+          case "INOUT_OUTPATIENT":
+            return "Is the patient an outpatient?";
+          case "BMI":
+            return "What is the patient's BMI?";
+          case "ICD9_AREA":
+            return "What is the area of the patient's ICD-9 diagnosis?";
+          case "ELECTSURG":
+            return "Is the surgery elective?";
+        }
+      }
     </script>
   </body>
 </html>
