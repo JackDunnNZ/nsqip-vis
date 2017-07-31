@@ -1,107 +1,107 @@
 {
     "MORB_ORGSPCSSI": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_OTHSESHOCK": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_OTHSYSEP": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_OTHBLEED": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_CDARREST": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_RENAINSF": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_SUPINFEC": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_URNINFEC": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_OUPNEUMO": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_REINTUB": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_PULEMBOL": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORT": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_CNSCVA": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_CDMI": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_FAILWEAN": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_DEHIS": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_OPRENAFL": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_OR_MORT": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_WNDINFD": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_OTHDVT": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ],
     "MORB_ANY": [
-        "full",
+        "limited",
         "asa",
-        "limited"
+        "full"
     ]
 }
