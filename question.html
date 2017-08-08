@@ -73,7 +73,7 @@
           var morb = morbselect.val();
           var vartype = extravarsselect.val();
           var treename = morb + '_' + vartype + '.json';
-          loadtree('questions/' + treename);
+          loadtree('trees/' + treename);
         });
 
         morbselect.change(function() {
@@ -96,6 +96,7 @@
       });
     </script>
     <script>
+      var treedata;
       var questionVisible = [];
 
       var answerQuestionRadio = function() {
@@ -140,28 +141,44 @@
         refreshQuestions()
       }
 
+      var formatProb = function(prob) {
+        return (prob * 100).toFixed(2);
+      }
+
       var loadtree = function(treename) {
         console.log(treename);
-        $.getJSON(treename, function(data) {
+        $.getJSON(treename, function(lnr) {
+          treedata = lnr;
+          data = lnr.tree_.nodes;
+
           var questions = $("#dynamic-questions");
           questions.empty();
+
           for (var i = 0; i < data.length; i++) {
             questionVisible[i] = false;
-            var question = data[i]
-            console.log(question)
+            var node = data[i]
+            console.log(node)
             var div = document.createElement('div')
             div.setAttribute('class', 'question')
-            div.setAttribute('id', question.node_id)
+            div.setAttribute('id', node.id)
 
             var heading = document.createElement('div')
             heading.setAttribute('class', 'heading')
             div.appendChild(heading);
 
-            if (question.question_text) {
-              heading.appendChild(document.createTextNode(getquestiontext(question.question_text)))
+            var feature;
+            if (node.split_type == "CATEGORIC") {
+              feature = lnr.col_map_categoric_to_X_[node.feature - 1] - 1;
+            } else if (node.split_type == "PARALLEL") {
+              feature = lnr.col_map_numeric_to_X_[node.feature - 1] - 1;
+            }
+            var varname = lnr.feature_names_[feature];
+
+            if (node.split_type != "LEAF") {
+              heading.appendChild(document.createTextNode(getquestiontext(varname)))
 
 
-              if (question.question_options.length > 2) {
+              if (node.split_type == "CATEGORIC") {
                 // Categoric
                 var select = document.createElement('select');
                 select.setAttribute('class', 'form-control')
@@ -171,12 +188,15 @@
                 option.appendChild(document.createTextNode('Choose an answer...'));
                 select.appendChild(option);
 
-                for (var r = 0; r < question.question_options.length; r++) {
-                  var question_option = question.question_options[r];
+                var num_options = lnr.n_categoric_levels_[node.feature - 1];
+                for (var r = 0; r < num_options; r++) {
+                  var level = lnr.categoric_index_to_level_[node.feature - 1][r];
+                  var nextId = node.categoric_split[r] ? node.lower_child
+                                                       : node.upper_child;
 
                   option = document.createElement('option')
-                  option.setAttribute('value', question_option.next_question);
-                  option.appendChild(document.createTextNode(question_option.option_text));
+                  option.setAttribute('value', nextId);
+                  option.appendChild(document.createTextNode(level));
                   select.appendChild(option);
                 }
                 $(select).change(answerQuestionSelect)
@@ -185,20 +205,18 @@
                 // Parallel
                 var radioGroup = document.createElement('div')
                 radioGroup.setAttribute('class', 'container')
-                for (var r = 0; r < question.question_options.length; r++) {
-                  var question_option = question.question_options[r];
 
+                function addradio(id, nextId, text) {
                   var radioLabel = document.createElement('label');
                   radioLabel.setAttribute('class', 'radio-inline col-xs-6')
                   radioGroup.appendChild(radioLabel);
 
                   var radio = document.createElement('input')
-                  radio.setAttribute('name', question.node_id);
+                  radio.setAttribute('name', id);
                   radio.setAttribute('type', 'radio');
-                  radio.setAttribute('value', question_option.next_question);
+                  radio.setAttribute('value', nextId);
                   radioLabel.appendChild(radio);
 
-                  var text = question_option.option_text;
                   if (text == "< 0.5") {
                     text = "No";
                   } else if (text == "≥ 0.5") {
@@ -208,6 +226,11 @@
 
                   $(radio).click(answerQuestionRadio)
                 }
+
+                var cutoff = +node.threshold.toFixed(4);
+                addradio(node.id, node.lower_child, "< " + cutoff);
+                addradio(node.id, node.upper_child, "≥ " + cutoff);
+
                 div.appendChild(radioGroup);
               }
             } else {
@@ -215,19 +238,20 @@
 
               var result = document.createElement('div')
               result.setAttribute('class', 'result')
-              result.appendChild(document.createTextNode(question.proba + "%"))
+              result.appendChild(document.createTextNode(
+                  formatProb(node.probs[1]) + "%"))
               div.appendChild(result)
             }
 
-            var text1 = question.number_of_patients + ' patients'
-            var text2 = '(' + question.proba + '%)'
+            var text1 = node.n_node_samples + ' patients'
+            var text2 = '(' + formatProb(node.probs[1]) + '%)'
 
             var stats = document.createElement('div')
             stats.setAttribute('class', 'stats')
             var stats1 = document.createElement('div')
             stats1.appendChild(document.createTextNode(text1))
             stats.appendChild(stats1)
-            if (question.question_text) {
+            if (node.split_type != "LEAF") {
               var stats2 = document.createElement('div')
               stats2.appendChild(document.createTextNode(text2))
               stats.appendChild(stats2)

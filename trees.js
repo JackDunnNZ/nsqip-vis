@@ -33,15 +33,17 @@ var color = d3.scale.linear()
 
 var loadtree = function(treename) {
   console.log(treename);
-  d3.json(treename, function(error, data) {
+  d3.json(treename, function(error, lnr) {
+    data = lnr.tree_.nodes;
     var dataMap = data.reduce(function(map, node) {
-        map[node.node_id] = node;
+        map[node.id] = node;
         return map;
     }, {});
     var treeData = [];
     data.forEach(function(node) {
+        node.lnr = lnr;
         // add to parent
-        var parent = dataMap[node.parent_id];
+        var parent = dataMap[node.parent];
         if (parent) {
             // create child array if it doesn't exist
             (parent.children || (parent.children = []))
@@ -62,8 +64,14 @@ var loadtree = function(treename) {
   });
 }
 
+function formatprob(prob) {
+  return (prob * 100).toFixed(2);
+}
+
 
 var tooltipText = function(node) {
+  var lnr = node.lnr;
+
   var tr;
   var td;
   var table = document.createElement("table")
@@ -84,19 +92,19 @@ var tooltipText = function(node) {
 
   table.appendChild(tr);
 
-  for (k = 0; k < node.class_text.length; k++) {
+  for (k = 0; k < lnr.n_classes_; k++) {
     tr = document.createElement("tr");
 
     td = document.createElement("td");
-    td.appendChild(document.createTextNode(node.class_text[k].label));
+    td.appendChild(document.createTextNode(lnr.classes_.vs[k]));
     tr.appendChild(td);
 
     td = document.createElement("td");
-    td.appendChild(document.createTextNode(node.class_text[k].size));
+    td.appendChild(document.createTextNode(node.sizes[k]));
     tr.appendChild(td);
 
     td = document.createElement("td");
-    td.appendChild(document.createTextNode(node.class_text[k].proba));
+    td.appendChild(document.createTextNode(formatprob(node.probs[k])));
     tr.appendChild(td);
 
     table.appendChild(tr);
@@ -117,7 +125,7 @@ function update(source) {
 
   // Update the nodes…
   var node = svg.selectAll("g.node")
-      .data(nodes, function(d) { return d.id || (d.id = ++i); });
+      .data(nodes, function(d) { return d.d3id || (d.d3id = ++i); });
 
   // Enter any new nodes at the parent's previous position.
   var nodeEnter = node.enter().append("g")
@@ -140,7 +148,7 @@ function update(source) {
           } else if (d.children) {
             return "#fff";
           } else {
-            return color(parseFloat(d.proba) / 100);
+            return color(d.probs[1]);
           }
       })
       .on("mouseover", function(d) {
@@ -163,7 +171,7 @@ function update(source) {
   nodeEnter.append("text")
       .attr("class", "node-title")
       .attr("text-anchor", "middle")
-      .text(function(d) { return "Risk: " + d.proba + "%;" + d.n_node_samples + " patients"; })
+      .text(function(d) { return "Risk: " + formatprob(d.probs[1]) + "%;" + d.n_node_samples + " patients"; })
       .call(wrapsemicolons)
       .style("fill-opacity", 1e-6);
   nodeEnter.append("text")
@@ -173,7 +181,7 @@ function update(source) {
       .attr("text-anchor", "middle")
       .text(function(d) {
           if (d.children || d._children) {
-            return getvariabletext(d.node_text);
+            return getvariabletext(d);
           }
       })
       .style("fill-opacity", 1e-6);
@@ -192,7 +200,7 @@ function update(source) {
           } else if (d.children) {
             return "#fff";
           } else {
-            return color(parseFloat(d.proba) / 100);
+            return color(d.probs[1]);
           }
       });
   nodeUpdate.select("text.split-title")
@@ -218,7 +226,7 @@ function update(source) {
 
   // Update the links…
   var link = svg.selectAll("g.link")
-      .data(links, function(d) { return d.target.id; });
+      .data(links, function(d) { return d.target.d3id; });
   // Enter any new links at the parent's previous position.
   var linkenter = link.enter()
       .insert("g", "g")  // insert so nodes draw over the top
@@ -241,7 +249,7 @@ function update(source) {
       .attr("text-anchor", "middle")
       .style("fill-opacity", 1e-6)
       .text(function(d) {
-        var text = d.target.split_text;
+        var text = getsplittext(d);
         numfactors = text.split(";").length;
         if (numfactors > 3) {
           text = numfactors + " factors";
@@ -255,7 +263,7 @@ function update(source) {
       })
       .call(wrapsemicolons)
       .on("mouseover", function(d) {
-          var text = d.target.split_text;
+          var text = getsplittext(d);
           if (text.split(";").length > 3) {
             text = "<b>Factors</b><br>" + text.replace(/;/g, "<br>")
             tooltip.transition()
@@ -398,7 +406,17 @@ function expand(d) {
   }
 }
 
-function getvariabletext(varname) {
+function getvariabletext(d) {
+  var lnr = d.lnr;
+
+  var varname;
+  if (d.split_type == "CATEGORIC") {
+    varname = lnr.feature_names_[lnr.col_map_categoric_to_X_[d.feature - 1] - 1]
+  } else if (d.split_type == "PARALLEL") {
+    varname = lnr.feature_names_[lnr.col_map_numeric_to_X_[d.feature - 1] - 1];
+  }
+
+
   switch (varname) {
     case "Age":
       return "Age";
@@ -492,5 +510,25 @@ function getvariabletext(varname) {
       return "ICD9 Area";
     case "ELECTSURG":
       return "Elective Surgery";
+  }
+}
+
+function getsplittext(d) {
+  var node = d.source;
+  var lnr = node.lnr;
+  var islower = node.lower_child == d.target.id
+
+  if (node.split_type == "PARALLEL") {
+    sign = islower ? "<" : "≥"
+    return sign +  " " + (+node.threshold.toFixed(4));
+
+  } else if (node.split_type == "CATEGORIC") {
+    levels = [];
+    for (var l = 0; l < lnr.n_categoric_levels_[node.feature - 1]; l++) {
+      if (islower == node.categoric_split[l]) {
+        levels.push(lnr.categoric_index_to_level_[node.feature - 1][l])
+      }
+    }
+    return levels.join(";");
   }
 }
