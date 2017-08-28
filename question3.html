@@ -256,6 +256,10 @@
                 for (var r = 0; r < num_options; r++) {
                   var level = lnr.categoric_index_to_level_[node.feature - 1][r];
 
+                  if (level === "MISSING") {
+                    continue;
+                  }
+
                   option = document.createElement('option')
                   option.setAttribute('value', level);
                   option.appendChild(document.createTextNode(level));
