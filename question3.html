@@ -14,9 +14,25 @@
   <body>
     <div class="container">
       <div id="question-container">
-        <div class="question">
+        <div id="target" class="question">
           <div class="heading">Prediction target:</div>
-          <select id="morb" class="form-control"></select>
+          <div class="clearfix">
+            <label class="radio-inline col-xs-4">
+              <input type="radio" id="target-mort" name="target" checked/>
+              Mortality
+            </label>
+            <label class="radio-inline col-xs-4">
+              <input type="radio" id="target-morb" name="target"/>
+              Any complication
+            </label>
+            <label class="radio-inline col-xs-4">
+              <input type="radio" id="target-spec" name="target"/>
+              Specific complication:
+            </label>
+          </div>
+          <div style="margin-top:10px;">
+            <select id="morb" class="form-control"></select>
+          </div>
         </div>
         <div class="question">
           <div class="heading">Model type:</div>
@@ -68,16 +84,31 @@
         var morbselect = $('#morb');
         var extravarsselect = $('#extra-vars');
 
+        var getmorb = function() {
+          if ($('#target-mort').prop('checked')) {
+            morbselect.prop('disabled', true);
+            return "MORT";
+          } else if ($('#target-morb').prop('checked')) {
+            morbselect.prop('disabled', true);
+            return "MORB_OR_MORT";
+          } else {
+            morbselect.prop('disabled', false);
+            return morbselect.val();
+          }
+        }
 
-        extravarsselect.change(function() {
-          var morb = morbselect.val();
+        var refreshtree = function() {
+          var morb = getmorb();
           var vartype = extravarsselect.val();
           var treename = morb + '_' + vartype + '.json';
           loadtree('trees/' + treename);
-        });
+        };
+
+        extravarsselect.change(refreshtree);
+        $('#target input').click(refreshtree);
 
         morbselect.change(function() {
-          var morb = morbselect.val();
+          var morb = getmorb();
           extravarsselect.find('option').remove().end();
           var morbvars = trees[morb];
           for (var i = 0; i < morbvars.length; i++) {
@@ -87,11 +118,13 @@
         });
         for (morb in trees) {
           if (trees.hasOwnProperty(morb)) {
-            morbselect.append('<option value="' + morb + '">' +
-                              TARGET_MAP[morb] + '</option>');
+            if (!(["MORT", "MORB_OR_MORT", "MORB_ANY"].indexOf(morb) > 0)) {
+              morbselect.append('<option value="' + morb + '">' +
+                                TARGET_MAP[morb] + '</option>');
+            }
           }
         }
-        morbselect.val(morb);
+        morbselect[0].selectedIndex = 0;
         morbselect.trigger('change');
       });
     </script>
