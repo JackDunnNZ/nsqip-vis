@@ -244,29 +244,16 @@
 
               if (node.split_type == "CATEGORIC") {
                 // Categoric
-                var select = document.createElement('select');
-                select.setAttribute('class', 'form-control')
-
-                var option = document.createElement('option')
-                option.setAttribute('value', '');
-                option.appendChild(document.createTextNode('Choose an answer...'));
-                select.appendChild(option);
-
+                var levels = [];
                 var num_options = lnr.n_categoric_levels_[node.feature - 1];
                 for (var r = 0; r < num_options; r++) {
-                  var level = lnr.categoric_index_to_level_[node.feature - 1][r];
+                  var l = lnr.categoric_index_to_level_[node.feature - 1][r];
 
-                  if (level === "MISSING") {
-                    continue;
+                  if (l != "MISSING") {
+                    levels.push(l);
                   }
-
-                  option = document.createElement('option')
-                  option.setAttribute('value', level);
-                  option.appendChild(document.createTextNode(level));
-                  select.appendChild(option);
                 }
-                $(select).change(answerQuestionSelect)
-                div.appendChild(select);
+                div.appendChild(makeselect(levels));
               } else {
                 // Parallel
 
@@ -301,6 +288,8 @@
                   addradio(node.id, 1, "≥ " + cutoff);
 
                   div.appendChild(radioGroup);
+                } else if (varname in ORDINAL_VARS) {
+                  div.appendChild(makeselect(ORDINAL_VARS[varname]));
                 } else {
                   var textbox = document.createElement('input')
                   textbox.setAttribute('type', 'number');
@@ -438,6 +427,33 @@
             return "Is the surgery elective?";
         }
       }
+
+      var ORDINAL_VARS = {
+        "WNDCLAS": [1, 2, 3, 4],
+        "ASACLAS": [1, 2, 3, 4, 5],
+        "AdmQtr": [1, 2, 3, 4]
+      }
+
+      var makeselect = function(levels) {
+        var select = document.createElement('select');
+        select.setAttribute('class', 'form-control')
+
+        var option = document.createElement('option')
+        option.setAttribute('value', '');
+        option.appendChild(document.createTextNode('Choose an answer...'));
+        select.appendChild(option);
+
+        for (var r = 0; r < levels.length; r++) {
+          var level = levels[r];
+
+          option = document.createElement('option')
+          option.setAttribute('value', level);
+          option.appendChild(document.createTextNode(level));
+          select.appendChild(option);
+        }
+        $(select).change(answerQuestionSelect)
+        return select;
+      };
     </script>
   </body>
 </html>
