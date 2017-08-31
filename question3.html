@@ -347,9 +347,11 @@
                     $(radio).click(answerQuestionRadio)
                   }
 
+                  var value = (varname == "INOUT_OUTPATIENT" ? 1 : 0)
+
                   var cutoff = +node.threshold.toFixed(4);
-                  addradio(node.id, 0, "< " + cutoff);
-                  addradio(node.id, 1, "≥ " + cutoff);
+                  addradio(node.id, value, "< " + cutoff);
+                  addradio(node.id, 1 - value, "≥ " + cutoff);
 
                   div.appendChild(radioGroup);
                 } else if (varname in ORDINAL_VARS) {
