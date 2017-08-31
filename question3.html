@@ -408,7 +408,7 @@
           case "SMOKE":
             return "Is the patient a current smoker or has been within the past year?";
           case "DYSPNEA":
-            return "At baseline does the patient have dyspnea at rest or on exertion?";
+            return "At baseline does the patient have dyspnea?";
           case "VENTILAT":
             return "Is the patient currently on mechanical ventilation?";
           case "HXCOPD":
@@ -502,7 +502,12 @@
           [4, "Dirty/Infected"]
         ],
         "ASACLAS": [[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]],
-        "AdmQtr": [[1, 1], [2, 2], [3, 3], [4, 4]]
+        "AdmQtr": [[1, 1], [2, 2], [3, 3], [4, 4]],
+        "DYSPNEA": [
+          [0, "No"],
+          [1, "Yes, upon moderate exertion"],
+          [2, "Yes, at rest"]
+        ]
       }
 
       var makeselect = function(levels) {
