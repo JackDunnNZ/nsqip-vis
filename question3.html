@@ -15,7 +15,7 @@
     <div class="container">
       <div id="question-container">
         <div id="target" class="question">
-          <div class="heading">Prediction target:</div>
+          <div class="heading">I would like to predict my patient's 30 day risk of:</div>
           <div class="clearfix">
             <label class="radio-inline col-xs-4">
               <input type="radio" id="target-mort" name="target" checked/>
@@ -27,10 +27,10 @@
             </label>
             <label class="radio-inline col-xs-4">
               <input type="radio" id="target-spec" name="target"/>
-              Specific complication:
+              A specific complication
             </label>
           </div>
-          <div style="margin-top:10px;">
+          <div id="morb-container" style="margin-top:10px;">
             <select id="morb" class="form-control"></select>
           </div>
         </div>
@@ -81,18 +81,22 @@
       $.getJSON('alltrees.json', function(json){ //get data from file
         trees = json;
 
+        var morbselectcontainer = $('#morb-container');
         var morbselect = $('#morb');
         var extravarsselect = $('#extra-vars');
 
         var getmorb = function() {
           if ($('#target-mort').prop('checked')) {
             morbselect.prop('disabled', true);
+            morbselectcontainer.hide();
             return "MORT";
           } else if ($('#target-morb').prop('checked')) {
             morbselect.prop('disabled', true);
+            morbselectcontainer.hide();
             return "MORB_OR_MORT";
           } else {
             morbselect.prop('disabled', false);
+            morbselectcontainer.show();
             return morbselect.val();
           }
         }
