@@ -253,6 +253,29 @@
         return (prob * 100).toFixed(2);
       }
 
+      function formatlevel(l, varname) {
+        if (varname == "PRSEPIS") {
+          if (l == "None") {
+            return "No";
+          } else if (l == "SIRS") {
+            return "SIRS only";
+          } else if (l == "Sepsis") {
+            return "Yes, sepsis";
+          } else if (l == "Septic Shock") {
+            return "Yes, septic shock";
+          }
+        }
+
+        if (varname == "RACE_NEW") {
+          if (l == "White") {
+            return "White (including white hispanic)"
+          } else if (l == "Black or African American") {
+            return "Black or African American (including black hispanic)"
+          }
+        }
+        return l;
+      }
+
       var loadtree = function(treename) {
         $.getJSON(treename, function(lnr) {
           treedata = lnr;
@@ -290,8 +313,8 @@
                 for (var r = 0; r < num_options; r++) {
                   var l = lnr.categoric_index_to_level_[node.feature - 1][r];
 
-                  if (l != "MISSING") {
-                    levels.push(l);
+                  if (l != "MISSING" && (varname != "RACE_NEW" || l != "Unknown")) {
+                    levels.push([l, formatlevel(l, varname)]);
                   }
                 }
                 div.appendChild(makeselect(levels));
@@ -470,12 +493,17 @@
       }
 
       var ORDINAL_VARS = {
-        "WNDCLAS": ["Clean", "Clean/Contaminated", "Contaminated", "Dirty/Infected"],
-        "ASACLAS": [1, 2, 3, 4, 5],
-        "AdmQtr": [1, 2, 3, 4]
+        "WNDCLAS": [
+          [1, "Clean"],
+          [2, "Clean/Contaminated"],
+          [3, "Contaminated"],
+          [4, "Dirty/Infected"]
+        ],
+        "ASACLAS": [[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]],
+        "AdmQtr": [[1, 1], [2, 2], [3, 3], [4, 4]]
       }
 
-      var makeselect = function(levels, numericvalues) {
+      var makeselect = function(levels) {
 
         var select = document.createElement('select');
         select.setAttribute('class', 'form-control')
@@ -486,10 +514,11 @@
         select.appendChild(option);
 
         for (var r = 0; r < levels.length; r++) {
-          var level = levels[r];
+          var value = levels[r][0];
+          var level = levels[r][1];
 
           option = document.createElement('option')
-          option.setAttribute('value', numericvalues ? (r + 1) : level);
+          option.setAttribute('value', value);
           option.appendChild(document.createTextNode(level));
           select.appendChild(option);
         }
