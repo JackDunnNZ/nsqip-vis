@@ -330,7 +330,7 @@
 
                   div.appendChild(radioGroup);
                 } else if (varname in ORDINAL_VARS) {
-                  div.appendChild(makeselect(ORDINAL_VARS[varname]));
+                  div.appendChild(makeselect(ORDINAL_VARS[varname], true));
                 } else {
                   var textbox = document.createElement('input')
                   textbox.setAttribute('type', 'number');
@@ -470,12 +470,13 @@
       }
 
       var ORDINAL_VARS = {
-        "WNDCLAS": [1, 2, 3, 4],
+        "WNDCLAS": ["Clean", "Clean/Contaminated", "Contaminated", "Dirty/Infected"],
         "ASACLAS": [1, 2, 3, 4, 5],
         "AdmQtr": [1, 2, 3, 4]
       }
 
-      var makeselect = function(levels) {
+      var makeselect = function(levels, numericvalues) {
+
         var select = document.createElement('select');
         select.setAttribute('class', 'form-control')
 
@@ -488,7 +489,7 @@
           var level = levels[r];
 
           option = document.createElement('option')
-          option.setAttribute('value', level);
+          option.setAttribute('value', numericvalues ? (r + 1) : level);
           option.appendChild(document.createTextNode(level));
           select.appendChild(option);
         }
