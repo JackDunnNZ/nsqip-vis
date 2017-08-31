@@ -228,8 +228,12 @@
             var node = treedata.tree_.nodes[node_id - 1];
             if (knownInfo[getfeature(node)] === undefined) {
               $(question).find('input[type="radio"]:checked').prop('checked', false);
-              $(question).find('select').val('')
-              $(question).find('input[type="number"]').val('')
+              var radios = $(question).find('input[type="radio"]');
+              if (radios.length > 0) {
+                radios[0].focus();
+              }
+              $(question).find('select').val('').focus()
+              $(question).find('input[type="number"]').val('').focus()
             }
           } else {
             $(question).addClass('hidden')
