@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Optimal Trees for Morbidity and Mortality</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="question.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="question-container">
+        <div id="target" class="question">
+          <div class="heading">I would like to predict my patient's 30 day risk of:</div>
+          <div class="clearfix">
+            <label class="radio-inline col-xs-4">
+              <input type="radio" id="target-mort" name="target" checked/>
+              Mortality
+            </label>
+            <label class="radio-inline col-xs-4">
+              <input type="radio" id="target-morb" name="target"/>
+              Any complication
+            </label>
+            <label class="radio-inline col-xs-4">
+              <input type="radio" id="target-spec" name="target"/>
+              A specific complication
+            </label>
+          </div>
+          <div id="morb-container" style="margin-top:10px;">
+            <select id="morb" class="form-control"></select>
+          </div>
+        </div>
+        <div class="question" style="display: none;">
+          <div class="heading">Model type:</div>
+          <select id="extra-vars" class="form-control"></select>
+        </div>
+
+        <div id="dynamic-questions"></div>
+
+      </div>
+    </div>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
+    <script>
+      var TARGET_MAP = {
+        MORB_SUPINFEC: "Superficial SSI",
+        MORB_WNDINFD: "Deep Incisional SSI",
+        MORB_ORGSPCSSI: "Organ Space SSI",
+        MORB_DEHIS: "Wound Disruption",
+        MORB_OUPNEUMO: "Pneumonia",
+        MORB_REINTUB: "Unplanned Intubation",
+        MORB_PULEMBOL: "Pulmonary Embolism",
+        MORB_FAILWEAN: "On Ventilator > 48 hours",
+        MORB_RENAINSF: "Progressive Renal Insufficiency",
+        MORB_OPRENAFL: "Acute Renal Failure",
+        MORB_URNINFEC: "Urinary Tract Infection",
+        MORB_CNSCVA: "Stroke/CVA",
+        MORB_CDARREST: "Cardiac Arrest Requiring CPR",
+        MORB_CDMI: "Myocardial Infection",
+        MORB_OTHBLEED: "Bleeding Transfusions",
+        MORB_OTHDVT: "DVT/Thrombophlebitis",
+        MORB_OTHSYSEP: "Sepsis",
+        MORB_OTHSESHOCK: "Septic Shock",
+
+        MORB_ANY: "Any Morbidity",
+        MORT: "Mortality",
+
+        MORB_OR_MORT: "Any Morbidity or Mortality",
+      };
+
+      var trees;
+      $.getJSON('alltrees.json', function(json){ //get data from file
+        trees = json;
+
+        var morbselectcontainer = $('#morb-container');
+        var morbselect = $('#morb');
+        var extravarsselect = $('#extra-vars');
+
+        var getmorb = function() {
+          if ($('#target-mort').prop('checked')) {
+            morbselect.prop('disabled', true);
+            morbselectcontainer.hide();
+            return "MORT";
+          } else if ($('#target-morb').prop('checked')) {
+            morbselect.prop('disabled', true);
+            morbselectcontainer.hide();
+            return "MORB_OR_MORT";
+          } else {
+            morbselect.prop('disabled', false);
+            morbselectcontainer.show();
+            return morbselect.val();
+          }
+        }
+
+        var refreshtree = function() {
+          var morb = getmorb();
+          // var vartype = extravarsselect.val();
+          var vartype = 'limited';
+          var treename = morb + '_' + vartype + '.json';
+          loadtree('trees/' + treename);
+        };
+
+        extravarsselect.change(refreshtree);
+        $('#target input').click(refreshtree);
+
+        morbselect.change(function() {
+          var morb = getmorb();
+          extravarsselect.find('option').remove().end();
+          var morbvars = trees[morb];
+          for (var i = 0; i < morbvars.length; i++) {
+            extravarsselect.append('<option>' + morbvars[i] + '</option>');
+          }
+          extravarsselect.trigger('change');
+        });
+        for (morb in trees) {
+          if (trees.hasOwnProperty(morb)) {
+            if (!(["MORT", "MORB_OR_MORT", "MORB_ANY"].indexOf(morb) > 0)) {
+              morbselect.append('<option value="' + morb + '">' +
+                                TARGET_MAP[morb] + '</option>');
+            }
+          }
+        }
+        morbselect[0].selectedIndex = 0;
+        morbselect.trigger('change');
+      });
+    </script>
+    <script>
+      var treedata;
+      var knownInfo = [];
+      var questionVisible = [];
+
+      var answerQuestionRadio = function() {
+        var question = this.parentElement.parentElement.parentElement
+        var nodeId = parseInt(question.getAttribute('id')) - 1
+        var newValue = parseFloat(this.value);
+        if (isNaN(newValue)) {
+          newValue = undefined;
+        }
+        answerQuestion(nodeId, newValue)
+      }
+
+      var answerQuestionSelect = function() {
+        var question = this.parentElement;
+        var nodeId = parseInt(question.getAttribute('id')) - 1
+        var newValue = this.value
+        answerQuestion(nodeId, newValue)
+      }
+
+      var answerQuestionText = function() {
+        var question = this.parentElement;
+        var nodeId = parseInt(question.getAttribute('id')) - 1
+        var newValue = parseFloat(this.value)
+        if (isNaN(newValue)) {
+          newValue = undefined;
+        }
+        answerQuestion(nodeId, newValue)
+      }
+
+      var answerQuestion = function(nodeId, newValue) {
+        var node = treedata.tree_.nodes[nodeId];
+
+        knownInfo[getfeature(node)] = newValue;
+
+        refreshQuestions(nodeId);
+      }
+
+      var getfeature = function(node) {
+        if (node.split_type == "CATEGORIC") {
+          return treedata.col_map_categoric_to_X_[node.feature - 1] - 1;
+        } else {
+          return treedata.col_map_numeric_to_X_[node.feature - 1] - 1;
+        }
+      }
+
+      var refreshQuestions = function(nodeId) {
+
+        for (var i = nodeId + 1; i < treedata.tree_.node_count; i++) {
+          if (questionVisible[i]) {
+            var feature = getfeature(treedata.tree_.nodes[i]);
+            if (feature !== undefined) {
+              knownInfo[feature] = undefined;
+            }
+          }
+          questionVisible[i] = false;
+        }
+
+        i = nodeId;
+        while (true) {
+          var node = treedata.tree_.nodes[i];
+
+          if (node.split_type == "LEAF") {
+            questionVisible[i] = true;
+            break;
+          }
+
+          var feature = getfeature(node)
+          var value = knownInfo[feature]
+
+          // Don't know this variable yet
+          if (value === undefined) {
+            questionVisible[i] = true;
+            break;
+          }
+
+          var islower;
+          if (node.split_type == "CATEGORIC") {
+            var level = treedata.categoric_level_to_index_[node.feature - 1][value];
+            islower = node.categoric_split[level - 1];
+          } else {
+            islower = (value < node.threshold);
+          }
+
+          i = (islower ? node.lower_child : node.upper_child) - 1;
+        }
+
+        $('#dynamic-questions').children().each(function(i, question) {
+          var node_id = parseInt(question.getAttribute('id'));
+          if (questionVisible[node_id - 1]) {
+            $(question).removeClass('hidden')
+            var node = treedata.tree_.nodes[node_id - 1];
+            if (knownInfo[getfeature(node)] === undefined) {
+              $(question).find('input[type="radio"]:checked').prop('checked', false);
+              var radios = $(question).find('input[type="radio"]');
+              if (radios.length > 0) {
+                radios[0].focus();
+              }
+              $(question).find('select').val('').focus()
+              $(question).find('input[type="number"]').val('').focus()
+            }
+          } else {
+            $(question).addClass('hidden')
+            $(question).find('input[type="radio"]:checked').prop('checked', false);
+            $(question).find('select').val('')
+            $(question).find('input[type="number"]').val('')
+          }
+        })
+      }
+
+      var resetQuestions = function() {
+        knownInfo = [];
+        refreshQuestions(0)
+      }
+
+      var formatProb = function(prob) {
+        return (prob * 100).toFixed(2);
+      }
+
+      function formatlevel(l, varname) {
+        if (varname == "PRSEPIS") {
+          if (l == "None") {
+            return "No";
+          } else if (l == "SIRS") {
+            return "SIRS only";
+          } else if (l == "Sepsis") {
+            return "Yes, sepsis";
+          } else if (l == "Septic Shock") {
+            return "Yes, septic shock";
+          }
+        }
+
+        if (varname == "RACE_NEW") {
+          if (l == "White") {
+            return "White (including white hispanic)"
+          } else if (l == "Black or African American") {
+            return "Black or African American (including black hispanic)"
+          }
+        }
+        return l;
+      }
+
+      var loadtree = function(treename) {
+        $.getJSON(treename, function(lnr) {
+          treedata = lnr;
+          data = lnr.tree_.nodes;
+
+          var questions = $("#dynamic-questions");
+          questions.empty();
+
+          for (var i = 0; i < data.length; i++) {
+            var node = data[i]
+            var div = document.createElement('div')
+            div.setAttribute('class', 'question')
+            div.setAttribute('id', node.id)
+
+            var heading = document.createElement('div')
+            heading.setAttribute('class', 'heading')
+            div.appendChild(heading);
+
+            var feature;
+            if (node.split_type == "CATEGORIC") {
+              feature = lnr.col_map_categoric_to_X_[node.feature - 1] - 1;
+            } else if (node.split_type == "PARALLEL") {
+              feature = lnr.col_map_numeric_to_X_[node.feature - 1] - 1;
+            }
+            var varname = lnr.feature_names_[feature];
+
+            if (node.split_type != "LEAF") {
+              heading.appendChild(document.createTextNode(getquestiontext(varname)))
+
+
+              if (node.split_type == "CATEGORIC") {
+                // Categoric
+                var levels = [];
+                var num_options = lnr.n_categoric_levels_[node.feature - 1];
+                for (var r = 0; r < num_options; r++) {
+                  var l = lnr.categoric_index_to_level_[node.feature - 1][r];
+
+                  if (l != "MISSING" && (varname != "RACE_NEW" || l != "Unknown")) {
+                    levels.push([l, formatlevel(l, varname)]);
+                  }
+                }
+                div.appendChild(makeselect(levels));
+              } else {
+                // Parallel
+
+                if (node.threshold == 0.5) {
+                  // Binary
+                  var radioGroup = document.createElement('div')
+                  radioGroup.setAttribute('class', 'container')
+
+                  function addradio(id, value, text) {
+                    var radioLabel = document.createElement('label');
+                    radioLabel.setAttribute('class', 'radio-inline col-xs-6')
+                    radioGroup.appendChild(radioLabel);
+
+                    var radio = document.createElement('input')
+                    radio.setAttribute('name', id);
+                    radio.setAttribute('type', 'radio');
+                    radio.setAttribute('value', value);
+                    radioLabel.appendChild(radio);
+
+                    if (text == "< 0.5") {
+                      text = "No";
+                    } else if (text == "≥ 0.5") {
+                      text = "Yes";
+                    }
+                    radioLabel.appendChild(document.createTextNode(text));
+
+                    $(radio).click(answerQuestionRadio)
+                  }
+
+                  var value = (varname == "INOUT_OUTPATIENT" ? 1 : 0)
+
+                  var cutoff = +node.threshold.toFixed(4);
+                  addradio(node.id, value, "< " + cutoff);
+                  addradio(node.id, 1 - value, "≥ " + cutoff);
+
+                  div.appendChild(radioGroup);
+                } else if (varname in ORDINAL_VARS) {
+                  div.appendChild(makeselect(ORDINAL_VARS[varname], true));
+                } else {
+                  var textbox = document.createElement('input')
+                  textbox.setAttribute('type', 'number');
+                  textbox.setAttribute('placeholder', 'Enter a value...');
+                  textbox.setAttribute('class', 'form-control');
+                  div.appendChild(textbox);
+                  $(textbox).change(answerQuestionText)
+                }
+
+              }
+            } else {
+              heading.appendChild(document.createTextNode("Final risk estimation:"))
+
+              var result = document.createElement('div')
+              result.setAttribute('class', 'result')
+              result.appendChild(document.createTextNode(
+                  formatProb(node.probs[1]) + "%"))
+              div.appendChild(result)
+            }
+
+            var text1 = node.n_node_samples + ' patients'
+            var text2 = '(' + formatProb(node.probs[1]) + '%)'
+
+            var stats = document.createElement('div')
+            stats.setAttribute('class', 'stats')
+            var stats1 = document.createElement('div')
+            stats1.appendChild(document.createTextNode(text1))
+            stats.appendChild(stats1)
+            if (node.split_type != "LEAF") {
+              var stats2 = document.createElement('div')
+              stats2.appendChild(document.createTextNode(text2))
+              stats.appendChild(stats2)
+            }
+            div.appendChild(stats)
+
+            questions.append(div)
+          }
+          resetQuestions()
+        });
+      };
+
+      function getquestiontext(varname) {
+        switch (varname) {
+          case "Age":
+            return "What is the patient's age?";
+          case "SURGSPEC":
+            return "What type of surgery will be performed?";
+          case "DIABETES":
+            return "Does the patient have diabetes mellitus requiring medical therapy (with insulin or oral hypoglycemics)?";
+          case "SMOKE":
+            return "Is the patient a current smoker or has been within the past year?";
+          case "DYSPNEA":
+            return "At baseline does the patient have dyspnea?";
+          case "VENTILAT":
+            return "Is the patient currently on mechanical ventilation?";
+          case "HXCOPD":
+            return "Does the patient have history of COPD?";
+          case "ASCITES":
+            return "Does the patient have ascites?";
+          case "HXCHF":
+            return "Does the patient have congestive heart failure?";
+          case "HYPERMED":
+            return "Does the patient have hypertension requiring medication?";
+          case "RENAFAIL":
+            return "Does the patient currently have acute renal failure?";
+          case "DIALYSIS":
+            return "Is the patient on dialysis or currently requiring dialysis?";
+          case "DISCANCR":
+            return "Does the patient have disseminated cancer?";
+          case "WNDINF":
+            return "Does the patient have any open wound or a closed wound infection?";
+          case "STEROID":
+            return "Is the patient using steroids or immunosuppressants for a chronic condition?";
+          case "WTLOSS":
+            return "Has the patient experienced >10% loss of body weight in the last 6 months?";
+          case "BLEEDDIS":
+            return "Does the patient have any bleeding disorder?";
+          case "TRANSFUS":
+            return "Has the patient received any transfusion in the last 72 hours?";
+          case "PRSEPIS":
+            return "Is the patient septic?";
+          case "PRSODM":
+            return "What is the patient's pre-operative serum sodium (mmol/L)?";
+          case "PRBUN":
+            return "What is the patient's pre-operative BUN (mg/dl)?";
+          case "PRCREAT":
+            return "What is the patient's pre-operative serum creatinine (mg/dl)?";
+          case "PRALBUM":
+            return "What is the patient's pre-operative serum albumin (g/dl)?";
+          case "PRBILI":
+            return "What is the patient's pre-operative serum bilirubin (mg/dl)?";
+          case "PRSGOT":
+            return "What is the patient's pre-operative SGOT (U/L)?";
+          case "PRALKPH":
+            return "What is the patient's pre-operative alkline phosphatase (U/L)?";
+          case "PRWBC":
+            return "What is the patient's pre-operative WBC (K/cumm)?";
+          case "PRHCT":
+            return "What is the patient's pre-operative hematocrit (%)?";
+          case "PRPLATE":
+            return "What is the patient's pre-operative platelet count (K/cumm)?";
+          case "PRPTT":
+            return "What is the patient's pre-operative PTT (seconds)?";
+          case "PRINR":
+            return "What is the patient's pre-operative INR?";
+          case "PRPT":
+            return "What is the patient's pre-operative PT (seconds)?";
+          case "WNDCLAS":
+            return "If the patient undergoes surgery, what would be the most likely wound classification?";
+          case "ASACLAS":
+            return "What is the patient's ASA classification?";
+          case "AdmQtr":
+            return "In which quarter was the patient admitted?";
+          case "RACE_NEW":
+            return "What is the patient's race?";
+          case "ETHNICITY_HISPANIC":
+            return "Is the patient hispanic?";
+          case "SEX_MALE":
+            return "Is the patient male?";
+          case "CPT_CAT":
+            return "What is the CPT code of the procedure?";
+          case "CPT_Digestive":
+            return "Which digestive CPT code best describes the procedure?";
+          case "CPT_Cardio":
+            return "Which cardiovascular CPT code best describes the procedure?";
+          case "CPT_Muscl":
+            return "Which muscular CPT code best describes the procedure?";
+          case "INOUT_OUTPATIENT":
+            return "Will the patient most likely needing to be admitted post-operatively (check yes if already an inpatient)?";
+          case "BMI":
+            return "What is the patient's BMI (kg/m²)?";
+          case "ICD9_AREA":
+            return "What is the area of the patient's ICD-9 diagnosis?";
+          case "ELECTSURG":
+            return "Is the surgery elective?";
+        }
+      }
+
+      var ORDINAL_VARS = {
+        "WNDCLAS": [
+          [1, "Clean"],
+          [2, "Clean/Contaminated"],
+          [3, "Contaminated"],
+          [4, "Dirty/Infected"]
+        ],
+        "ASACLAS": [[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]],
+        "AdmQtr": [[1, 1], [2, 2], [3, 3], [4, 4]],
+        "DYSPNEA": [
+          [0, "No"],
+          [1, "Yes, upon moderate exertion"],
+          [2, "Yes, at rest"]
+        ]
+      }
+
+      var makeselect = function(levels) {
+
+        var select = document.createElement('select');
+        select.setAttribute('class', 'form-control')
+
+        var option = document.createElement('option')
+        option.setAttribute('value', '');
+        option.appendChild(document.createTextNode('Choose an answer...'));
+        select.appendChild(option);
+
+        for (var r = 0; r < levels.length; r++) {
+          var value = levels[r][0];
+          var level = levels[r][1];
+
+          option = document.createElement('option')
+          option.setAttribute('value', value);
+          option.appendChild(document.createTextNode(level));
+          select.appendChild(option);
+        }
+        $(select).change(answerQuestionSelect)
+        return select;
+      };
+    </script>
+  </body>
+</html>
