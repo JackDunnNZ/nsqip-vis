@@ -364,6 +364,15 @@
                   textbox.setAttribute('class', 'form-control');
                   div.appendChild(textbox);
                   $(textbox).change(answerQuestionText)
+                  // Hack for IE to advance question on pressing enter
+                  if (isIE()) {
+                    $(textbox).on('keyup', function(e) {
+                      if (e.keyCode == '13') {
+                        e.preventDefault();
+                        $(this).trigger('blur');
+                      }
+                    });
+                  }
                 }
 
               }
@@ -533,6 +542,10 @@
         $(select).change(answerQuestionSelect)
         return select;
       };
+
+      function isIE() {
+        return navigator.userAgent.indexOf("MSIE ") > -1 || navigator.userAgent.indexOf("Trident/") > -1;
+      }
     </script>
   </body>
 </html>
