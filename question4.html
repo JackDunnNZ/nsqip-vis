@@ -244,8 +244,10 @@
           }
         })
 
-        // Scroll to bottom question
-        $(window).scrollTop($(document).height())
+        // Scroll to bottom if final panel
+        if (treedata.tree_.nodes[i].split_type == "LEAF") {
+          $(window).scrollTop($(document).height())
+        }
       }
 
       var resetQuestions = function() {
@@ -279,6 +281,11 @@
         }
         return l;
       }
+
+      var ensureVisible = function() {
+        // $(window).scrollTop($(this).position().top + 100);
+        // $(this).focus();
+      };
 
       var loadtree = function(treename) {
         $.getJSON(treename, function(lnr) {
@@ -349,6 +356,7 @@
                     radioLabel.appendChild(document.createTextNode(text));
 
                     $(radio).click(answerQuestionRadio)
+                    $(radio).on('focus', ensureVisible)
                   }
 
                   var value = (varname == "INOUT_OUTPATIENT" ? 1 : 0)
@@ -367,6 +375,7 @@
                   textbox.setAttribute('class', 'form-control');
                   div.appendChild(textbox);
                   $(textbox).change(answerQuestionText)
+                  $(textbox).on('focus', ensureVisible)
                   // Hack for IE to advance question on pressing enter
                   if (isIE()) {
                     $(textbox).on('keyup', function(e) {
@@ -543,6 +552,7 @@
           select.appendChild(option);
         }
         $(select).change(answerQuestionSelect)
+        $(select).on('focus', ensureVisible)
         return select;
       };
 
