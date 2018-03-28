@@ -243,6 +243,9 @@
             $(question).find('input[type="number"]').val('')
           }
         })
+
+        // Scroll to bottom question
+        $(window).scrollTop($(document).height())
       }
 
       var resetQuestions = function() {
