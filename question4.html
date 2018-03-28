@@ -134,6 +134,8 @@
       });
     </script>
     <script>
+      var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
       var treedata;
       var knownInfo = [];
       var questionVisible = [];
@@ -229,12 +231,14 @@
             var node = treedata.tree_.nodes[node_id - 1];
             if (knownInfo[getfeature(node)] === undefined) {
               $(question).find('input[type="radio"]:checked').prop('checked', false);
-              var radios = $(question).find('input[type="radio"]');
-              if (radios.length > 0) {
-                radios[0].focus();
+              if (!iOS) {
+                var radios = $(question).find('input[type="radio"]');
+                if (radios.length > 0) {
+                  radios[0].focus();
+                }
+                $(question).find('select').val('').focus()
+                $(question).find('input[type="number"]').val('').focus()
               }
-              $(question).find('select').val('').focus()
-              $(question).find('input[type="number"]').val('').focus()
             }
           } else {
             $(question).addClass('hidden')
@@ -245,9 +249,9 @@
         })
 
         // Scroll to bottom if final panel
-        if (treedata.tree_.nodes[i].split_type == "LEAF") {
+        // if (treedata.tree_.nodes[i].split_type == "LEAF") {
           $(window).scrollTop($(document).height())
-        }
+        // }
       }
 
       var resetQuestions = function() {
