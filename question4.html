@@ -184,6 +184,10 @@
       }
 
       var refreshQuestions = function(nodeId) {
+        // Hide keyboard on iOS
+        if (iOS) {
+          $(".question input").blur()
+        }
 
         for (var i = nodeId + 1; i < treedata.tree_.node_count; i++) {
           if (questionVisible[i]) {
