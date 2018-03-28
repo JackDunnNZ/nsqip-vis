@@ -134,7 +134,7 @@
       });
     </script>
     <script>
-      var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      var iOS = navigator.platform.substr(0,2) === 'iP';
 
       var treedata;
       var knownInfo = [];
