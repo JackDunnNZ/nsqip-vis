@@ -62,6 +62,7 @@ nav .brand-logo {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     height: 48px;
+    cursor: pointer;
 }
 
 nav .brand-logo img {

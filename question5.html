@@ -16,7 +16,8 @@
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper primary">
-          <a class="brand-logo" href="javascript:window.location.reload(true)"><img src="logo.png">
+          <a class="brand-logo">
+            <img src="logo.png">
             POTTER Calculator
           </a>
       </div>
@@ -66,7 +67,7 @@
     </div>
 
     <div class="fixed-action-btn">
-      <a class="btn-floating btn-large" style="background-color:#f69019;" href="javascript:window.location.reload(true)">
+      <a class="btn-floating btn-large" style="background-color:#f69019;">
         <i class="large material-icons" style="font-size:2.5rem;">refresh</i>
       </a>
     </div>
@@ -316,7 +317,7 @@
 
       var resetQuestions = function() {
         knownInfo = [];
-        refreshQuestions(0)
+        refreshQuestions(0);
       }
 
       var formatProb = function(prob) {
@@ -638,6 +639,9 @@
         $(select).change(answerQuestionSelect)
         return select;
       };
+    </script>
+    <script>
+      $('.brand-logo, .btn-floating').click(resetQuestions);
     </script>
   </body>
 </html>
