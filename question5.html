@@ -286,15 +286,11 @@
             $(question).addClass('scale-in');
             var node = treedata.tree_.nodes[node_id - 1];
             if (knownInfo[getfeature(node)] === undefined) {
-              $(question).find('input[type="button"]:checked').prop('checked', false);
+              $(question).find('a').removeClass('unselected').removeClass('primary-darker');
               $(question).find('select').val('').formSelect()
               $(question).find('input[type="number"]').val('')
 
               if (!isIOS()) {
-                var radios = $(question).find('input[type="button"]');
-                if (radios.length > 0) {
-                  radios[0].focus();
-                }
                 $(question).find('select').focus()
                 $(question).find('input[type="number"]').focus()
               }
