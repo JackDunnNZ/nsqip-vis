@@ -126,3 +126,9 @@ body {
 .progress .determinate {
   background-color: #f69019;
 }
+
+.unselected {
+  background-color: #DFDFDF !important;
+  color: #9F9F9F !important;
+  box-shadow: none;
+}

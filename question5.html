@@ -181,12 +181,20 @@
       });
 
       var answerQuestionRadio = function() {
+        var buttonrow = this.parentElement.parentElement;
+        $(buttonrow).find('.btn').each(function(i, eachbutton) {
+          $(eachbutton).removeClass('primary-darker').addClass('unselected');
+        });
+
+        $(this).removeClass('unselected').addClass('primary-darker');
+
         var question = this.parentElement.parentElement.parentElement.parentElement
         var nodeId = parseInt(question.getAttribute('id')) - 1
         var newValue = parseFloat(this.getAttribute('value'));
         if (isNaN(newValue)) {
           newValue = undefined;
         }
+
         answerQuestion(nodeId, newValue)
       }
 
@@ -407,26 +415,6 @@
                   buttonRow.setAttribute('class', 'row button-row');
                   content.appendChild(buttonRow);
 
-                  function addbutton(buttonRow, value, id, text) {
-                    var buttonSpan = document.createElement('span');
-                    buttonSpan.setAttribute('class', 'col s6 button');
-                    buttonRow.appendChild(buttonSpan);
-
-                    var buttonLabel = document.createElement('a');
-                    buttonLabel.setAttribute('class', 'waves-effect waves-light btn primary');
-                    buttonSpan.appendChild(buttonLabel);
-
-                    var value;
-                    if (text == '< 0.5') {
-                      text = 'No';
-                    } else if (text == '≥ 0.5') {
-                      text = 'Yes';
-                    }
-                    buttonLabel.setAttribute('value', value);
-                    buttonLabel.append(text);
-                    $(buttonLabel).click(answerQuestionRadio);
-                  }
-
                   var value = (varname == "INOUT_OUTPATIENT" ? 1 : 0)
 
                   var cutoff = +node.threshold.toFixed(4);
@@ -603,6 +591,25 @@
           [1, "Yes, upon moderate exertion"],
           [2, "Yes, at rest"]
         ]
+      }
+
+      function addbutton(buttonRow, id, value, text) {
+        var buttonSpan = document.createElement('span');
+        buttonSpan.setAttribute('class', 'col s6 button');
+        buttonRow.appendChild(buttonSpan);
+
+        var buttonLabel = document.createElement('a');
+        buttonLabel.setAttribute('class', 'waves-effect waves-light btn primary');
+        buttonSpan.appendChild(buttonLabel);
+
+        if (text == '< 0.5') {
+          text = 'No';
+        } else if (text == '≥ 0.5') {
+          text = 'Yes';
+        }
+        buttonLabel.setAttribute('value', value);
+        buttonLabel.append(text);
+        $(buttonLabel).click(answerQuestionRadio);
       }
 
       var makeselect = function(levels) {
