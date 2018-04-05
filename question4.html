@@ -137,7 +137,6 @@
 
         var refreshtree = function() {
           var morb = getmorb();
-          console.log(morb)
           // var vartype = extravarsselect.val();
           var vartype = 'limited';
           var treename = morb + '_' + vartype + '.json';
@@ -210,8 +209,6 @@
         }
         var nodeId = parseInt(question.getAttribute('id')) - 1
         var newValue = this.value
-        console.log(question)
-        console.log(nodeId)
         answerQuestion(nodeId, newValue)
       }
 
