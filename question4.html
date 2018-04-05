@@ -114,6 +114,10 @@
         var morbselect = $('#morb');
         var extravarsselect = $('#extra-vars');
 
+        if (isIOS()) {
+          morbselect.addClass('browser-default')
+        }
+
         var getmorb = function() {
           if ($('#target-mort').prop('checked')) {
             morbselect.prop('disabled', true);
@@ -200,7 +204,10 @@
       }
 
       var answerQuestionSelect = function() {
-        var question = this.parentElement.parentElement.parentElement;
+        var question = this;
+        while (question.parentElement.getAttribute('id') != 'dynamic-questions') {
+          question = question.parentElement;
+        }
         var nodeId = parseInt(question.getAttribute('id')) - 1
         var newValue = this.value
         console.log(question)
@@ -615,6 +622,9 @@
         selectdiv.setAttribute('class', 'input-field');
 
         var select = document.createElement('select');
+        if (isIOS()) {
+          select.className += ' browser-default';
+        }
         selectdiv.appendChild(select);
 
         var option = document.createElement('option');
