@@ -58,18 +58,17 @@ nav .button-collapse i {
 
 nav .brand-logo {
     font-size: 1.2rem;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
     height: 48px;
     cursor: pointer;
+    width: 100%;
+    text-align: center;
 }
 
 nav .brand-logo img {
     height: 38px;
-    float: left;
+    position: absolute;
     margin-top: 5px;
-    margin-right: 6px;
+    left: 6px;
 }
 
 .card .card-results {
