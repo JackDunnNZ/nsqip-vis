@@ -411,7 +411,7 @@
                 for (var r = 0; r < num_options; r++) {
                   var l = lnr.categoric_index_to_level_[node.feature - 1][r];
 
-                  if (l != "MISSING" && (varname != "RACE_NEW" || l != "Unknown")) {
+                  if (l != "MISSING" && (varname != "RACE_NEW" || l != "Unknown") && l != "SIRS") {
                     levels.push([l, formatlevel(l, varname)]);
                   }
                 }
