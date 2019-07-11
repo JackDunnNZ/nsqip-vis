@@ -3,7 +3,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">630730</TD>\n    <TD ALIGN=\"RIGHT\">99.73%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">1707</TD>\n    <TD ALIGN=\"RIGHT\">0.27%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 2,
-            "leaftext": "Predict No Complication; p = 99.73%",
+            "leaftext": "0.27% : 1707/632437 patients",
             "missingdataleft": false,
             "upper_child": 21,
             "curvedata": [],
@@ -37,7 +37,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">361723</TD>\n    <TD ALIGN=\"RIGHT\">99.57%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">1553</TD>\n    <TD ALIGN=\"RIGHT\">0.43%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 3,
-            "leaftext": "Predict No Complication; p = 99.57%",
+            "leaftext": "0.43% : 1553/363276 patients",
             "missingdataleft": false,
             "upper_child": 20,
             "curvedata": [],
@@ -71,7 +71,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">347643</TD>\n    <TD ALIGN=\"RIGHT\">99.60%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">1395</TD>\n    <TD ALIGN=\"RIGHT\">0.40%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 4,
-            "leaftext": "Predict No Complication; p = 99.60%",
+            "leaftext": "0.40% : 1395/349038 patients",
             "missingdataleft": false,
             "upper_child": 19,
             "curvedata": [],
@@ -113,7 +113,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">281625</TD>\n    <TD ALIGN=\"RIGHT\">99.55%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">1262</TD>\n    <TD ALIGN=\"RIGHT\">0.45%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 5,
-            "leaftext": "Predict No Complication; p = 99.55%",
+            "leaftext": "0.45% : 1262/282887 patients",
             "missingdataleft": false,
             "upper_child": 12,
             "curvedata": [],
@@ -138,7 +138,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">143151</TD>\n    <TD ALIGN=\"RIGHT\">99.71%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">419</TD>\n    <TD ALIGN=\"RIGHT\">0.29%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 6,
-            "leaftext": "Predict No Complication; p = 99.71%",
+            "leaftext": "0.29% : 419/143570 patients",
             "missingdataleft": false,
             "upper_child": 7,
             "curvedata": [],
@@ -163,7 +163,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">10269</TD>\n    <TD ALIGN=\"RIGHT\">99.21%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">82</TD>\n    <TD ALIGN=\"RIGHT\">0.79%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.21%",
+            "leaftext": "0.79% : 82/10351 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -188,7 +188,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">132882</TD>\n    <TD ALIGN=\"RIGHT\">99.75%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">337</TD>\n    <TD ALIGN=\"RIGHT\">0.25%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 8,
-            "leaftext": "Predict No Complication; p = 99.75%",
+            "leaftext": "0.25% : 337/133219 patients",
             "missingdataleft": false,
             "upper_child": 9,
             "curvedata": [],
@@ -213,7 +213,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">47449</TD>\n    <TD ALIGN=\"RIGHT\">99.86%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">65</TD>\n    <TD ALIGN=\"RIGHT\">0.14%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.86%",
+            "leaftext": "0.14% : 65/47514 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -238,7 +238,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">85433</TD>\n    <TD ALIGN=\"RIGHT\">99.68%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">272</TD>\n    <TD ALIGN=\"RIGHT\">0.32%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 10,
-            "leaftext": "Predict No Complication; p = 99.68%",
+            "leaftext": "0.32% : 272/85705 patients",
             "missingdataleft": false,
             "upper_child": 11,
             "curvedata": [],
@@ -263,7 +263,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">22692</TD>\n    <TD ALIGN=\"RIGHT\">99.86%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">31</TD>\n    <TD ALIGN=\"RIGHT\">0.14%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.86%",
+            "leaftext": "0.14% : 31/22723 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -288,7 +288,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">62741</TD>\n    <TD ALIGN=\"RIGHT\">99.62%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">241</TD>\n    <TD ALIGN=\"RIGHT\">0.38%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.62%",
+            "leaftext": "0.38% : 241/62982 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -313,7 +313,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">138474</TD>\n    <TD ALIGN=\"RIGHT\">99.39%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">843</TD>\n    <TD ALIGN=\"RIGHT\">0.61%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 13,
-            "leaftext": "Predict No Complication; p = 99.39%",
+            "leaftext": "0.61% : 843/139317 patients",
             "missingdataleft": false,
             "upper_child": 18,
             "curvedata": [],
@@ -338,7 +338,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">132425</TD>\n    <TD ALIGN=\"RIGHT\">99.43%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">765</TD>\n    <TD ALIGN=\"RIGHT\">0.57%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 14,
-            "leaftext": "Predict No Complication; p = 99.43%",
+            "leaftext": "0.57% : 765/133190 patients",
             "missingdataleft": false,
             "upper_child": 15,
             "curvedata": [],
@@ -363,7 +363,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">65650</TD>\n    <TD ALIGN=\"RIGHT\">99.55%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">300</TD>\n    <TD ALIGN=\"RIGHT\">0.45%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.55%",
+            "leaftext": "0.45% : 300/65950 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -388,7 +388,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">66775</TD>\n    <TD ALIGN=\"RIGHT\">99.31%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">465</TD>\n    <TD ALIGN=\"RIGHT\">0.69%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 16,
-            "leaftext": "Predict No Complication; p = 99.31%",
+            "leaftext": "0.69% : 465/67240 patients",
             "missingdataleft": false,
             "upper_child": 17,
             "curvedata": [],
@@ -413,7 +413,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">19677</TD>\n    <TD ALIGN=\"RIGHT\">99.55%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">88</TD>\n    <TD ALIGN=\"RIGHT\">0.45%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.55%",
+            "leaftext": "0.45% : 88/19765 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -438,7 +438,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">47098</TD>\n    <TD ALIGN=\"RIGHT\">99.21%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">377</TD>\n    <TD ALIGN=\"RIGHT\">0.79%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.21%",
+            "leaftext": "0.79% : 377/47475 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -463,7 +463,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">6049</TD>\n    <TD ALIGN=\"RIGHT\">98.73%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">78</TD>\n    <TD ALIGN=\"RIGHT\">1.27%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 98.73%",
+            "leaftext": "1.27% : 78/6127 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -488,7 +488,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">66018</TD>\n    <TD ALIGN=\"RIGHT\">99.80%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">133</TD>\n    <TD ALIGN=\"RIGHT\">0.20%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.80%",
+            "leaftext": "0.20% : 133/66151 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -513,7 +513,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">14080</TD>\n    <TD ALIGN=\"RIGHT\">98.89%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">158</TD>\n    <TD ALIGN=\"RIGHT\">1.11%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 98.89%",
+            "leaftext": "1.11% : 158/14238 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -538,7 +538,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">269007</TD>\n    <TD ALIGN=\"RIGHT\">99.94%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">154</TD>\n    <TD ALIGN=\"RIGHT\">0.06%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 22,
-            "leaftext": "Predict No Complication; p = 99.94%",
+            "leaftext": "0.06% : 154/269161 patients",
             "missingdataleft": false,
             "upper_child": 23,
             "curvedata": [],
@@ -563,7 +563,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">24653</TD>\n    <TD ALIGN=\"RIGHT\">100.00%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">0</TD>\n    <TD ALIGN=\"RIGHT\">0.00%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 100.00%",
+            "leaftext": "0.00% : 0/24653 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -588,7 +588,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">244354</TD>\n    <TD ALIGN=\"RIGHT\">99.94%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">154</TD>\n    <TD ALIGN=\"RIGHT\">0.06%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 24,
-            "leaftext": "Predict No Complication; p = 99.94%",
+            "leaftext": "0.06% : 154/244508 patients",
             "missingdataleft": false,
             "upper_child": 25,
             "curvedata": [],
@@ -613,7 +613,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">126195</TD>\n    <TD ALIGN=\"RIGHT\">99.96%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">50</TD>\n    <TD ALIGN=\"RIGHT\">0.04%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.96%",
+            "leaftext": "0.04% : 50/126245 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -638,7 +638,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">118159</TD>\n    <TD ALIGN=\"RIGHT\">99.91%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Pulmonary Embolism</TD>\n    <TD ALIGN=\"RIGHT\">104</TD>\n    <TD ALIGN=\"RIGHT\">0.09%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.91%",
+            "leaftext": "0.09% : 104/118263 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -663,5 +663,3 @@
     ],
     "simple_layout": false
 }
-;
-        

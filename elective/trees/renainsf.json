@@ -3,7 +3,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">583889</TD>\n    <TD ALIGN=\"RIGHT\">99.77%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">1322</TD>\n    <TD ALIGN=\"RIGHT\">0.23%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 2,
-            "leaftext": "Predict No Complication; p = 99.77%",
+            "leaftext": "0.23% : 1322/585211 patients",
             "missingdataleft": false,
             "upper_child": 29,
             "curvedata": [],
@@ -37,7 +37,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">328979</TD>\n    <TD ALIGN=\"RIGHT\">99.62%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">1260</TD>\n    <TD ALIGN=\"RIGHT\">0.38%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 3,
-            "leaftext": "Predict No Complication; p = 99.62%",
+            "leaftext": "0.38% : 1260/330239 patients",
             "missingdataleft": false,
             "upper_child": 14,
             "curvedata": [],
@@ -71,7 +71,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">161757</TD>\n    <TD ALIGN=\"RIGHT\">99.79%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">333</TD>\n    <TD ALIGN=\"RIGHT\">0.21%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 4,
-            "leaftext": "Predict No Complication; p = 99.79%",
+            "leaftext": "0.21% : 333/162090 patients",
             "missingdataleft": false,
             "upper_child": 7,
             "curvedata": [],
@@ -113,7 +113,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">51180</TD>\n    <TD ALIGN=\"RIGHT\">99.91%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">44</TD>\n    <TD ALIGN=\"RIGHT\">0.09%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 5,
-            "leaftext": "Predict No Complication; p = 99.91%",
+            "leaftext": "0.09% : 44/51224 patients",
             "missingdataleft": false,
             "upper_child": 6,
             "curvedata": [],
@@ -138,7 +138,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">31972</TD>\n    <TD ALIGN=\"RIGHT\">99.96%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">13</TD>\n    <TD ALIGN=\"RIGHT\">0.04%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.96%",
+            "leaftext": "0.04% : 13/31985 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -163,7 +163,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">19208</TD>\n    <TD ALIGN=\"RIGHT\">99.84%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">31</TD>\n    <TD ALIGN=\"RIGHT\">0.16%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.84%",
+            "leaftext": "0.16% : 31/19239 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -188,7 +188,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">110577</TD>\n    <TD ALIGN=\"RIGHT\">99.74%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">289</TD>\n    <TD ALIGN=\"RIGHT\">0.26%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 8,
-            "leaftext": "Predict No Complication; p = 99.74%",
+            "leaftext": "0.26% : 289/110866 patients",
             "missingdataleft": false,
             "upper_child": 11,
             "curvedata": [],
@@ -213,7 +213,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">27481</TD>\n    <TD ALIGN=\"RIGHT\">99.59%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">114</TD>\n    <TD ALIGN=\"RIGHT\">0.41%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 9,
-            "leaftext": "Predict No Complication; p = 99.59%",
+            "leaftext": "0.41% : 114/27595 patients",
             "missingdataleft": false,
             "upper_child": 10,
             "curvedata": [],
@@ -247,7 +247,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">16766</TD>\n    <TD ALIGN=\"RIGHT\">99.76%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">41</TD>\n    <TD ALIGN=\"RIGHT\">0.24%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.76%",
+            "leaftext": "0.24% : 41/16807 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -272,7 +272,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">10715</TD>\n    <TD ALIGN=\"RIGHT\">99.32%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">73</TD>\n    <TD ALIGN=\"RIGHT\">0.68%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.32%",
+            "leaftext": "0.68% : 73/10788 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -297,7 +297,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">83096</TD>\n    <TD ALIGN=\"RIGHT\">99.79%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">175</TD>\n    <TD ALIGN=\"RIGHT\">0.21%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 12,
-            "leaftext": "Predict No Complication; p = 99.79%",
+            "leaftext": "0.21% : 175/83271 patients",
             "missingdataleft": false,
             "upper_child": 13,
             "curvedata": [],
@@ -322,7 +322,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">69153</TD>\n    <TD ALIGN=\"RIGHT\">99.75%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">170</TD>\n    <TD ALIGN=\"RIGHT\">0.25%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.75%",
+            "leaftext": "0.25% : 170/69323 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -347,7 +347,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">13943</TD>\n    <TD ALIGN=\"RIGHT\">99.96%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">5</TD>\n    <TD ALIGN=\"RIGHT\">0.04%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.96%",
+            "leaftext": "0.04% : 5/13948 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -372,7 +372,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">167222</TD>\n    <TD ALIGN=\"RIGHT\">99.45%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">927</TD>\n    <TD ALIGN=\"RIGHT\">0.55%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 15,
-            "leaftext": "Predict No Complication; p = 99.45%",
+            "leaftext": "0.55% : 927/168149 patients",
             "missingdataleft": false,
             "upper_child": 20,
             "curvedata": [],
@@ -397,7 +397,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">42684</TD>\n    <TD ALIGN=\"RIGHT\">99.15%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">367</TD>\n    <TD ALIGN=\"RIGHT\">0.85%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 16,
-            "leaftext": "Predict No Complication; p = 99.15%",
+            "leaftext": "0.85% : 367/43051 patients",
             "missingdataleft": false,
             "upper_child": 17,
             "curvedata": [],
@@ -422,7 +422,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">12994</TD>\n    <TD ALIGN=\"RIGHT\">98.83%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">154</TD>\n    <TD ALIGN=\"RIGHT\">1.17%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 98.83%",
+            "leaftext": "1.17% : 154/13148 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -447,7 +447,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">29690</TD>\n    <TD ALIGN=\"RIGHT\">99.29%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">213</TD>\n    <TD ALIGN=\"RIGHT\">0.71%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 18,
-            "leaftext": "Predict No Complication; p = 99.29%",
+            "leaftext": "0.71% : 213/29903 patients",
             "missingdataleft": false,
             "upper_child": 19,
             "curvedata": [],
@@ -481,7 +481,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">16293</TD>\n    <TD ALIGN=\"RIGHT\">99.53%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">77</TD>\n    <TD ALIGN=\"RIGHT\">0.47%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.53%",
+            "leaftext": "0.47% : 77/16370 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -506,7 +506,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">13397</TD>\n    <TD ALIGN=\"RIGHT\">99.00%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">136</TD>\n    <TD ALIGN=\"RIGHT\">1.00%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.00%",
+            "leaftext": "1.00% : 136/13533 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -531,7 +531,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">124538</TD>\n    <TD ALIGN=\"RIGHT\">99.55%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">560</TD>\n    <TD ALIGN=\"RIGHT\">0.45%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 21,
-            "leaftext": "Predict No Complication; p = 99.55%",
+            "leaftext": "0.45% : 560/125098 patients",
             "missingdataleft": false,
             "upper_child": 24,
             "curvedata": [],
@@ -573,7 +573,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">58988</TD>\n    <TD ALIGN=\"RIGHT\">99.70%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">180</TD>\n    <TD ALIGN=\"RIGHT\">0.30%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 22,
-            "leaftext": "Predict No Complication; p = 99.70%",
+            "leaftext": "0.30% : 180/59168 patients",
             "missingdataleft": false,
             "upper_child": 23,
             "curvedata": [],
@@ -598,7 +598,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">44831</TD>\n    <TD ALIGN=\"RIGHT\">99.77%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">104</TD>\n    <TD ALIGN=\"RIGHT\">0.23%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.77%",
+            "leaftext": "0.23% : 104/44935 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -623,7 +623,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">14157</TD>\n    <TD ALIGN=\"RIGHT\">99.47%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">76</TD>\n    <TD ALIGN=\"RIGHT\">0.53%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.47%",
+            "leaftext": "0.53% : 76/14233 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -648,7 +648,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">65550</TD>\n    <TD ALIGN=\"RIGHT\">99.42%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">380</TD>\n    <TD ALIGN=\"RIGHT\">0.58%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 25,
-            "leaftext": "Predict No Complication; p = 99.42%",
+            "leaftext": "0.58% : 380/65930 patients",
             "missingdataleft": false,
             "upper_child": 26,
             "curvedata": [],
@@ -673,7 +673,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">33213</TD>\n    <TD ALIGN=\"RIGHT\">99.65%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">117</TD>\n    <TD ALIGN=\"RIGHT\">0.35%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.65%",
+            "leaftext": "0.35% : 117/33330 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -698,7 +698,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">32337</TD>\n    <TD ALIGN=\"RIGHT\">99.19%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">263</TD>\n    <TD ALIGN=\"RIGHT\">0.81%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 27,
-            "leaftext": "Predict No Complication; p = 99.19%",
+            "leaftext": "0.81% : 263/32600 patients",
             "missingdataleft": false,
             "upper_child": 28,
             "curvedata": [],
@@ -732,7 +732,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">27861</TD>\n    <TD ALIGN=\"RIGHT\">99.34%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">185</TD>\n    <TD ALIGN=\"RIGHT\">0.66%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.34%",
+            "leaftext": "0.66% : 185/28046 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -757,7 +757,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">4476</TD>\n    <TD ALIGN=\"RIGHT\">98.29%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">78</TD>\n    <TD ALIGN=\"RIGHT\">1.71%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 98.29%",
+            "leaftext": "1.71% : 78/4554 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -782,7 +782,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">254910</TD>\n    <TD ALIGN=\"RIGHT\">99.98%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">62</TD>\n    <TD ALIGN=\"RIGHT\">0.02%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 30,
-            "leaftext": "Predict No Complication; p = 99.98%",
+            "leaftext": "0.02% : 62/254972 patients",
             "missingdataleft": false,
             "upper_child": 31,
             "curvedata": [],
@@ -807,7 +807,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">3590</TD>\n    <TD ALIGN=\"RIGHT\">99.75%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">9</TD>\n    <TD ALIGN=\"RIGHT\">0.25%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.75%",
+            "leaftext": "0.25% : 9/3599 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -832,7 +832,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">251320</TD>\n    <TD ALIGN=\"RIGHT\">99.98%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">53</TD>\n    <TD ALIGN=\"RIGHT\">0.02%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": 32,
-            "leaftext": "Predict No Complication; p = 99.98%",
+            "leaftext": "0.02% : 53/251373 patients",
             "missingdataleft": false,
             "upper_child": 33,
             "curvedata": [],
@@ -866,7 +866,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">159497</TD>\n    <TD ALIGN=\"RIGHT\">99.99%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">9</TD>\n    <TD ALIGN=\"RIGHT\">0.01%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.99%",
+            "leaftext": "0.01% : 9/159506 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -891,7 +891,7 @@
         {
             "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">91823</TD>\n    <TD ALIGN=\"RIGHT\">99.95%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Progressive Renal Insufficiency</TD>\n    <TD ALIGN=\"RIGHT\">44</TD>\n    <TD ALIGN=\"RIGHT\">0.05%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
             "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.95%",
+            "leaftext": "0.05% : 44/91867 patients",
             "missingdataleft": false,
             "upper_child": -2,
             "curvedata": [],
@@ -916,5 +916,3 @@
     ],
     "simple_layout": false
 }
-;
-        

@@ -6,7 +6,6 @@
     <title>Optimal Trees Prediction Tool</title>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <style>.card {
@@ -152,7 +151,7 @@ body {
       <div class="nav-wrapper primary">
         <a class="brand-logo">
           <img src="http://www.mit.edu/~zhuo/logo.png">
-          Optimal Trees Prediction Tool
+          POTTER for Elective Surgery
         </a>
     </div>
       <div class="progress">
@@ -164,1062 +163,45 @@ body {
     <div class="container row">
       <div class="container-col row col s12 m10 push-m1 l8 push-l2 xl6 push-xl3">
         <div id="question-container">
+          <div id="target" class="card hoverable">
+            <div class="card-content main">
+              <span class="card-title">I would like to predict my patient's 30 day risk of:</span>
+              <p>
+                <label>
+                  <input class="with-gap" type="radio" id="target-mort" name="target" checked/>
+                  <span>Mortality</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input class="with-gap" type="radio" id="target-morb" name="target"/>
+                  <span>Any complication</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input class="with-gap" type="radio" id="target-spec" name="target"/>
+                  <span>A specific complication</span>
+                </label>
+              </p>
+              <div id="morb-container" style="margin-top:10px; display: none;">
+                <select id="morb" class="form-control"></select>
+                <p class="red-text" style="font-size: 0.8em;">The calculator assumes the patient does not have this complication pre-operatively.</p>
+              </div>
+            </div>
+            <div class="question" style="display: none;">
+              <div class="heading">Model type:</div>
+              <select id="extra-vars" class="form-control"></select>
+            </div>
+          </div>
+
+
           <div id="dynamic-questions"></div>
         </div>
       </div>
     </div>
-    <div class="fixed-action-btn">
-      <a class="btn-floating btn-large" style="background-color:#f69019;">
-        <i class="large material-icons" style="font-size:2.5rem;">refresh</i>
-      </a>
-    </div>
-    <script>
-      (function(){
-        treejson = {
-    "nodes": [
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">1664</TD>\n    <TD ALIGN=\"RIGHT\">0.26%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">630773</TD>\n    <TD ALIGN=\"RIGHT\">99.74%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 2,
-            "leaftext": "Predict No Complication; p = 99.74%",
-            "missingdataleft": false,
-            "upper_child": 33,
-            "curvedata": [],
-            "n_node_samples": 632437,
-            "feature": "prcreat",
-            "threshold": 2.555186,
-            "id": 1,
-            "split_type": "PARALLEL",
-            "parent": -2,
-            "categoric_split": [
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 0,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">1449</TD>\n    <TD ALIGN=\"RIGHT\">0.23%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">616129</TD>\n    <TD ALIGN=\"RIGHT\">99.77%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 3,
-            "leaftext": "Predict No Complication; p = 99.77%",
-            "missingdataleft": false,
-            "upper_child": 22,
-            "curvedata": [],
-            "n_node_samples": 617578,
-            "feature": "surgspec",
-            "threshold": 0.0,
-            "id": 2,
-            "split_type": "CATEGORIC",
-            "parent": 1,
-            "categoric_split": [
-                false,
-                false,
-                true,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 1,
-            "levels": [
-                [
-                    2,
-                    "Cardiac Surgery"
-                ],
-                [
-                    3,
-                    "General Surgery"
-                ],
-                [
-                    4,
-                    "Thoracic"
-                ],
-                [
-                    5,
-                    "Vascular"
-                ]
-            ]
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">842</TD>\n    <TD ALIGN=\"RIGHT\">0.16%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">521759</TD>\n    <TD ALIGN=\"RIGHT\">99.84%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 4,
-            "leaftext": "Predict No Complication; p = 99.84%",
-            "missingdataleft": false,
-            "upper_child": 13,
-            "curvedata": [],
-            "n_node_samples": 522601,
-            "feature": "age",
-            "threshold": 53.5,
-            "id": 3,
-            "split_type": "PARALLEL",
-            "parent": 2,
-            "categoric_split": [
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 2,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">424</TD>\n    <TD ALIGN=\"RIGHT\">0.10%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">411401</TD>\n    <TD ALIGN=\"RIGHT\">99.90%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 5,
-            "leaftext": "Predict No Complication; p = 99.90%",
-            "missingdataleft": false,
-            "upper_child": 12,
-            "curvedata": [],
-            "n_node_samples": 411825,
-            "feature": "inout",
-            "threshold": 0.7094594594594594,
-            "id": 4,
-            "split_type": "CATEGORIC",
-            "parent": 3,
-            "categoric_split": [
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 3,
-            "levels": [
-                [
-                    2,
-                    "Inpatient"
-                ],
-                [
-                    3,
-                    "Outpatient"
-                ]
-            ]
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">392</TD>\n    <TD ALIGN=\"RIGHT\">0.19%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">208562</TD>\n    <TD ALIGN=\"RIGHT\">99.81%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 6,
-            "leaftext": "Predict No Complication; p = 99.81%",
-            "missingdataleft": false,
-            "upper_child": 9,
-            "curvedata": [],
-            "n_node_samples": 208954,
-            "feature": "pralbum",
-            "threshold": 3.7100779999999998,
-            "id": 5,
-            "split_type": "PARALLEL",
-            "parent": 4,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 4,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">210</TD>\n    <TD ALIGN=\"RIGHT\">0.39%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">53503</TD>\n    <TD ALIGN=\"RIGHT\">99.61%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 7,
-            "leaftext": "Predict No Complication; p = 99.61%",
-            "missingdataleft": false,
-            "upper_child": 8,
-            "curvedata": [],
-            "n_node_samples": 53713,
-            "feature": "age",
-            "threshold": 36.5,
-            "id": 6,
-            "split_type": "PARALLEL",
-            "parent": 5,
-            "categoric_split": [
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 5,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">41</TD>\n    <TD ALIGN=\"RIGHT\">0.16%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">25414</TD>\n    <TD ALIGN=\"RIGHT\">99.84%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.84%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 25455,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 7,
-            "split_type": "LEAF",
-            "parent": 6,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 6,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">169</TD>\n    <TD ALIGN=\"RIGHT\">0.60%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">28089</TD>\n    <TD ALIGN=\"RIGHT\">99.40%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.40%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 28258,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 8,
-            "split_type": "LEAF",
-            "parent": 6,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 6,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">182</TD>\n    <TD ALIGN=\"RIGHT\">0.12%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">155059</TD>\n    <TD ALIGN=\"RIGHT\">99.88%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 10,
-            "leaftext": "Predict No Complication; p = 99.88%",
-            "missingdataleft": false,
-            "upper_child": 11,
-            "curvedata": [],
-            "n_node_samples": 155241,
-            "feature": "age",
-            "threshold": 33.5,
-            "id": 9,
-            "split_type": "PARALLEL",
-            "parent": 5,
-            "categoric_split": [
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 5,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">34</TD>\n    <TD ALIGN=\"RIGHT\">0.05%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">65444</TD>\n    <TD ALIGN=\"RIGHT\">99.95%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.95%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 65478,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 10,
-            "split_type": "LEAF",
-            "parent": 9,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 6,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">148</TD>\n    <TD ALIGN=\"RIGHT\">0.16%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">89615</TD>\n    <TD ALIGN=\"RIGHT\">99.84%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.84%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 89763,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 11,
-            "split_type": "LEAF",
-            "parent": 9,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 6,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">32</TD>\n    <TD ALIGN=\"RIGHT\">0.02%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">202839</TD>\n    <TD ALIGN=\"RIGHT\">99.98%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.98%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 202871,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 12,
-            "split_type": "LEAF",
-            "parent": 4,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 4,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">418</TD>\n    <TD ALIGN=\"RIGHT\">0.38%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">110358</TD>\n    <TD ALIGN=\"RIGHT\">99.62%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 14,
-            "leaftext": "Predict No Complication; p = 99.62%",
-            "missingdataleft": false,
-            "upper_child": 21,
-            "curvedata": [],
-            "n_node_samples": 110776,
-            "feature": "inout",
-            "threshold": 0.24888235540653814,
-            "id": 13,
-            "split_type": "CATEGORIC",
-            "parent": 3,
-            "categoric_split": [
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 3,
-            "levels": [
-                [
-                    2,
-                    "Inpatient"
-                ],
-                [
-                    3,
-                    "Outpatient"
-                ]
-            ]
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">399</TD>\n    <TD ALIGN=\"RIGHT\">0.60%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">65816</TD>\n    <TD ALIGN=\"RIGHT\">99.40%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 15,
-            "leaftext": "Predict No Complication; p = 99.40%",
-            "missingdataleft": false,
-            "upper_child": 18,
-            "curvedata": [],
-            "n_node_samples": 66215,
-            "feature": "sex",
-            "threshold": 0.10227429292929291,
-            "id": 14,
-            "split_type": "CATEGORIC",
-            "parent": 13,
-            "categoric_split": [
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 4,
-            "levels": [
-                [
-                    2,
-                    "female"
-                ],
-                [
-                    3,
-                    "male"
-                ]
-            ]
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">152</TD>\n    <TD ALIGN=\"RIGHT\">0.40%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">37585</TD>\n    <TD ALIGN=\"RIGHT\">99.60%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 16,
-            "leaftext": "Predict No Complication; p = 99.60%",
-            "missingdataleft": false,
-            "upper_child": 17,
-            "curvedata": [],
-            "n_node_samples": 37737,
-            "feature": "prhct",
-            "threshold": 31.750000000000004,
-            "id": 15,
-            "split_type": "PARALLEL",
-            "parent": 14,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 5,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">49</TD>\n    <TD ALIGN=\"RIGHT\">0.85%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">5696</TD>\n    <TD ALIGN=\"RIGHT\">99.15%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.15%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 5745,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 16,
-            "split_type": "LEAF",
-            "parent": 15,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 6,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">103</TD>\n    <TD ALIGN=\"RIGHT\">0.32%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">31889</TD>\n    <TD ALIGN=\"RIGHT\">99.68%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.68%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 31992,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 17,
-            "split_type": "LEAF",
-            "parent": 15,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 6,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">247</TD>\n    <TD ALIGN=\"RIGHT\">0.87%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">28231</TD>\n    <TD ALIGN=\"RIGHT\">99.13%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 19,
-            "leaftext": "Predict No Complication; p = 99.13%",
-            "missingdataleft": false,
-            "upper_child": 20,
-            "curvedata": [],
-            "n_node_samples": 28478,
-            "feature": "wndclas",
-            "threshold": 0.0,
-            "id": 18,
-            "split_type": "CATEGORIC",
-            "parent": 14,
-            "categoric_split": [
-                false,
-                true,
-                false,
-                true,
-                false,
-                false,
-                false
-            ],
-            "depth": 5,
-            "levels": [
-                [
-                    2,
-                    "1-Clean"
-                ],
-                [
-                    3,
-                    "2-Clean/Contaminated"
-                ],
-                [
-                    4,
-                    "3-Contaminated"
-                ],
-                [
-                    5,
-                    "4-Dirty/Infected"
-                ]
-            ]
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">46</TD>\n    <TD ALIGN=\"RIGHT\">0.49%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">9327</TD>\n    <TD ALIGN=\"RIGHT\">99.51%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.51%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 9373,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 19,
-            "split_type": "LEAF",
-            "parent": 18,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 6,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">201</TD>\n    <TD ALIGN=\"RIGHT\">1.05%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">18904</TD>\n    <TD ALIGN=\"RIGHT\">98.95%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 98.95%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 19105,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 20,
-            "split_type": "LEAF",
-            "parent": 18,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 6,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">19</TD>\n    <TD ALIGN=\"RIGHT\">0.04%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">44542</TD>\n    <TD ALIGN=\"RIGHT\">99.96%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.96%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 44561,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 21,
-            "split_type": "LEAF",
-            "parent": 13,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 4,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">607</TD>\n    <TD ALIGN=\"RIGHT\">0.64%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">94370</TD>\n    <TD ALIGN=\"RIGHT\">99.36%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 23,
-            "leaftext": "Predict No Complication; p = 99.36%",
-            "missingdataleft": false,
-            "upper_child": 32,
-            "curvedata": [],
-            "n_node_samples": 94977,
-            "feature": "inout",
-            "threshold": 0.0757931543624161,
-            "id": 22,
-            "split_type": "CATEGORIC",
-            "parent": 2,
-            "categoric_split": [
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 2,
-            "levels": [
-                [
-                    2,
-                    "Inpatient"
-                ],
-                [
-                    3,
-                    "Outpatient"
-                ]
-            ]
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">597</TD>\n    <TD ALIGN=\"RIGHT\">0.76%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">78415</TD>\n    <TD ALIGN=\"RIGHT\">99.24%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 24,
-            "leaftext": "Predict No Complication; p = 99.24%",
-            "missingdataleft": false,
-            "upper_child": 31,
-            "curvedata": [],
-            "n_node_samples": 79012,
-            "feature": "hxchf",
-            "threshold": 0.5008653846153847,
-            "id": 23,
-            "split_type": "CATEGORIC",
-            "parent": 22,
-            "categoric_split": [
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 3,
-            "levels": [
-                [
-                    2,
-                    "No"
-                ],
-                [
-                    3,
-                    "Yes"
-                ]
-            ]
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">519</TD>\n    <TD ALIGN=\"RIGHT\">0.68%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">76359</TD>\n    <TD ALIGN=\"RIGHT\">99.32%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 25,
-            "leaftext": "Predict No Complication; p = 99.32%",
-            "missingdataleft": false,
-            "upper_child": 28,
-            "curvedata": [],
-            "n_node_samples": 76878,
-            "feature": "prhct",
-            "threshold": 35.703125,
-            "id": 24,
-            "split_type": "PARALLEL",
-            "parent": 23,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 4,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">223</TD>\n    <TD ALIGN=\"RIGHT\">1.15%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">19150</TD>\n    <TD ALIGN=\"RIGHT\">98.85%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 26,
-            "leaftext": "Predict No Complication; p = 98.85%",
-            "missingdataleft": false,
-            "upper_child": 27,
-            "curvedata": [],
-            "n_node_samples": 19373,
-            "feature": "pralbum",
-            "threshold": 2.4055554999999997,
-            "id": 25,
-            "split_type": "PARALLEL",
-            "parent": 24,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 5,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">36</TD>\n    <TD ALIGN=\"RIGHT\">2.74%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">1277</TD>\n    <TD ALIGN=\"RIGHT\">97.26%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 97.26%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 1313,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 26,
-            "split_type": "LEAF",
-            "parent": 25,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 6,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">187</TD>\n    <TD ALIGN=\"RIGHT\">1.04%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">17873</TD>\n    <TD ALIGN=\"RIGHT\">98.96%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 98.96%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 18060,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 27,
-            "split_type": "LEAF",
-            "parent": 25,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 6,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">296</TD>\n    <TD ALIGN=\"RIGHT\">0.51%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">57209</TD>\n    <TD ALIGN=\"RIGHT\">99.49%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 29,
-            "leaftext": "Predict No Complication; p = 99.49%",
-            "missingdataleft": false,
-            "upper_child": 30,
-            "curvedata": [],
-            "n_node_samples": 57505,
-            "feature": "dyspnea",
-            "threshold": 0.12042713567839196,
-            "id": 28,
-            "split_type": "CATEGORIC",
-            "parent": 24,
-            "categoric_split": [
-                false,
-                true,
-                true,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 5,
-            "levels": [
-                [
-                    2,
-                    "AT REST"
-                ],
-                [
-                    3,
-                    "MODERATE EXERTION"
-                ],
-                [
-                    4,
-                    "No"
-                ]
-            ]
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">102</TD>\n    <TD ALIGN=\"RIGHT\">0.97%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">10373</TD>\n    <TD ALIGN=\"RIGHT\">99.03%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.03%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 10475,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 29,
-            "split_type": "LEAF",
-            "parent": 28,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 6,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">194</TD>\n    <TD ALIGN=\"RIGHT\">0.41%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">46836</TD>\n    <TD ALIGN=\"RIGHT\">99.59%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.59%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 47030,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 30,
-            "split_type": "LEAF",
-            "parent": 28,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 6,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">78</TD>\n    <TD ALIGN=\"RIGHT\">3.66%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">2056</TD>\n    <TD ALIGN=\"RIGHT\">96.34%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 96.34%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 2134,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 31,
-            "split_type": "LEAF",
-            "parent": 23,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 4,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">10</TD>\n    <TD ALIGN=\"RIGHT\">0.06%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">15955</TD>\n    <TD ALIGN=\"RIGHT\">99.94%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.94%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 15965,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 32,
-            "split_type": "LEAF",
-            "parent": 22,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 3,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">215</TD>\n    <TD ALIGN=\"RIGHT\">1.45%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">14644</TD>\n    <TD ALIGN=\"RIGHT\">98.55%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 34,
-            "leaftext": "Predict No Complication; p = 98.55%",
-            "missingdataleft": false,
-            "upper_child": 37,
-            "curvedata": [],
-            "n_node_samples": 14859,
-            "feature": "inout",
-            "threshold": 0.017343545481837287,
-            "id": 33,
-            "split_type": "CATEGORIC",
-            "parent": 1,
-            "categoric_split": [
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 1,
-            "levels": [
-                [
-                    2,
-                    "Inpatient"
-                ],
-                [
-                    3,
-                    "Outpatient"
-                ]
-            ]
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">195</TD>\n    <TD ALIGN=\"RIGHT\">2.15%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">8887</TD>\n    <TD ALIGN=\"RIGHT\">97.85%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": 35,
-            "leaftext": "Predict No Complication; p = 97.85%",
-            "missingdataleft": false,
-            "upper_child": 36,
-            "curvedata": [],
-            "n_node_samples": 9082,
-            "feature": "fnstatus2",
-            "threshold": 0.0,
-            "id": 34,
-            "split_type": "CATEGORIC",
-            "parent": 33,
-            "categoric_split": [
-                false,
-                true,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 2,
-            "levels": [
-                [
-                    2,
-                    "Independent"
-                ],
-                [
-                    3,
-                    "Partially Dependent"
-                ],
-                [
-                    4,
-                    "Totally Dependent"
-                ]
-            ]
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">129</TD>\n    <TD ALIGN=\"RIGHT\">1.70%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">7449</TD>\n    <TD ALIGN=\"RIGHT\">98.30%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 98.30%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 7578,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 35,
-            "split_type": "LEAF",
-            "parent": 34,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 3,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">66</TD>\n    <TD ALIGN=\"RIGHT\">4.39%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">1438</TD>\n    <TD ALIGN=\"RIGHT\">95.61%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 95.61%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 1504,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 36,
-            "split_type": "LEAF",
-            "parent": 34,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 3,
-            "levels": []
-        },
-        {
-            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR >\n    <TD ALIGN=\"LEFT\">Cardiac Arrest Requiring CPR</TD>\n    <TD ALIGN=\"RIGHT\">20</TD>\n    <TD ALIGN=\"RIGHT\">0.35%</TD>\n  </TR>\n  <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">5757</TD>\n    <TD ALIGN=\"RIGHT\">99.65%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
-            "lower_child": -2,
-            "leaftext": "Predict No Complication; p = 99.65%",
-            "missingdataleft": false,
-            "upper_child": -2,
-            "curvedata": [],
-            "n_node_samples": 5777,
-            "feature": "",
-            "threshold": 0.0,
-            "id": 37,
-            "split_type": "LEAF",
-            "parent": 33,
-            "categoric_split": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "depth": 2,
-            "levels": []
-        }
-    ],
-    "simple_layout": false
-}
-;
+
+<script>
         /* global $ */
 
 function isIE() {
@@ -1413,23 +395,23 @@ var loadtree = function(treejson) {
       $(this).css('z-index', zindex++);
     });
 
-    if (!treedata.simple_layout) {
-      var stats = document.createElement('div');
-      stats.setAttribute('class', 'card-content stats');
-      div.appendChild(stats);
+    // if (!treedata.simple_layout) {
+    //   var stats = document.createElement('div');
+    //   stats.setAttribute('class', 'card-content stats');
+    //   div.appendChild(stats);
 
 
-      var stats1 = document.createElement('span');
-      stats1.appendChild(document.createTextNode('n = ' + node.n_node_samples));
-      stats.appendChild(stats1);
+    //   var stats1 = document.createElement('span');
+    //   stats1.appendChild(document.createTextNode('n = ' + node.n_node_samples));
+    //   stats.appendChild(stats1);
 
-      if (node.split_type != 'LEAF') {
-        var stats2 = document.createElement('span');
-        stats2.className = 'right';
-        stats2.appendChild(document.createTextNode(node.leaftext));
-        stats.appendChild(stats2);
-      }
-    }
+    //   if (node.split_type != 'LEAF') {
+    //     var stats2 = document.createElement('span');
+    //     stats2.className = 'right';
+    //     stats2.appendChild(document.createTextNode(node.leaftext));
+    //     stats.appendChild(stats2);
+    //   }
+    // }
 
     var content = document.createElement('div');
     content.setAttribute('class', 'card-content main');
@@ -1439,7 +421,7 @@ var loadtree = function(treejson) {
     questionheading.setAttribute('class', 'card-title');
     content.appendChild(questionheading);
 
-    var varname = node.feature;
+    var varname = getquestiontext(node.feature);
 
 
     if (node.split_type != 'LEAF') {
@@ -1497,23 +479,121 @@ var loadtree = function(treejson) {
       questionheading.className += ' center-align';
       questionheading.appendChild(document.createTextNode('Final Prediction'));
 
-      if (node.tabletext == '') {
+      // if (node.tabletext == '') {
         var result = document.createElement('div');
         result.setAttribute('class', 'card-results');
-        result.appendChild(document.createTextNode(node.leaftext));
+        result.appendChild(document.createTextNode(
+            node.leaftext.replace(":", "\u00A0\u00A0\u00A0")));
         content.appendChild(result);
-      } else {
-        var result2 = document.createElement('div');
-        result2.setAttribute('class', 'card card-table primary-lighter');
-        $(result2).append(node.tabletext);
-        content.appendChild(result2);
-      }
+      // } else {
+      //   var result2 = document.createElement('div');
+      //   result2.setAttribute('class', 'card card-table primary-lighter');
+      //   $(result2).append(node.tabletext);
+      //   content.appendChild(result2);
+      // }
     }
 
     questions.append(div);
   }
   resetQuestions();
 };
+
+function getquestiontext(varname) {
+  switch (varname) {
+    case "sex":
+      return "What is the patient's sex?";
+    case "age":
+      return "What is the patient's age?";
+    case "surgspec":
+      return "What type of surgery will be performed?";
+    case "diabetes":
+      return "Does the patient take diabetes medication?";
+    case "smoke":
+      return "Is the patient a current smoker or has been within the past year?";
+    case "dyspnea":
+      return "Does the patient have dyspnea?";
+    case "fnstatus2":
+      return "Is the patient currently dependent on mechanical ventilation?";
+    case "hxcopd":
+      return "Does the patient have history of COPD?";
+    case "ascites":
+      return "Does the patient have ascites?";
+    case "hxchf":
+      return "Does the patient have congestive heart failure?";
+    case "hypermed":
+      return "Does the patient have hypertension requiring medication?";
+    case "renalfail":
+      return "Does the patient currently have acute renal failure?";
+    case "dialysis":
+      return "Is the patient on dialysis or currently requiring dialysis?";
+    case "discancr":
+      return "Does the patient have disseminated cancer?";
+    case "wndinf":
+      return "Does the patient have any open wound or a closed wound infection?";
+    case "steriod":
+      return "Is the patient using steroids or immunosuppressants for a chronic condition?";
+    case "wtloss":
+      return "Has the patient experienced >10% loss of body weight in the last 6 months?";
+    case "bleeddis":
+      return "Does the patient have any bleeding disorder?";
+    case "transfusion":
+      return "Has the patient received any transfusion in the last 72 hours?";
+    case "PRSEPIS":
+      return "Is the patient septic?";
+    case "prsodm":
+      return "What is the patient's pre-operative serum sodium (mmol/L)?";
+    case "prbun":
+      return "What is the patient's pre-operative BUN (mg/dl)?";
+    case "prcreat":
+      return "What is the patient's pre-operative serum creatinine (mg/dl)?";
+    case "pralbum":
+      return "What is the patient's pre-operative serum albumin (g/dl)?";
+    case "prbili":
+      return "What is the patient's pre-operative serum bilirubin (mg/dl)?";
+    case "prsgot":
+      return "What is the patient's pre-operative SGOT (U/L)?";
+    case "pralkph":
+      return "What is the patient's pre-operative alkline phosphatase (U/L)?";
+    case "prwbc":
+      return "What is the patient's pre-operative WBC (K/cumm)?";
+    case "prhct":
+      return "What is the patient's pre-operative hematocrit (%)?";
+    case "prplate":
+      return "What is the patient's pre-operative platelet count (K/cumm)?";
+    case "prptt":
+      return "What is the patient's pre-operative PTT (seconds)?";
+    case "prinr":
+      return "What is the patient's pre-operative INR?";
+    case "prpt":
+      return "What is the patient's pre-operative PT (seconds)?";
+    case "wndclas":
+      return "If the patient undergoes surgery, what would be the most likely wound classification?";
+    case "ASACLAS":
+      return "What is the patient's ASA classification?";
+    case "AdmQtr":
+      return "In which quarter was the patient admitted?";
+    case "race":
+      return "What is the patient's race?";
+    case "ethnicity_hispanic":
+      return "Is the patient hispanic?";
+    case "CPT_CAT":
+      return "What is the CPT code of the procedure?";
+    case "CPT_Digestive":
+      return "Which digestive CPT code best describes the procedure?";
+    case "CPT_Cardio":
+      return "Which cardiovascular CPT code best describes the procedure?";
+    case "CPT_Muscl":
+      return "Which muscular CPT code best describes the procedure?";
+    case "inout":
+      return "Is the patient an inpatient or outpatient?";
+    case "BMI":
+      return "What is the patient's BMI (kg/m²)?";
+    case "ICD9_AREA":
+      return "What is the area of the patient's ICD-9 diagnosis?";
+    case "ELECTSURG":
+      return "Is the surgery elective?";
+  }
+}
 
 
 function addbutton(buttonRow, text) {
@@ -1577,8 +657,84 @@ var addlevels = function(buttonRow, levels) {
 };
 
         $('.brand-logo, .btn-floating').click(resetQuestions);
-        loadtree(treejson);
-      })();
+
     </script>
+        <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+
+      var TARGET_MAP = {
+          supinfec: "Superficial SSI",
+          wndinfd: "Deep Incisional SSI",
+          orgspcssi: "Organ Space SSI",
+          dehis: "Wound Disruption",
+          oupneumo: "Pneumonia",
+          reintub: "Unplanned Intubation",
+          pulembol: "Pulmonary Embolism",
+          failwean: "On Ventilator > 48 hours",
+          renainsf: "Progressive Renal Insufficiency",
+          oprenafl: "Acute Renal Failure",
+          urninfec: "Urinary Tract Infection",
+          cnscva: "Stroke/CVA",
+          cdarrest: "Cardiac Arrest Requiring CPR",
+          cdmi: "Myocardial Infarction",
+          othbleed: "Bleeding Requiring Transfusions",
+          othdvt: "DVT/Thrombophlebitis",
+          othsysep: "Sepsis",
+          othseshock: "Septic Shock",
+
+          morbany: "Any Morbidity",
+          mortality: "Mortality",
+
+          morb: "Any Morbidity or Mortality",
+      };
+
+      var morbselectcontainer = $('#morb-container');
+      var morbselect = $('#morb');
+
+      if (isIOS()) {
+        morbselect.addClass('browser-default')
+      }
+
+      var getmorb = function() {
+        if ($('#target-mort').prop('checked')) {
+          morbselect.prop('disabled', true);
+          morbselectcontainer.hide();
+          return "mortality";
+        } else if ($('#target-morb').prop('checked')) {
+          morbselect.prop('disabled', true);
+          morbselectcontainer.hide();
+          return "morb";
+        } else {
+          morbselect.prop('disabled', false);
+          morbselect.formSelect();
+          morbselectcontainer.show();
+          return morbselect.val();
+        }
+      }
+
+      var refreshtree = function() {
+        var morb = getmorb();
+        var treename = morb + '.json';
+        $.getJSON('trees/' + treename, function(lnr) {
+          loadtree(lnr);
+        })
+      };
+
+      morbselect.change(refreshtree);
+      $('#target input').click(refreshtree);
+
+      for (morb in TARGET_MAP) {
+        if (!(["mortality", "morb", "morbany"].indexOf(morb) > -1)) {
+          morbselect.append('<option value="' + morb + '">' +
+                            TARGET_MAP[morb] + '</option>');
+        }
+      }
+      morbselect[0].selectedIndex = 0;
+      morbselect.trigger('change');
+</script>
   </body>
 </html>
