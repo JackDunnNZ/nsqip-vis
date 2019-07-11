@@ -1,0 +1,2012 @@
+{
+    "nodes": [
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">623941</TD>\n    <TD ALIGN=\"RIGHT\">98.66%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">8497</TD>\n    <TD ALIGN=\"RIGHT\">1.34%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 2,
+            "leaftext": "Predict No Complication; p = 98.66%",
+            "missingdataleft": false,
+            "upper_child": 57,
+            "curvedata": [],
+            "n_node_samples": 632438,
+            "feature": "inout",
+            "threshold": 0.030718557470475884,
+            "id": 1,
+            "split_type": "CATEGORIC",
+            "parent": -2,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 0,
+            "levels": [
+                [
+                    2,
+                    "Inpatient"
+                ],
+                [
+                    3,
+                    "Outpatient"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">354975</TD>\n    <TD ALIGN=\"RIGHT\">97.79%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">8033</TD>\n    <TD ALIGN=\"RIGHT\">2.21%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 3,
+            "leaftext": "Predict No Complication; p = 97.79%",
+            "missingdataleft": false,
+            "upper_child": 48,
+            "curvedata": [],
+            "n_node_samples": 363008,
+            "feature": "wndclas",
+            "threshold": 0.510576923076923,
+            "id": 2,
+            "split_type": "CATEGORIC",
+            "parent": 1,
+            "categoric_split": [
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ],
+            "depth": 1,
+            "levels": [
+                [
+                    2,
+                    "1"
+                ],
+                [
+                    3,
+                    "2"
+                ],
+                [
+                    4,
+                    "3"
+                ],
+                [
+                    5,
+                    "4"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">340266</TD>\n    <TD ALIGN=\"RIGHT\">98.01%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">6899</TD>\n    <TD ALIGN=\"RIGHT\">1.99%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 4,
+            "leaftext": "Predict No Complication; p = 98.01%",
+            "missingdataleft": false,
+            "upper_child": 41,
+            "curvedata": [],
+            "n_node_samples": 347165,
+            "feature": "fnstatus2",
+            "threshold": 0.0,
+            "id": 3,
+            "split_type": "CATEGORIC",
+            "parent": 2,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 2,
+            "levels": [
+                [
+                    2,
+                    "Independent"
+                ],
+                [
+                    3,
+                    "Partially Dependent"
+                ],
+                [
+                    4,
+                    "Totally Dependent"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">328533</TD>\n    <TD ALIGN=\"RIGHT\">98.11%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">6312</TD>\n    <TD ALIGN=\"RIGHT\">1.89%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 5,
+            "leaftext": "Predict No Complication; p = 98.11%",
+            "missingdataleft": false,
+            "upper_child": 32,
+            "curvedata": [],
+            "n_node_samples": 334845,
+            "feature": "BMI",
+            "threshold": 38.413945,
+            "id": 4,
+            "split_type": "PARALLEL",
+            "parent": 3,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 3,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">280784</TD>\n    <TD ALIGN=\"RIGHT\">98.00%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">5729</TD>\n    <TD ALIGN=\"RIGHT\">2.00%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 6,
+            "leaftext": "Predict No Complication; p = 98.00%",
+            "missingdataleft": false,
+            "upper_child": 13,
+            "curvedata": [],
+            "n_node_samples": 286513,
+            "feature": "wndclas",
+            "threshold": 0.5309615384615385,
+            "id": 5,
+            "split_type": "CATEGORIC",
+            "parent": 4,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 4,
+            "levels": [
+                [
+                    2,
+                    "1"
+                ],
+                [
+                    3,
+                    "2"
+                ],
+                [
+                    4,
+                    "3"
+                ],
+                [
+                    5,
+                    "4"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">124085</TD>\n    <TD ALIGN=\"RIGHT\">99.10%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">1125</TD>\n    <TD ALIGN=\"RIGHT\">0.90%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 7,
+            "leaftext": "Predict No Complication; p = 99.10%",
+            "missingdataleft": false,
+            "upper_child": 12,
+            "curvedata": [],
+            "n_node_samples": 125210,
+            "feature": "wndinf",
+            "threshold": 0.34330916666666667,
+            "id": 6,
+            "split_type": "CATEGORIC",
+            "parent": 5,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 5,
+            "levels": [
+                [
+                    2,
+                    "No"
+                ],
+                [
+                    3,
+                    "Yes"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">117996</TD>\n    <TD ALIGN=\"RIGHT\">99.18%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">971</TD>\n    <TD ALIGN=\"RIGHT\">0.82%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 8,
+            "leaftext": "Predict No Complication; p = 99.18%",
+            "missingdataleft": false,
+            "upper_child": 11,
+            "curvedata": [],
+            "n_node_samples": 118967,
+            "feature": "pralbum",
+            "threshold": 4.0243585,
+            "id": 7,
+            "split_type": "PARALLEL",
+            "parent": 6,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 6,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">56527</TD>\n    <TD ALIGN=\"RIGHT\">98.93%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">614</TD>\n    <TD ALIGN=\"RIGHT\">1.07%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 9,
+            "leaftext": "Predict No Complication; p = 98.93%",
+            "missingdataleft": false,
+            "upper_child": 10,
+            "curvedata": [],
+            "n_node_samples": 57141,
+            "feature": "prhct",
+            "threshold": 35.62,
+            "id": 8,
+            "split_type": "PARALLEL",
+            "parent": 7,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 7,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">16718</TD>\n    <TD ALIGN=\"RIGHT\">98.49%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">256</TD>\n    <TD ALIGN=\"RIGHT\">1.51%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 98.49%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 16974,
+            "feature": "",
+            "threshold": 0.1086086086086086,
+            "id": 9,
+            "split_type": "LEAF",
+            "parent": 8,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 8,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">39809</TD>\n    <TD ALIGN=\"RIGHT\">99.11%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">358</TD>\n    <TD ALIGN=\"RIGHT\">0.89%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 99.11%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 40167,
+            "feature": "",
+            "threshold": 0.3332353888888889,
+            "id": 10,
+            "split_type": "LEAF",
+            "parent": 8,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 8,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">61469</TD>\n    <TD ALIGN=\"RIGHT\">99.42%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">357</TD>\n    <TD ALIGN=\"RIGHT\">0.58%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 99.42%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 61826,
+            "feature": "",
+            "threshold": 0.3930379746835443,
+            "id": 11,
+            "split_type": "LEAF",
+            "parent": 7,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 7,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">6089</TD>\n    <TD ALIGN=\"RIGHT\">97.53%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">154</TD>\n    <TD ALIGN=\"RIGHT\">2.47%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 97.53%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 6243,
+            "feature": "",
+            "threshold": 0.3438438438438438,
+            "id": 12,
+            "split_type": "LEAF",
+            "parent": 6,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 6,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">156699</TD>\n    <TD ALIGN=\"RIGHT\">97.15%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">4604</TD>\n    <TD ALIGN=\"RIGHT\">2.85%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 14,
+            "leaftext": "Predict No Complication; p = 97.15%",
+            "missingdataleft": false,
+            "upper_child": 31,
+            "curvedata": [],
+            "n_node_samples": 161303,
+            "feature": "wtloss",
+            "threshold": 0.11563893893893895,
+            "id": 13,
+            "split_type": "CATEGORIC",
+            "parent": 5,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 5,
+            "levels": [
+                [
+                    2,
+                    "No"
+                ],
+                [
+                    3,
+                    "Yes"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">149921</TD>\n    <TD ALIGN=\"RIGHT\">97.31%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">4143</TD>\n    <TD ALIGN=\"RIGHT\">2.69%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 15,
+            "leaftext": "Predict No Complication; p = 97.31%",
+            "missingdataleft": false,
+            "upper_child": 26,
+            "curvedata": [],
+            "n_node_samples": 154064,
+            "feature": "pralkph",
+            "threshold": 120.5,
+            "id": 14,
+            "split_type": "PARALLEL",
+            "parent": 13,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 6,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">132970</TD>\n    <TD ALIGN=\"RIGHT\">97.55%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">3340</TD>\n    <TD ALIGN=\"RIGHT\">2.45%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 16,
+            "leaftext": "Predict No Complication; p = 97.55%",
+            "missingdataleft": false,
+            "upper_child": 21,
+            "curvedata": [],
+            "n_node_samples": 136310,
+            "feature": "sex",
+            "threshold": 0.3986486486486487,
+            "id": 15,
+            "split_type": "CATEGORIC",
+            "parent": 14,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 7,
+            "levels": [
+                [
+                    2,
+                    "female"
+                ],
+                [
+                    3,
+                    "male"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">71194</TD>\n    <TD ALIGN=\"RIGHT\">97.90%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">1528</TD>\n    <TD ALIGN=\"RIGHT\">2.10%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 17,
+            "leaftext": "Predict No Complication; p = 97.90%",
+            "missingdataleft": false,
+            "upper_child": 20,
+            "curvedata": [],
+            "n_node_samples": 72722,
+            "feature": "steroid",
+            "threshold": 0.5629406730769231,
+            "id": 16,
+            "split_type": "CATEGORIC",
+            "parent": 15,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 8,
+            "levels": [
+                [
+                    2,
+                    "No"
+                ],
+                [
+                    3,
+                    "Yes"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">67651</TD>\n    <TD ALIGN=\"RIGHT\">98.02%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">1370</TD>\n    <TD ALIGN=\"RIGHT\">1.98%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 18,
+            "leaftext": "Predict No Complication; p = 98.02%",
+            "missingdataleft": false,
+            "upper_child": 19,
+            "curvedata": [],
+            "n_node_samples": 69021,
+            "feature": "prhct",
+            "threshold": 36.010097819010404,
+            "id": 17,
+            "split_type": "PARALLEL",
+            "parent": 16,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 9,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">19813</TD>\n    <TD ALIGN=\"RIGHT\">97.45%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">519</TD>\n    <TD ALIGN=\"RIGHT\">2.55%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 97.45%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 20332,
+            "feature": "",
+            "threshold": 0.134070479457013,
+            "id": 18,
+            "split_type": "LEAF",
+            "parent": 17,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 10,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">47838</TD>\n    <TD ALIGN=\"RIGHT\">98.25%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">851</TD>\n    <TD ALIGN=\"RIGHT\">1.75%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 98.25%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 48689,
+            "feature": "",
+            "threshold": 0.11459673366834171,
+            "id": 19,
+            "split_type": "LEAF",
+            "parent": 17,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 10,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">3543</TD>\n    <TD ALIGN=\"RIGHT\">95.73%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">158</TD>\n    <TD ALIGN=\"RIGHT\">4.27%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 95.73%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 3701,
+            "feature": "",
+            "threshold": 0.09061656656656657,
+            "id": 20,
+            "split_type": "LEAF",
+            "parent": 16,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 9,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">61776</TD>\n    <TD ALIGN=\"RIGHT\">97.15%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">1812</TD>\n    <TD ALIGN=\"RIGHT\">2.85%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 22,
+            "leaftext": "Predict No Complication; p = 97.15%",
+            "missingdataleft": false,
+            "upper_child": 23,
+            "curvedata": [],
+            "n_node_samples": 63588,
+            "feature": "prhct",
+            "threshold": 37.370545,
+            "id": 21,
+            "split_type": "PARALLEL",
+            "parent": 15,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 8,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">15245</TD>\n    <TD ALIGN=\"RIGHT\">96.22%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">599</TD>\n    <TD ALIGN=\"RIGHT\">3.78%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 96.22%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 15844,
+            "feature": "",
+            "threshold": 0.096996996996997,
+            "id": 22,
+            "split_type": "LEAF",
+            "parent": 21,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 9,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">46531</TD>\n    <TD ALIGN=\"RIGHT\">97.46%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">1213</TD>\n    <TD ALIGN=\"RIGHT\">2.54%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 24,
+            "leaftext": "Predict No Complication; p = 97.46%",
+            "missingdataleft": false,
+            "upper_child": 25,
+            "curvedata": [],
+            "n_node_samples": 47744,
+            "feature": "age",
+            "threshold": 17.5,
+            "id": 23,
+            "split_type": "PARALLEL",
+            "parent": 21,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 9,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">4011</TD>\n    <TD ALIGN=\"RIGHT\">98.67%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">54</TD>\n    <TD ALIGN=\"RIGHT\">1.33%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 98.67%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 4065,
+            "feature": "",
+            "threshold": 0.0,
+            "id": 24,
+            "split_type": "LEAF",
+            "parent": 23,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 10,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">42520</TD>\n    <TD ALIGN=\"RIGHT\">97.35%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">1159</TD>\n    <TD ALIGN=\"RIGHT\">2.65%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 97.35%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 43679,
+            "feature": "",
+            "threshold": 0.21218029642545772,
+            "id": 25,
+            "split_type": "LEAF",
+            "parent": 23,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 10,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">16951</TD>\n    <TD ALIGN=\"RIGHT\">95.48%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">803</TD>\n    <TD ALIGN=\"RIGHT\">4.52%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 27,
+            "leaftext": "Predict No Complication; p = 95.48%",
+            "missingdataleft": false,
+            "upper_child": 30,
+            "curvedata": [],
+            "n_node_samples": 17754,
+            "feature": "sex",
+            "threshold": 0.4109109109109109,
+            "id": 26,
+            "split_type": "CATEGORIC",
+            "parent": 14,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 7,
+            "levels": [
+                [
+                    2,
+                    "female"
+                ],
+                [
+                    3,
+                    "male"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">9476</TD>\n    <TD ALIGN=\"RIGHT\">96.34%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">360</TD>\n    <TD ALIGN=\"RIGHT\">3.66%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 28,
+            "leaftext": "Predict No Complication; p = 96.34%",
+            "missingdataleft": false,
+            "upper_child": 29,
+            "curvedata": [],
+            "n_node_samples": 9836,
+            "feature": "age",
+            "threshold": 23.5,
+            "id": 27,
+            "split_type": "PARALLEL",
+            "parent": 26,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 8,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">1571</TD>\n    <TD ALIGN=\"RIGHT\">98.87%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">18</TD>\n    <TD ALIGN=\"RIGHT\">1.13%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 98.87%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 1589,
+            "feature": "",
+            "threshold": 0.0,
+            "id": 28,
+            "split_type": "LEAF",
+            "parent": 27,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 9,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">7905</TD>\n    <TD ALIGN=\"RIGHT\">95.85%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">342</TD>\n    <TD ALIGN=\"RIGHT\">4.15%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 95.85%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 8247,
+            "feature": "",
+            "threshold": 0.050988067114093955,
+            "id": 29,
+            "split_type": "LEAF",
+            "parent": 27,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 9,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">7475</TD>\n    <TD ALIGN=\"RIGHT\">94.41%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">443</TD>\n    <TD ALIGN=\"RIGHT\">5.59%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 94.41%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 7918,
+            "feature": "",
+            "threshold": 0.0,
+            "id": 30,
+            "split_type": "LEAF",
+            "parent": 26,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 8,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">6778</TD>\n    <TD ALIGN=\"RIGHT\">93.63%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">461</TD>\n    <TD ALIGN=\"RIGHT\">6.37%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 93.63%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 7239,
+            "feature": "",
+            "threshold": 0.0,
+            "id": 31,
+            "split_type": "LEAF",
+            "parent": 13,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 6,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">47749</TD>\n    <TD ALIGN=\"RIGHT\">98.79%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">583</TD>\n    <TD ALIGN=\"RIGHT\">1.21%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 33,
+            "leaftext": "Predict No Complication; p = 98.79%",
+            "missingdataleft": false,
+            "upper_child": 34,
+            "curvedata": [],
+            "n_node_samples": 48332,
+            "feature": "age",
+            "threshold": 21.5,
+            "id": 32,
+            "split_type": "PARALLEL",
+            "parent": 4,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 4,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">9372</TD>\n    <TD ALIGN=\"RIGHT\">99.36%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">60</TD>\n    <TD ALIGN=\"RIGHT\">0.64%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 99.36%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 9432,
+            "feature": "",
+            "threshold": 0.0,
+            "id": 33,
+            "split_type": "LEAF",
+            "parent": 32,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 5,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">38377</TD>\n    <TD ALIGN=\"RIGHT\">98.66%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">523</TD>\n    <TD ALIGN=\"RIGHT\">1.34%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 35,
+            "leaftext": "Predict No Complication; p = 98.66%",
+            "missingdataleft": false,
+            "upper_child": 40,
+            "curvedata": [],
+            "n_node_samples": 38900,
+            "feature": "wndclas",
+            "threshold": 0.0,
+            "id": 34,
+            "split_type": "CATEGORIC",
+            "parent": 32,
+            "categoric_split": [
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 5,
+            "levels": [
+                [
+                    2,
+                    "1"
+                ],
+                [
+                    3,
+                    "2"
+                ],
+                [
+                    4,
+                    "3"
+                ],
+                [
+                    5,
+                    "4"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">36629</TD>\n    <TD ALIGN=\"RIGHT\">98.79%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">447</TD>\n    <TD ALIGN=\"RIGHT\">1.21%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 36,
+            "leaftext": "Predict No Complication; p = 98.79%",
+            "missingdataleft": false,
+            "upper_child": 37,
+            "curvedata": [],
+            "n_node_samples": 37076,
+            "feature": "pralbum",
+            "threshold": 3.7820885,
+            "id": 35,
+            "split_type": "PARALLEL",
+            "parent": 34,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 6,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">8590</TD>\n    <TD ALIGN=\"RIGHT\">97.99%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">176</TD>\n    <TD ALIGN=\"RIGHT\">2.01%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 97.99%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 8766,
+            "feature": "",
+            "threshold": 0.2156773757628596,
+            "id": 36,
+            "split_type": "LEAF",
+            "parent": 35,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 7,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">28039</TD>\n    <TD ALIGN=\"RIGHT\">99.04%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">271</TD>\n    <TD ALIGN=\"RIGHT\">0.96%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 38,
+            "leaftext": "Predict No Complication; p = 99.04%",
+            "missingdataleft": false,
+            "upper_child": 39,
+            "curvedata": [],
+            "n_node_samples": 28310,
+            "feature": "smoke",
+            "threshold": 0.11892447447447446,
+            "id": 37,
+            "split_type": "CATEGORIC",
+            "parent": 35,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 7,
+            "levels": [
+                [
+                    2,
+                    "No"
+                ],
+                [
+                    3,
+                    "Yes"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">24602</TD>\n    <TD ALIGN=\"RIGHT\">99.19%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">202</TD>\n    <TD ALIGN=\"RIGHT\">0.81%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 99.19%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 24804,
+            "feature": "",
+            "threshold": 0.09518407407407407,
+            "id": 38,
+            "split_type": "LEAF",
+            "parent": 37,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 8,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">3437</TD>\n    <TD ALIGN=\"RIGHT\">98.03%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">69</TD>\n    <TD ALIGN=\"RIGHT\">1.97%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 98.03%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 3506,
+            "feature": "",
+            "threshold": 0.22526470840598778,
+            "id": 39,
+            "split_type": "LEAF",
+            "parent": 37,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 8,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">1748</TD>\n    <TD ALIGN=\"RIGHT\">95.83%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">76</TD>\n    <TD ALIGN=\"RIGHT\">4.17%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 95.83%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 1824,
+            "feature": "",
+            "threshold": 0.20601645998956714,
+            "id": 40,
+            "split_type": "LEAF",
+            "parent": 34,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 6,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">11733</TD>\n    <TD ALIGN=\"RIGHT\">95.24%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">587</TD>\n    <TD ALIGN=\"RIGHT\">4.76%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 42,
+            "leaftext": "Predict No Complication; p = 95.24%",
+            "missingdataleft": false,
+            "upper_child": 45,
+            "curvedata": [],
+            "n_node_samples": 12320,
+            "feature": "wndclas",
+            "threshold": 0.11497592592592593,
+            "id": 41,
+            "split_type": "CATEGORIC",
+            "parent": 3,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 3,
+            "levels": [
+                [
+                    2,
+                    "1"
+                ],
+                [
+                    3,
+                    "2"
+                ],
+                [
+                    4,
+                    "3"
+                ],
+                [
+                    5,
+                    "4"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">6103</TD>\n    <TD ALIGN=\"RIGHT\">96.90%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">195</TD>\n    <TD ALIGN=\"RIGHT\">3.10%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 43,
+            "leaftext": "Predict No Complication; p = 96.90%",
+            "missingdataleft": false,
+            "upper_child": 44,
+            "curvedata": [],
+            "n_node_samples": 6298,
+            "feature": "prinr",
+            "threshold": 1.0707975,
+            "id": 42,
+            "split_type": "PARALLEL",
+            "parent": 41,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 4,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">2579</TD>\n    <TD ALIGN=\"RIGHT\">98.21%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">47</TD>\n    <TD ALIGN=\"RIGHT\">1.79%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 98.21%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 2626,
+            "feature": "",
+            "threshold": 0.08950927777777777,
+            "id": 43,
+            "split_type": "LEAF",
+            "parent": 42,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 5,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">3524</TD>\n    <TD ALIGN=\"RIGHT\">95.97%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">148</TD>\n    <TD ALIGN=\"RIGHT\">4.03%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 95.97%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 3672,
+            "feature": "",
+            "threshold": 0.3227253333333333,
+            "id": 44,
+            "split_type": "LEAF",
+            "parent": 42,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 5,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">5630</TD>\n    <TD ALIGN=\"RIGHT\">93.49%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">392</TD>\n    <TD ALIGN=\"RIGHT\">6.51%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 46,
+            "leaftext": "Predict No Complication; p = 93.49%",
+            "missingdataleft": false,
+            "upper_child": 47,
+            "curvedata": [],
+            "n_node_samples": 6022,
+            "feature": "pralbum",
+            "threshold": 2.8082305,
+            "id": 45,
+            "split_type": "PARALLEL",
+            "parent": 41,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 4,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">1532</TD>\n    <TD ALIGN=\"RIGHT\">90.87%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">154</TD>\n    <TD ALIGN=\"RIGHT\">9.13%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 90.87%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 1686,
+            "feature": "",
+            "threshold": 0.4932692307692308,
+            "id": 46,
+            "split_type": "LEAF",
+            "parent": 45,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 5,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">4098</TD>\n    <TD ALIGN=\"RIGHT\">94.51%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">238</TD>\n    <TD ALIGN=\"RIGHT\">5.49%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 94.51%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 4336,
+            "feature": "",
+            "threshold": 0.179263,
+            "id": 47,
+            "split_type": "LEAF",
+            "parent": 45,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 5,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">14709</TD>\n    <TD ALIGN=\"RIGHT\">92.84%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">1134</TD>\n    <TD ALIGN=\"RIGHT\">7.16%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 49,
+            "leaftext": "Predict No Complication; p = 92.84%",
+            "missingdataleft": false,
+            "upper_child": 56,
+            "curvedata": [],
+            "n_node_samples": 15843,
+            "feature": "surgspec",
+            "threshold": 0.0,
+            "id": 48,
+            "split_type": "CATEGORIC",
+            "parent": 2,
+            "categoric_split": [
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false
+            ],
+            "depth": 2,
+            "levels": [
+                [
+                    2,
+                    "Cardiac Surgery"
+                ],
+                [
+                    3,
+                    "General Surgery"
+                ],
+                [
+                    4,
+                    "Thoracic"
+                ],
+                [
+                    5,
+                    "Vascular"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">12356</TD>\n    <TD ALIGN=\"RIGHT\">92.29%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">1032</TD>\n    <TD ALIGN=\"RIGHT\">7.71%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 50,
+            "leaftext": "Predict No Complication; p = 92.29%",
+            "missingdataleft": false,
+            "upper_child": 55,
+            "curvedata": [],
+            "n_node_samples": 13388,
+            "feature": "pralkph",
+            "threshold": 192.5,
+            "id": 49,
+            "split_type": "PARALLEL",
+            "parent": 48,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 3,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">11729</TD>\n    <TD ALIGN=\"RIGHT\">92.62%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">934</TD>\n    <TD ALIGN=\"RIGHT\">7.38%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 51,
+            "leaftext": "Predict No Complication; p = 92.62%",
+            "missingdataleft": false,
+            "upper_child": 54,
+            "curvedata": [],
+            "n_node_samples": 12663,
+            "feature": "steroid",
+            "threshold": 0.24917436419753108,
+            "id": 50,
+            "split_type": "CATEGORIC",
+            "parent": 49,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 4,
+            "levels": [
+                [
+                    2,
+                    "No"
+                ],
+                [
+                    3,
+                    "Yes"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">10927</TD>\n    <TD ALIGN=\"RIGHT\">93.08%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">812</TD>\n    <TD ALIGN=\"RIGHT\">6.92%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 52,
+            "leaftext": "Predict No Complication; p = 93.08%",
+            "missingdataleft": false,
+            "upper_child": 53,
+            "curvedata": [],
+            "n_node_samples": 11739,
+            "feature": "prplate",
+            "threshold": 376.5,
+            "id": 51,
+            "split_type": "PARALLEL",
+            "parent": 50,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 5,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">9217</TD>\n    <TD ALIGN=\"RIGHT\">93.73%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">617</TD>\n    <TD ALIGN=\"RIGHT\">6.27%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 93.73%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 9834,
+            "feature": "",
+            "threshold": 0.6545058653846154,
+            "id": 52,
+            "split_type": "LEAF",
+            "parent": 51,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 6,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">1710</TD>\n    <TD ALIGN=\"RIGHT\">89.76%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">195</TD>\n    <TD ALIGN=\"RIGHT\">10.24%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 89.76%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 1905,
+            "feature": "",
+            "threshold": 0.22322893206027297,
+            "id": 53,
+            "split_type": "LEAF",
+            "parent": 51,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 6,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">802</TD>\n    <TD ALIGN=\"RIGHT\">86.80%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">122</TD>\n    <TD ALIGN=\"RIGHT\">13.20%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 86.80%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 924,
+            "feature": "",
+            "threshold": 0.101936551226551,
+            "id": 54,
+            "split_type": "LEAF",
+            "parent": 50,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 5,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">627</TD>\n    <TD ALIGN=\"RIGHT\">86.48%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">98</TD>\n    <TD ALIGN=\"RIGHT\">13.52%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 86.48%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 725,
+            "feature": "",
+            "threshold": 0.015040318222755932,
+            "id": 55,
+            "split_type": "LEAF",
+            "parent": 49,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 4,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">2353</TD>\n    <TD ALIGN=\"RIGHT\">95.85%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">102</TD>\n    <TD ALIGN=\"RIGHT\">4.15%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 95.85%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 2455,
+            "feature": "",
+            "threshold": 0.0,
+            "id": 56,
+            "split_type": "LEAF",
+            "parent": 48,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 3,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">268966</TD>\n    <TD ALIGN=\"RIGHT\">99.83%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">464</TD>\n    <TD ALIGN=\"RIGHT\">0.17%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 58,
+            "leaftext": "Predict No Complication; p = 99.83%",
+            "missingdataleft": false,
+            "upper_child": 69,
+            "curvedata": [],
+            "n_node_samples": 269430,
+            "feature": "prbun",
+            "threshold": 23.80475,
+            "id": 57,
+            "split_type": "PARALLEL",
+            "parent": 1,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 1,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">250047</TD>\n    <TD ALIGN=\"RIGHT\">99.85%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">365</TD>\n    <TD ALIGN=\"RIGHT\">0.15%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 59,
+            "leaftext": "Predict No Complication; p = 99.85%",
+            "missingdataleft": false,
+            "upper_child": 68,
+            "curvedata": [],
+            "n_node_samples": 250412,
+            "feature": "wndclas",
+            "threshold": 0.08670541470311027,
+            "id": 58,
+            "split_type": "CATEGORIC",
+            "parent": 57,
+            "categoric_split": [
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ],
+            "depth": 2,
+            "levels": [
+                [
+                    2,
+                    "1"
+                ],
+                [
+                    3,
+                    "2"
+                ],
+                [
+                    4,
+                    "3"
+                ],
+                [
+                    5,
+                    "4"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">246061</TD>\n    <TD ALIGN=\"RIGHT\">99.87%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">327</TD>\n    <TD ALIGN=\"RIGHT\">0.13%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 60,
+            "leaftext": "Predict No Complication; p = 99.87%",
+            "missingdataleft": false,
+            "upper_child": 61,
+            "curvedata": [],
+            "n_node_samples": 246388,
+            "feature": "pralbum",
+            "threshold": 3.1014635000000004,
+            "id": 59,
+            "split_type": "PARALLEL",
+            "parent": 58,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 3,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">3696</TD>\n    <TD ALIGN=\"RIGHT\">99.22%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">29</TD>\n    <TD ALIGN=\"RIGHT\">0.78%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 99.22%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 3725,
+            "feature": "",
+            "threshold": 0.0,
+            "id": 60,
+            "split_type": "LEAF",
+            "parent": 59,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 4,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">242365</TD>\n    <TD ALIGN=\"RIGHT\">99.88%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">298</TD>\n    <TD ALIGN=\"RIGHT\">0.12%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 62,
+            "leaftext": "Predict No Complication; p = 99.88%",
+            "missingdataleft": false,
+            "upper_child": 67,
+            "curvedata": [],
+            "n_node_samples": 242663,
+            "feature": "wndinf",
+            "threshold": 0.09938403403403404,
+            "id": 61,
+            "split_type": "CATEGORIC",
+            "parent": 59,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 4,
+            "levels": [
+                [
+                    2,
+                    "No"
+                ],
+                [
+                    3,
+                    "Yes"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">240374</TD>\n    <TD ALIGN=\"RIGHT\">99.88%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">281</TD>\n    <TD ALIGN=\"RIGHT\">0.12%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 63,
+            "leaftext": "Predict No Complication; p = 99.88%",
+            "missingdataleft": false,
+            "upper_child": 66,
+            "curvedata": [],
+            "n_node_samples": 240655,
+            "feature": "pralkph",
+            "threshold": 100.28465,
+            "id": 62,
+            "split_type": "PARALLEL",
+            "parent": 61,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 5,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">218319</TD>\n    <TD ALIGN=\"RIGHT\">99.90%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">222</TD>\n    <TD ALIGN=\"RIGHT\">0.10%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 64,
+            "leaftext": "Predict No Complication; p = 99.90%",
+            "missingdataleft": false,
+            "upper_child": 65,
+            "curvedata": [],
+            "n_node_samples": 218541,
+            "feature": "diabetes",
+            "threshold": 0.26382218021056103,
+            "id": 63,
+            "split_type": "CATEGORIC",
+            "parent": 62,
+            "categoric_split": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 6,
+            "levels": [
+                [
+                    2,
+                    "INSULIN"
+                ],
+                [
+                    3,
+                    "NO"
+                ],
+                [
+                    4,
+                    "NON-INSULIN"
+                ],
+                [
+                    5,
+                    "ORAL"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">5406</TD>\n    <TD ALIGN=\"RIGHT\">99.59%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">22</TD>\n    <TD ALIGN=\"RIGHT\">0.41%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 99.59%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 5428,
+            "feature": "",
+            "threshold": 0.14164164164164164,
+            "id": 64,
+            "split_type": "LEAF",
+            "parent": 63,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 7,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">212913</TD>\n    <TD ALIGN=\"RIGHT\">99.91%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">200</TD>\n    <TD ALIGN=\"RIGHT\">0.09%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 99.91%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 213113,
+            "feature": "",
+            "threshold": 0.03530872483221477,
+            "id": 65,
+            "split_type": "LEAF",
+            "parent": 63,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 7,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">22055</TD>\n    <TD ALIGN=\"RIGHT\">99.73%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">59</TD>\n    <TD ALIGN=\"RIGHT\">0.27%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 99.73%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 22114,
+            "feature": "",
+            "threshold": 0.0,
+            "id": 66,
+            "split_type": "LEAF",
+            "parent": 62,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 6,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">1991</TD>\n    <TD ALIGN=\"RIGHT\">99.15%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">17</TD>\n    <TD ALIGN=\"RIGHT\">0.85%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 99.15%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 2008,
+            "feature": "",
+            "threshold": 0.12262262262262262,
+            "id": 67,
+            "split_type": "LEAF",
+            "parent": 61,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 5,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">3986</TD>\n    <TD ALIGN=\"RIGHT\">99.06%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">38</TD>\n    <TD ALIGN=\"RIGHT\">0.94%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 99.06%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 4024,
+            "feature": "",
+            "threshold": 0.36751075949367085,
+            "id": 68,
+            "split_type": "LEAF",
+            "parent": 58,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 3,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">18919</TD>\n    <TD ALIGN=\"RIGHT\">99.48%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">99</TD>\n    <TD ALIGN=\"RIGHT\">0.52%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": 70,
+            "leaftext": "Predict No Complication; p = 99.48%",
+            "missingdataleft": false,
+            "upper_child": 71,
+            "curvedata": [],
+            "n_node_samples": 19018,
+            "feature": "wndclas",
+            "threshold": 0.0,
+            "id": 69,
+            "split_type": "CATEGORIC",
+            "parent": 57,
+            "categoric_split": [
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 2,
+            "levels": [
+                [
+                    2,
+                    "1"
+                ],
+                [
+                    3,
+                    "2"
+                ],
+                [
+                    4,
+                    "3"
+                ],
+                [
+                    5,
+                    "4"
+                ]
+            ]
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">18030</TD>\n    <TD ALIGN=\"RIGHT\">99.57%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">78</TD>\n    <TD ALIGN=\"RIGHT\">0.43%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 99.57%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 18108,
+            "feature": "",
+            "threshold": 0.16607477954144667,
+            "id": 70,
+            "split_type": "LEAF",
+            "parent": 69,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 3,
+            "levels": []
+        },
+        {
+            "tabletext": "  <TABLE class=\"centered\">\n    <TR>\n  <TD>\n    <TABLE CELLSPACING=\"0\">\n        <TH>Outcome</TH>\n  <TH>Count</TH>\n  <TH>Probability</TH>\n\n        <TR class=\"highlighted\">\n    <TD ALIGN=\"LEFT\">No Complication</TD>\n    <TD ALIGN=\"RIGHT\">889</TD>\n    <TD ALIGN=\"RIGHT\">97.69%</TD>\n  </TR>\n  <TR >\n    <TD ALIGN=\"LEFT\">Sepsis</TD>\n    <TD ALIGN=\"RIGHT\">21</TD>\n    <TD ALIGN=\"RIGHT\">2.31%</TD>\n  </TR>\n\n    </TABLE>\n  </TD>\n</TR>\n\n  </TABLE>\n",
+            "lower_child": -2,
+            "leaftext": "Predict No Complication; p = 97.69%",
+            "missingdataleft": false,
+            "upper_child": -2,
+            "curvedata": [],
+            "n_node_samples": 910,
+            "feature": "",
+            "threshold": 0.11161161161161161,
+            "id": 71,
+            "split_type": "LEAF",
+            "parent": 69,
+            "categoric_split": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "depth": 3,
+            "levels": []
+        }
+    ],
+    "simple_layout": false
+}
+;
+        
